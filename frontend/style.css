@@ -2844,3 +2844,363 @@ td:not(:first-child) {
     .panel-header h3 { font-size: 17px; }
     body { font-size: 14px; }
 }
+
+
+/* =========================================================
+   BRIGHT INTERACTIVE UI REFINEMENT
+   Smaller typography + stronger visual color system
+   ========================================================= */
+
+:root {
+    --bg: #f2f7fc;
+    --card: #ffffff;
+    --text: #18324a;
+    --muted: #607386;
+    --border: #d6e3ef;
+
+    --blue: #1769aa;
+    --blue-light: #2f80ed;
+    --green: #2e8b57;
+    --green-light: #4eab73;
+    --warning: #f59e0b;
+    --danger: #d64545;
+    --water: #168bd0;
+    --esz: #7956c5;
+
+    --shadow: 0 5px 18px rgba(23, 76, 115, 0.09);
+}
+
+/* Global typography reduction */
+body {
+    font-size: 14px;
+    line-height: 1.48;
+}
+
+.section-heading h2 {
+    font-size: 26px;
+}
+
+.section-heading p {
+    font-size: 13px;
+}
+
+.panel-header h3 {
+    font-size: 16px;
+}
+
+.panel-kicker,
+.eyebrow {
+    font-size: 9px;
+}
+
+.kpi-card strong {
+    font-size: 26px;
+}
+
+.kpi-label {
+    font-size: 10px;
+}
+
+.kpi-card small {
+    font-size: 9px;
+}
+
+/* Header */
+.top-header {
+    background: linear-gradient(90deg, #ffffff 0%, #f7fbff 100%);
+    border-bottom-color: #cbdceb;
+}
+
+.brand-mark {
+    background: linear-gradient(135deg, #1769aa, #2f80ed);
+    box-shadow: 0 4px 12px rgba(47, 128, 237, 0.22);
+}
+
+.brand h1 {
+    font-size: 17px;
+}
+
+/* Sidebar */
+.sidebar {
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+.nav-item {
+    font-size: 13px;
+}
+
+.nav-item:hover {
+    background: linear-gradient(90deg, #eaf4ff, #f4f9ff);
+    color: #1769aa;
+    transform: translateX(2px);
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, #dceeff, #eef7ff);
+    color: #1769aa;
+    border-left-color: #1769aa;
+    box-shadow: inset 0 0 0 1px rgba(47, 128, 237, 0.08);
+}
+
+/* KPI cards become more colorful */
+.kpi-card {
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.kpi-card:hover,
+.impact-summary-card:hover,
+.decision-stat-card:hover,
+.comparison-route-card:hover,
+.report-info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 24px rgba(23, 76, 115, 0.14);
+}
+
+.kpi-card:nth-child(1) {
+    background: linear-gradient(135deg, #ffffff, #eef7ff);
+}
+
+.kpi-card:nth-child(2) {
+    background: linear-gradient(135deg, #ffffff, #eefaf2);
+}
+
+.kpi-card:nth-child(3) {
+    background: linear-gradient(135deg, #ffffff, #eef9ff);
+}
+
+.kpi-card:nth-child(4) {
+    background: linear-gradient(135deg, #ffffff, #fff8e8);
+}
+
+/* Panels */
+.panel,
+.analysis-card,
+.info-card,
+.route-summary-card,
+.decision-panel,
+.workflow-step,
+.method-parameter,
+.method-explanation,
+.stability-card,
+.source-item {
+    box-shadow: 0 4px 15px rgba(23, 76, 115, 0.06);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.panel:hover,
+.analysis-card:hover,
+.info-card:hover {
+    box-shadow: 0 7px 20px rgba(23, 76, 115, 0.10);
+}
+
+.panel-header {
+    background: linear-gradient(90deg, #f1f8ff, #fbfdff);
+    border-bottom-color: #d6e5f1;
+}
+
+/* Buttons */
+.panel-action,
+.criterion-btn,
+.report-btn {
+    transition: all 0.18s ease;
+}
+
+.panel-action:hover,
+.criterion-btn:hover {
+    background: #eaf4ff;
+    border-color: #2f80ed;
+    color: #1769aa;
+    transform: translateY(-1px);
+}
+
+.criterion-btn.active {
+    background: linear-gradient(135deg, #1769aa, #2f80ed);
+    border-color: #1769aa;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(47, 128, 237, 0.22);
+}
+
+/* Tables */
+thead,
+.data-table th,
+.decision-table th {
+    background: linear-gradient(90deg, #e7f2fb, #f1f8fd);
+}
+
+tbody tr {
+    transition: background 0.15s ease;
+}
+
+tbody tr:hover {
+    background: #edf7ff;
+}
+
+/* Colored information boxes */
+.calculation-box {
+    background: #eef7ff;
+    border-color: #cfe4f7;
+    border-left: 3px solid #2f80ed;
+}
+
+.assumption-box {
+    background: #f1faf4;
+    border-color: #d3ead9;
+    border-left: 3px solid #2e8b57;
+}
+
+.method-note {
+    background: linear-gradient(90deg, #eef7ff, #f7fbff);
+    border-left-color: #2f80ed;
+}
+
+/* GIS */
+.gis-workspace {
+    box-shadow: 0 6px 20px rgba(23, 76, 115, 0.08);
+}
+
+.gis-toolbar {
+    background: linear-gradient(90deg, #edf7ff, #ffffff);
+}
+
+.gis-toolbar-meta span {
+    background: #eaf4fb;
+    color: #1769aa;
+}
+
+.status-badge {
+    background: #edf9f1;
+    border-color: #cbe8d3;
+    color: #2e8b57;
+}
+
+.info-icon {
+    background: #eaf4fb;
+    border-color: #cfe3f3;
+    color: #1769aa;
+}
+
+/* Impact cards */
+.impact-summary-card:nth-child(1) {
+    background: linear-gradient(135deg, #ffffff, #eef8f0);
+}
+
+.impact-summary-card:nth-child(2) {
+    background: linear-gradient(135deg, #ffffff, #fff8e8);
+}
+
+.impact-summary-card:nth-child(3) {
+    background: linear-gradient(135deg, #ffffff, #f6effc);
+}
+
+.impact-summary-card:nth-child(4) {
+    background: linear-gradient(135deg, #ffffff, #eef8ff);
+}
+
+/* Decision cards */
+.decision-stat-card:nth-child(1) {
+    background: linear-gradient(135deg, #ffffff, #eef7ff);
+}
+
+.decision-stat-card:nth-child(2) {
+    background: linear-gradient(135deg, #ffffff, #eefaf2);
+}
+
+.decision-stat-card:nth-child(3) {
+    background: linear-gradient(135deg, #ffffff, #fff8e8);
+}
+
+.decision-stat-card:nth-child(4) {
+    background: linear-gradient(135deg, #ffffff, #f5effc);
+}
+
+/* Route comparison cards */
+.comparison-route-card:nth-child(1) {
+    background: linear-gradient(135deg, #ffffff, #eef7ff);
+}
+
+.comparison-route-card:nth-child(2) {
+    background: linear-gradient(135deg, #ffffff, #eefaf2);
+}
+
+.comparison-route-card:nth-child(3) {
+    background: linear-gradient(135deg, #ffffff, #fff8e8);
+}
+
+/* Workflow / methodology */
+.workflow-step:hover,
+.method-parameter:hover,
+.stability-card:hover,
+.source-item:hover {
+    transform: translateY(-2px);
+    border-color: #b8d5ed;
+}
+
+.workflow-step > span {
+    background: linear-gradient(135deg, #dceeff, #edf7ff);
+    color: #1769aa;
+}
+
+/* Sensitivity selection */
+.sensitivity-selected > div {
+    background: linear-gradient(135deg, #f1f8ff, #ffffff);
+    border-color: #cfe0ee;
+}
+
+.analysis-select {
+    font-size: 11px;
+    border-color: #c7d9e8;
+    box-shadow: 0 2px 8px rgba(23, 76, 115, 0.05);
+}
+
+.analysis-select:focus {
+    outline: none;
+    border-color: #2f80ed;
+    box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.12);
+}
+
+/* Report buttons */
+.report-btn {
+    background: linear-gradient(135deg, #1769aa, #2f80ed);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(47, 128, 237, 0.18);
+}
+
+.report-btn:hover {
+    background: linear-gradient(135deg, #12558c, #1769aa);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* Footer */
+.bottom-status {
+    background: linear-gradient(90deg, #ffffff, #f4f9fd);
+}
+
+/* Slightly tighter content */
+.main-content {
+    padding: 24px 28px 38px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.kpi-grid {
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+/* Mobile typography */
+@media (max-width: 800px) {
+    body {
+        font-size: 13px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .main-content {
+        padding: 18px 14px 30px;
+    }
+}

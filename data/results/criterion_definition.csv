@@ -1,0 +1,10 @@
+criterion,criterion_name,raw_measure,unit,criterion_type,interpretation,status
+C1,Forest Area,forest_area_km2,km2,Cost,Lower forest area affected is preferable,VERIFIED
+C2,Agriculture Area,agriculture_area_km2,km2,Cost,Lower agriculture area affected is preferable,VERIFIED
+C3,Built-up Area,built_up_area_km2,km2,Cost,Lower built-up area affected is preferable,VERIFIED
+C4,Educational Sector,educational_sector_count,count,Cost,Lower number of educational facilities within 100 m is preferable,VERIFIED
+C5,Wetland Impact,wetland_area_km2,km2,Cost,Lower wetland area affected is preferable,VERIFIED
+C6,Bhuvan Waterbody Polygon Intersections,waterbody_intersection_count,count,Cost,Lower number of intersected Bhuvan waterbody polygon features is preferable; count is not verified as unique waterbodies,VERIFIED
+C7,Nearest Eco-Sensitive Zone,nearest_esz_distance_km,km,Benefit,Greater distance from the nearest eco-sensitive zone is preferable,VERIFIED
+C8,Route Length,route_length_km,km,Cost,Lower route length is preferable,VERIFIED
+C9,Highway Intersection,highway_total_intersections,count,Cost,Lower number of highway intersections is preferable,VERIFIED

@@ -1,0 +1,4754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HSR Alignment Intelligence</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style id="criteria-enhanced-ui">
+        /* =========================================================
+           CRITERIA EXPLORER - ENHANCED UI
+           Keeps existing application styling and adds only the
+           criterion-analysis components.
+           ========================================================= */
+
+        .criteria-page-heading {
+            margin-bottom: 18px;
+        }
+
+        .criteria-read-strip {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 16px 18px;
+            margin-bottom: 18px;
+            background: #ffffff;
+            border: 1px solid #d9dee7;
+            border-radius: 12px;
+        }
+
+        .criteria-read-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 245px;
+        }
+
+        .criteria-read-icon {
+            display: grid;
+            place-items: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 9px;
+            background: #eef5fb;
+            color: #1769aa;
+            font-weight: 700;
+        }
+
+        .criteria-read-title strong,
+        .criteria-read-title span {
+            display: block;
+        }
+
+        .criteria-read-title strong {
+            color: #172033;
+            font-size: 13px;
+        }
+
+        .criteria-read-title span {
+            margin-top: 3px;
+            color: #667085;
+            font-size: 11px;
+        }
+
+        .criteria-read-points {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        .criteria-read-points span {
+            padding: 7px 10px;
+            border: 1px solid #e1e6ed;
+            border-radius: 7px;
+            background: #f8fafc;
+            color: #667085;
+            font-size: 11px;
+        }
+
+        .criteria-read-points b {
+            color: #344054;
+        }
+
+        .criteria-selector-panel {
+            padding: 20px;
+            margin-bottom: 18px;
+            background: #ffffff;
+            border: 1px solid #d9dee7;
+            border-radius: 14px;
+        }
+
+        .criteria-selector-heading {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .criteria-selector-heading h3 {
+            margin: 5px 0 0;
+            color: #172033;
+            font-size: 18px;
+        }
+
+        .criteria-selector-note {
+            color: #667085;
+            font-size: 11px;
+        }
+
+        .criteria-selector {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .criterion-btn {
+            min-height: 102px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 4px;
+            text-align: left;
+            cursor: pointer;
+            background: #ffffff;
+            border: 1px solid #d9dee7;
+            border-radius: 11px;
+            transition: border-color .18s ease, box-shadow .18s ease,
+                        transform .18s ease, background .18s ease;
+        }
+
+        .criterion-btn:hover {
+            border-color: #1769aa;
+            background: #fbfdff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 14px rgba(23, 105, 170, .09);
+        }
+
+        .criterion-btn.active {
+            border-color: #1769aa;
+            background: #f2f8fd;
+            box-shadow: inset 0 0 0 1px #1769aa;
+        }
+
+        .criterion-icon {
+            width: 36px;
+            height: 36px;
+            display: grid;
+            place-items: center;
+            border-radius: 9px;
+            background: #f5f7fa;
+            font-size: 22px;
+        }
+
+        .criterion-btn.active .criterion-icon {
+            background: #ffffff;
+        }
+
+        .criterion-card-title {
+            margin-top: 3px;
+            color: #172033;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .criterion-card-subtitle {
+            color: #667085;
+            font-size: 10px;
+        }
+
+        .criterion-explainer {
+            display: grid;
+            grid-template-columns: 225px minmax(0, 1fr);
+            gap: 22px;
+            padding: 22px;
+            margin-bottom: 18px;
+            background: #ffffff;
+            border: 1px solid #d9dee7;
+            border-radius: 14px;
+        }
+
+        .criterion-visual {
+            min-height: 245px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: #f5f7fa;
+            border: 1px solid #e3e7ed;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .criterion-large-icon {
+            width: 94px;
+            height: 94px;
+            display: grid;
+            place-items: center;
+            border-radius: 24px;
+            background: #ffffff;
+            box-shadow: 0 4px 16px rgba(16, 24, 40, .07);
+            font-size: 56px;
+        }
+
+        .criterion-visual-title {
+            margin-top: 15px;
+            color: #172033;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .criterion-visual-label {
+            margin-top: 5px;
+            color: #667085;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.1px;
+        }
+
+        .criterion-heading-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 17px;
+        }
+
+        .criterion-heading-row h2 {
+            margin: 5px 0 0;
+            color: #172033;
+            font-size: 25px;
+        }
+
+        .criterion-unit-badge {
+            padding: 6px 10px;
+            border: 1px solid #cfe0ee;
+            border-radius: 7px;
+            background: #eef5fb;
+            color: #1769aa;
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .criterion-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .explanation-block {
+            display: flex;
+            gap: 11px;
+            padding: 15px;
+            background: #fafbfc;
+            border: 1px solid #e8ebef;
+            border-radius: 9px;
+        }
+
+        .explanation-number {
+            flex: 0 0 27px;
+            height: 27px;
+            display: grid;
+            place-items: center;
+            border-radius: 7px;
+            background: #1769aa;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .explanation-block h4 {
+            margin: 1px 0 5px;
+            color: #172033;
+            font-size: 12px;
+        }
+
+        .explanation-block p {
+            margin: 0;
+            color: #667085;
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        .assumption-box {
+            display: flex;
+            gap: 11px;
+            align-items: flex-start;
+            margin-top: 14px;
+            padding: 13px 15px;
+            background: #f8fafc;
+            border-left: 3px solid #1769aa;
+            border-radius: 6px;
+        }
+
+        .assumption-icon {
+            color: #1769aa;
+            font-size: 16px;
+        }
+
+        .assumption-box strong {
+            color: #172033;
+            font-size: 11px;
+        }
+
+        .assumption-box p {
+            margin: 4px 0 0;
+            color: #667085;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .criterion-method-card {
+            padding: 20px;
+            margin-bottom: 18px;
+            background: #ffffff;
+            border: 1px solid #d9dee7;
+            border-radius: 14px;
+        }
+
+        .criterion-method-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 18px;
+        }
+
+        .criterion-method-header h3 {
+            margin: 5px 0 0;
+            color: #172033;
+            font-size: 17px;
+        }
+
+        .method-type-badge {
+            padding: 6px 9px;
+            border-radius: 6px;
+            background: #f2f4f7;
+            color: #667085;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .8px;
+            white-space: nowrap;
+        }
+
+        .footprint-diagram {
+            max-width: 680px;
+            margin: 5px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footprint-side {
+            flex: 1;
+            height: 68px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #eef6ed;
+            border-top: 2px solid #4e8b57;
+            border-bottom: 2px solid #4e8b57;
+            color: #4e8b57;
+        }
+
+        .footprint-side.left {
+            border-left: 2px solid #4e8b57;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .footprint-side.right {
+            border-right: 2px solid #4e8b57;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .footprint-side strong {
+            font-size: 14px;
+        }
+
+        .footprint-side span {
+            margin-top: 3px;
+            font-size: 9px;
+        }
+
+        .centerline-rail {
+            width: 135px;
+            height: 68px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #1769aa;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .centerline-rail span {
+            font-size: 10px;
+            opacity: .9;
+        }
+
+        .centerline-rail strong {
+            margin-top: 3px;
+            font-size: 11px;
+        }
+
+        .footprint-total {
+            margin-top: 12px;
+            text-align: center;
+            color: #667085;
+            font-size: 11px;
+        }
+
+        .footprint-total strong {
+            margin-left: 7px;
+            color: #172033;
+        }
+
+        .criteria-results-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.55fr) minmax(290px, .75fr);
+            gap: 18px;
+        }
+
+        .criterion-chart-card,
+        .criterion-values-card {
+            min-width: 0;
+        }
+
+        .criterion-chart-container {
+            position: relative;
+            height: 285px;
+            padding: 8px 4px 0;
+        }
+
+        .criterion-route-value-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .criterion-route-value {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            align-items: baseline;
+            gap: 10px;
+            padding: 14px;
+            border: 1px solid #e6e9ee;
+            border-radius: 9px;
+            background: #fafbfc;
+        }
+
+        .criterion-route-value span {
+            color: #667085;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .6px;
+        }
+
+        .criterion-route-value strong {
+            color: #172033;
+            font-family: "JetBrains Mono", monospace;
+            font-size: 17px;
+        }
+
+        .criterion-route-value small {
+            color: #667085;
+            font-size: 10px;
+        }
+
+        .criterion-why {
+            display: flex;
+            gap: 13px;
+            align-items: flex-start;
+            padding: 18px;
+            margin-top: 18px;
+            background: #f5f7fa;
+            border: 1px solid #d9dee7;
+            border-radius: 12px;
+        }
+
+        .why-icon {
+            width: 31px;
+            height: 31px;
+            display: grid;
+            place-items: center;
+            flex: 0 0 31px;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #1769aa;
+            font-weight: 700;
+        }
+
+        .criterion-why h3 {
+            margin: 4px 0 5px;
+            color: #172033;
+            font-size: 14px;
+        }
+
+        .criterion-why p {
+            margin: 0;
+            color: #667085;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .criterion-detail-card {
+            margin-top: 18px;
+        }
+
+        @media (max-width: 1100px) {
+            .criteria-selector {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .criteria-read-strip {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .criteria-read-points {
+                justify-content: flex-start;
+            }
+
+            .criteria-results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .criteria-selector {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .criterion-explainer {
+                grid-template-columns: 1fr;
+            }
+
+            .criterion-visual {
+                min-height: 175px;
+            }
+
+            .criterion-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .criterion-method-header,
+            .criteria-selector-heading {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .footprint-side {
+                height: 58px;
+            }
+
+            .centerline-rail {
+                width: 105px;
+                height: 58px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .criteria-selector {
+                grid-template-columns: 1fr;
+            }
+
+            .criterion-route-value {
+                grid-template-columns: 1fr auto;
+            }
+
+            .criterion-route-value small {
+                grid-column: 2;
+            }
+        }
+
+        .method-flow-visual,
+        .method-distance-visual,
+        .method-linear-visual {
+            min-height: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 1px solid #e5e9ef;
+            border-radius: 10px;
+            background: #fafbfc;
+        }
+
+        .method-flow-line {
+            width: min(720px, 90%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .method-point {
+            padding: 11px 14px;
+            border: 1px solid #d9dee7;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #344054;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .method-point.center {
+            background: #1769aa;
+            border-color: #1769aa;
+            color: #ffffff;
+        }
+
+        .method-distance {
+            color: #1769aa;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .method-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .method-mini-card {
+            min-height: 115px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            background: #fafbfc;
+            border: 1px solid #e5e9ef;
+            border-radius: 10px;
+        }
+
+        .method-mini-icon {
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+            border-radius: 7px;
+            background: #eef5fb;
+            color: #1769aa;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .method-mini-card strong {
+            color: #172033;
+            font-size: 12px;
+        }
+
+        .method-mini-card small {
+            color: #667085;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        .method-distance-visual {
+            overflow: hidden;
+        }
+
+        .esz-route-line {
+            width: 68%;
+            height: 4px;
+            border-radius: 4px;
+            background: #1769aa;
+        }
+
+        .esz-distance-line {
+            position: absolute;
+            width: 110px;
+            height: 65px;
+            border-left: 2px dashed #7656a6;
+            transform: translateX(45px);
+        }
+
+        .esz-distance-line span {
+            position: absolute;
+            top: -22px;
+            left: 8px;
+            width: 115px;
+            color: #7656a6;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .esz-zone {
+            margin-left: 150px;
+            padding: 17px 20px;
+            border-radius: 10px;
+            background: #f0ebf8;
+            color: #7656a6;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .linear-track {
+            width: 72%;
+            height: 5px;
+            margin: 0 12px;
+            border-radius: 5px;
+            background: #1769aa;
+        }
+
+        .method-linear-visual span {
+            color: #667085;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .method-linear-visual strong {
+            position: absolute;
+            top: 46px;
+            color: #1769aa;
+            font-size: 10px;
+            letter-spacing: .6px;
+        }
+
+        @media (max-width: 760px) {
+            .method-card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .method-flow-line {
+                flex-direction: column;
+            }
+
+            .method-distance {
+                transform: rotate(-90deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="top-header">
+
+        <div class="brand">
+            <div class="brand-mark">HSR</div>
+
+            <div>
+                <h1>HSR Alignment Intelligence</h1>
+                <p>GIS-Based Route Evaluation & Decision Support System</p>
+            </div>
+        </div>
+
+        <div class="header-status">
+
+            <div class="status-item">
+                <span class="status-label">Project</span>
+                <strong>Mumbai–Hyderabad HSR</strong>
+            </div>
+
+            <div class="status-item">
+                <span class="status-label">Analysis</span>
+                <strong class="status-success">Ready</strong>
+            </div>
+
+            <div class="status-item">
+                <span class="status-label">Data</span>
+                <strong class="status-success">Verified</strong>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= APPLICATION ================= -->
+    <div class="app-layout">
+
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+
+            <div class="sidebar-title">
+                ANALYSIS MODULES
+            </div>
+
+            <nav>
+
+                <button class="nav-item active" data-section="overview">
+                    <span>▦</span>
+                    Overview
+                </button>
+
+                <button class="nav-item" data-section="routes">
+                    <span>⌁</span>
+                    Route Explorer
+                </button>
+
+                <button class="nav-item" data-section="comparison">
+                    <span>⇄</span>
+                    Route Comparison
+                </button>
+
+                <button class="nav-item" data-section="gis">
+                    <span>⌖</span>
+                    GIS Layers
+                </button>
+
+                <button class="nav-item" data-section="impact">
+                    <span>▤</span>
+                    Impact Analysis
+                </button>
+
+                <button class="nav-item" data-section="criteria">
+                    <span>◎</span>
+                    Criteria Analysis
+                </button>
+
+                <button class="nav-item" data-section="decision">
+                    <span>◈</span>
+                    AHP / TOPSIS
+                </button>
+
+                <button class="nav-item" data-section="sensitivity">
+                    <span>◌</span>
+                    Sensitivity Analysis
+                </button>
+
+                <button class="nav-item" data-section="methodology">
+                    <span>◎</span>
+                    Methodology
+                </button>
+
+                <button class="nav-item" data-section="reports">
+                    <span>⇩</span>
+                    Reports
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <div>
+                    <span>CRS</span>
+                    <strong>EPSG:32643</strong>
+                </div>
+
+                <div>
+                    <span>Ground Footprint</span>
+                    <strong>3.5 m</strong>
+                </div>
+
+                <div>
+                    <span>Planning ROW</span>
+                    <strong>17.5 m</strong>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+        <main class="main-content">
+
+
+            <!-- ================= OVERVIEW ================= -->
+            <section id="overview" class="page-section active">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">PROJECT OVERVIEW</span>
+
+                        <h2>HSR Route Evaluation</h2>
+
+                        <p>
+                            Spatial analysis and multi-criteria decision support
+                            for three proposed high-speed rail alignments.
+                        </p>
+                    </div>
+
+                    <div class="analysis-badge">
+                        ● Analysis Ready
+                    </div>
+
+                </div>
+
+
+                <!-- KPI GRID -->
+<div class="kpi-grid">
+
+    <div class="kpi-card">
+        <span class="kpi-label">Routes Evaluated</span>
+        <strong id="kpi-routes">—</strong>
+        <small id="kpi-route-list">Loading...</small>
+    </div>
+
+    <div class="kpi-card">
+        <span class="kpi-label">Decision Criteria</span>
+        <strong id="kpi-criteria">9</strong>
+        <small>Verified MCDM criteria</small>
+    </div>
+
+    <div class="kpi-card">
+        <span class="kpi-label">Station Candidates</span>
+        <strong>479</strong>
+        <small>GIS screening dataset</small>
+    </div>
+
+    <div class="kpi-card">
+        <span class="kpi-label">Highway Interactions</span>
+        <strong id="kpi-highways">—</strong>
+        <small>All routes combined</small>
+    </div>
+
+</div>
+
+                <!-- MAP + ANALYTICS -->
+
+                <div class="overview-grid">
+
+                    <div class="panel map-panel">
+
+                        <div class="panel-header">
+                            <div>
+                                <span class="panel-kicker">SPATIAL ANALYSIS</span>
+                                <h3>HSR Alignment Map</h3>
+                            </div>
+
+                            <button class="panel-action" data-section-link="gis">
+                                Open GIS Analysis →
+                            </button>
+                        </div>
+
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <div class="map-placeholder-content">
+                                    <div class="map-icon">⌖</div>
+                                    <h3>Existing GIS Map</h3>
+                                    <p>
+                                        The verified interactive GIS map will be
+                                        connected here without changing its functionality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-column">
+
+                        <div class="panel">
+
+                            <div class="panel-header">
+                                <div>
+                                    <span class="panel-kicker">ROUTE METRICS</span>
+                                    <h3>Alignment Length</h3>
+                                </div>
+                            </div>
+
+                            <div class="route-length-list">
+
+                                <div class="metric-row">
+                                    <span>R1</span>
+                                    <strong>788.785 km</strong>
+                                </div>
+
+                                <div class="metric-row">
+                                    <span>R2</span>
+                                    <strong>789.902 km</strong>
+                                </div>
+
+                                <div class="metric-row">
+                                    <span>R3</span>
+                                    <strong>799.260 km</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="panel">
+
+                            <div class="panel-header">
+                                <div>
+                                    <span class="panel-kicker">DECISION ANALYSIS</span>
+                                    <h3>TOPSIS Results</h3>
+                                </div>
+                            </div>
+
+                            <div class="decision-summary">
+
+                                <div class="decision-row">
+                                    <span>R1</span>
+                                    <strong>0.612012</strong>
+                                    <small>Rank 1</small>
+                                </div>
+
+                                <div class="decision-row">
+                                    <span>R3</span>
+                                    <strong>0.420054</strong>
+                                    <small>Rank 2</small>
+                                </div>
+
+                                <div class="decision-row">
+                                    <span>R2</span>
+                                    <strong>0.419965</strong>
+                                    <small>Rank 3</small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ENVIRONMENTAL SNAPSHOT -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="panel-kicker">ENVIRONMENTAL IMPACT</span>
+                            <h3>Route Impact Snapshot</h3>
+                        </div>
+
+                        <span class="unit-note">
+                            Ground footprint: 3.5 m
+                        </span>
+
+                    </div>
+
+
+                    <div class="comparison-table-wrapper">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Criterion</th>
+                                    <th>R1</th>
+                                    <th>R2</th>
+                                    <th>R3</th>
+                                    <th>Unit</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Forest Area</td>
+                                    <td>0.048307</td>
+                                    <td>0.055493</td>
+                                    <td>0.056215</td>
+                                    <td>km²</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Agriculture Area</td>
+                                    <td>0.878612</td>
+                                    <td>1.571022</td>
+                                    <td>1.532198</td>
+                                    <td>km²</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Built-up Area</td>
+                                    <td>0.781871</td>
+                                    <td>0.736322</td>
+                                    <td>0.793088</td>
+                                    <td>km²</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Wetland Area</td>
+                                    <td>0.024743</td>
+                                    <td>0.063228</td>
+                                    <td>0.044774</td>
+                                    <td>km²</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Waterbody Intersections</td>
+                                    <td>18</td>
+                                    <td>65</td>
+                                    <td>51</td>
+                                    <td>features</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= OTHER SECTIONS ================= -->
+
+                    <section id="routes" class="page-section">
+
+    <div class="route-explorer-header">
+
+        <div>
+            <span class="section-kicker">ROUTE EXPLORER</span>
+
+            <h1>Alignment Route Profile</h1>
+
+            <p>
+                Interactive engineering, environmental and infrastructure
+                profile of the selected HSR alignment.
+            </p>
+        </div>
+
+        <div class="route-selector-box">
+
+    <label for="routeSelect">
+        SELECT ALIGNMENT
+    </label>
+
+    <select id="routeSelect" onchange="updateRouteExplorer(this.value)">
+
+        <option value="R1">
+            Route 1 — R1
+        </option>
+
+        <option value="R2">
+            Route 2 — R2
+        </option>
+
+        <option value="R3">
+            Route 3 — R3
+        </option>
+
+    </select>
+
+</div>
+
+    </div>
+
+
+    <!-- Selected Route -->
+    <div class="selected-route-banner">
+
+        <div>
+            <span class="section-kicker">
+                SELECTED ALIGNMENT
+            </span>
+
+            <h2 id="selected-route-name">
+                Route 1 — R1
+            </h2>
+
+            <p>
+                Comprehensive route-level evaluation profile
+            </p>
+        </div>
+
+        <div class="route-length-highlight">
+
+            <span>ROUTE LENGTH</span>
+
+            <strong id="route-length">
+                788.785
+            </strong>
+
+            <small>km</small>
+
+        </div>
+
+    </div>
+
+
+    <!-- KPI Cards -->
+    <div class="route-kpi-grid">
+
+        <div class="route-kpi forest">
+
+            <div class="kpi-title">
+                Forest Impact
+            </div>
+
+            <strong id="route-forest">0.048307</strong>
+
+            <span>km²</span>
+
+        </div>
+
+
+        <div class="route-kpi agriculture">
+
+            <div class="kpi-title">
+                Agriculture Impact
+            </div>
+
+            <strong id="route-agriculture">0.878612</strong>
+
+            <span>km²</span>
+
+        </div>
+
+
+        <div class="route-kpi builtup">
+
+            <div class="kpi-title">
+                Built-up Impact
+            </div>
+
+            <strong id="route-builtup">0.781871</strong>
+
+            <span>km²</span>
+
+        </div>
+
+
+        <div class="route-kpi education">
+
+            <div class="kpi-title">
+                Education Facilities
+            </div>
+
+            <strong id="route-education">39</strong>
+
+            <span>within 100 m</span>
+
+        </div>
+
+
+        <div class="route-kpi wetland">
+
+            <div class="kpi-title">
+                Wetland Impact
+            </div>
+
+            <strong id="route-wetland">0.024743</strong>
+
+            <span>km²</span>
+
+        </div>
+
+
+        <div class="route-kpi water">
+
+            <div class="kpi-title">
+                Waterbody Intersections
+            </div>
+
+            <strong id="route-waterbody">18</strong>
+
+            <span>polygon features</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- Charts -->
+    <div class="route-analysis-grid">
+
+        <!-- Environmental Chart -->
+        <div class="content-card route-chart-card">
+
+            <div class="card-header">
+
+                <div>
+                    <span class="section-kicker">
+                        ENVIRONMENT
+                    </span>
+
+                    <h2>Environmental Impact Profile</h2>
+
+                    <p>
+                        Ground footprint impact by land-use category.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="route-chart-container">
+                <canvas id="routeEnvironmentalChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <!-- Impact Distribution -->
+        <div class="content-card route-chart-card">
+
+            <div class="card-header">
+
+                <div>
+                    <span class="section-kicker">
+                        IMPACT DISTRIBUTION
+                    </span>
+
+                    <h2>Impact Composition</h2>
+
+                    <p>
+                        Relative distribution of mapped land-use impact.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="route-doughnut-container">
+                <canvas id="routeImpactDoughnut"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Infrastructure + ESZ -->
+    <div class="route-analysis-grid">
+
+        <div class="content-card">
+
+            <div class="card-header">
+
+                <div>
+                    <span class="section-kicker">
+                        INFRASTRUCTURE
+                    </span>
+
+                    <h2>Highway Interaction</h2>
+
+                    <p>
+                        Road crossings/interactions identified along
+                        the selected alignment.
+                    </p>
+                </div>
+
+                <strong
+                    id="route-highway-total"
+                    class="total-badge">
+                    60
+                </strong>
+
+            </div>
+
+
+            <div class="infrastructure-grid">
+
+                <div class="infra-item nh">
+                    <span>National Highways</span>
+                    <strong id="route-nh">52</strong>
+                </div>
+
+                <div class="infra-item sh">
+                    <span>State Highways</span>
+                    <strong id="route-sh">0</strong>
+                </div>
+
+                <div class="infra-item expressway">
+                    <span>State Expressways</span>
+                    <strong id="route-expressway">5</strong>
+                </div>
+
+                <div class="infra-item major-road">
+                    <span>Other Major Roads</span>
+                    <strong id="route-major-road">3</strong>
+                </div>
+
+                <div class="infra-item mdr">
+                    <span>MDR</span>
+                    <strong id="route-mdr">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="route-chart-small">
+                <canvas id="routeHighwayChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <div class="content-card esz-card">
+
+            <div class="card-header">
+
+                <div>
+                    <span class="section-kicker">
+                        ECO-SENSITIVE ZONE
+                    </span>
+
+                    <h2>Nearest ESZ</h2>
+                </div>
+
+            </div>
+
+
+            <div class="esz-distance">
+
+                <span>Perpendicular distance from centerline</span>
+
+                <strong id="route-esz-distance">
+                    1.459
+                </strong>
+
+                <small>km</small>
+
+            </div>
+
+
+            <div class="distance-meter">
+
+                <div
+                    id="esz-meter-fill"
+                    class="distance-meter-fill">
+                </div>
+
+            </div>
+
+
+            <div class="esz-area">
+
+                <span>Nearest identified area</span>
+
+                <strong id="route-esz-name">
+                    Sanjay Gandhi National Park
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Centerline Intersection -->
+    <div class="content-card route-intersection-card">
+
+        <div class="card-header">
+
+            <div>
+                <span class="section-kicker">
+                    CENTERLINE INTERSECTION ANALYSIS
+                </span>
+
+                <h2>
+                    Environmental Intersection Length
+                </h2>
+
+                <p>
+                    Length of the original HSR centerline passing
+                    through each mapped feature category.
+                </p>
+            </div>
+
+            <span class="unit-label">
+                km
+            </span>
+
+        </div>
+
+
+        <div class="route-chart-large">
+
+            <canvas id="routeIntersectionChart"></canvas>
+
+        </div>
+
+
+        <div class="intersection-summary">
+
+            <div>
+                <span>Forest</span>
+                <strong id="intersection-forest">
+                    13.815
+                </strong>
+                <small>km</small>
+            </div>
+
+            <div>
+                <span>Agriculture</span>
+                <strong id="intersection-agriculture">
+                    250.905
+                </strong>
+                <small>km</small>
+            </div>
+
+            <div>
+                <span>Built-up</span>
+                <strong id="intersection-builtup">
+                    223.740
+                </strong>
+                <small>km</small>
+            </div>
+
+            <div>
+                <span>Wetland</span>
+                <strong id="intersection-wetland">
+                    7.070
+                </strong>
+                <small>km</small>
+            </div>
+
+            <div>
+                <span>Water Bodies</span>
+                <strong id="intersection-waterbody">
+                    1.477
+                </strong>
+                <small>km</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Engineering Parameters -->
+    <div class="content-card">
+
+        <div class="card-header">
+
+            <div>
+                <span class="section-kicker">
+                    ENGINEERING PARAMETERS
+                </span>
+
+                <h2>Alignment Assumptions</h2>
+            </div>
+
+        </div>
+
+
+        <div class="engineering-parameter-grid">
+
+            <div>
+                <span>Ground Footprint</span>
+                <strong>3.5 m</strong>
+                <small>1.75 m each side</small>
+            </div>
+
+            <div>
+                <span>Track Gauge</span>
+                <strong>1.435 m</strong>
+                <small>Standard gauge</small>
+            </div>
+
+            <div>
+                <span>Planning / ROW</span>
+                <strong>17.5 m</strong>
+                <small>Separate planning width</small>
+            </div>
+
+            <div>
+                <span>Analysis CRS</span>
+                <strong>EPSG:32643</strong>
+                <small>Metric projected CRS</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+            <section id="comparison" class="page-section">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">CROSS-ROUTE ASSESSMENT</span>
+            <h2>Route Comparison</h2>
+            <p>
+                Consolidated engineering, environmental, social and
+                infrastructure comparison of the three HSR alternatives.
+            </p>
+        </div>
+
+        <span class="status-badge">
+            R1 · R2 · R3
+        </span>
+    </div>
+
+
+    <!-- ROUTE OVERVIEW -->
+    <div class="comparison-route-grid">
+
+        <div class="comparison-route-card">
+            <div class="comparison-route-header">
+                <span>ROUTE 1</span>
+                <strong>R1</strong>
+            </div>
+
+            <div class="comparison-main-value">
+                <span>Route Length</span>
+                <strong>788.785 km</strong>
+            </div>
+
+            <div class="comparison-mini-row">
+                <span>Highway Interactions</span>
+                <strong>60</strong>
+            </div>
+
+            <div class="comparison-mini-row">
+                <span>Education within 100 m</span>
+                <strong>39</strong>
+            </div>
+
+            <div class="comparison-mini-row">
+                <span>Nearest ESZ</span>
+                <strong>1.459 km</strong>
+            </div>
+        </div>
+
+
+        <div class="comparison-route-card">
+            <div class="comparison-route-header">
+                <span>ROUTE 2</span>
+                <strong>R2</strong>
+            </div>
+
+            <div class="comparison-main-value">
+                <span>Route Length</span>
+                <strong>789.902 km</strong>
+            </div>
+
+            <div class="comparison-mini-row">
+                <span>Highway Interactions</span>
+                <strong>55</strong>
+            </div>
+
+            <div class="comparison-mini-row">
+                <span>Education within 100 m</span>
+                <strong>31</strong>
+            </div>
+
+            <div class="comparison-mini-row">
+                <span>Nearest ESZ</span>
+                <strong>3.399 km</strong>
+            </div>
+        </div>
+
+
+        <div class="comparison-route-card">
+            <div class="comparison-route-header">
+                <span>ROUTE 3</span>
+                <strong>R3</strong>
+            </div>
+
+            <div class="comparison-main-value">
+                <span>Route Length</span>
+                <strong>799.260 km</strong>
+            </div>
+
+            <div class="comparison-mini-row">
+                <span>Highway Interactions</span>
+                <strong>55</strong>
+            </div>
+
+            <div class="comparison-mini-row">
+                <span>Education within 100 m</span>
+                <strong>39</strong>
+            </div>
+
+            <div class="comparison-mini-row">
+                <span>Nearest ESZ</span>
+                <strong>3.654 km</strong>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ENVIRONMENTAL COMPARISON -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">ENVIRONMENT</span>
+                <h3>Environmental Criteria</h3>
+                <p>
+                    Direct impact areas calculated using the 3.5 m
+                    permanent ground footprint.
+                </p>
+            </div>
+
+            <span class="analysis-unit">km²</span>
+        </div>
+
+        <div class="comparison-chart">
+            <canvas id="environmentComparisonChart"></canvas>
+        </div>
+
+    </div>
+
+
+    <!-- INFRASTRUCTURE + SOCIAL -->
+    <div class="comparison-two-column">
+
+        <div class="analysis-card">
+
+            <div class="analysis-card-header">
+                <div>
+                    <span class="eyebrow">INFRASTRUCTURE</span>
+                    <h3>Highway Interactions</h3>
+                    <p>
+                        Identified highway and major-road interactions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="comparison-chart-small">
+                <canvas id="highwayComparisonChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <div class="analysis-card">
+
+            <div class="analysis-card-header">
+                <div>
+                    <span class="eyebrow">SOCIAL</span>
+                    <h3>Educational Facilities</h3>
+                    <p>
+                        Facilities located within 100 m of the centerline.
+                    </p>
+                </div>
+            </div>
+
+            <div class="comparison-chart-small">
+                <canvas id="educationComparisonChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- COMPLETE COMPARISON TABLE -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">COMPARATIVE DATASET</span>
+                <h3>Complete Route Comparison</h3>
+                <p>
+                    Raw values used by the route evaluation framework.
+                </p>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+
+            <table class="data-table comparison-data-table">
+
+                <thead>
+                    <tr>
+                        <th>Criterion</th>
+                        <th>Route 1</th>
+                        <th>Route 2</th>
+                        <th>Route 3</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Forest Area</td>
+                        <td>0.048307</td>
+                        <td>0.055493</td>
+                        <td>0.056215</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Agriculture Area</td>
+                        <td>0.878612</td>
+                        <td>1.571022</td>
+                        <td>1.532198</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Built-up Area</td>
+                        <td>0.781871</td>
+                        <td>0.736322</td>
+                        <td>0.793088</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Educational Sector</td>
+                        <td>39</td>
+                        <td>31</td>
+                        <td>39</td>
+                        <td>facilities</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wetland Impact</td>
+                        <td>0.024743</td>
+                        <td>0.063228</td>
+                        <td>0.044774</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Waterbody Polygon Intersections</td>
+                        <td>18</td>
+                        <td>65</td>
+                        <td>51</td>
+                        <td>features</td>
+                    </tr>
+
+                    <tr>
+                        <td>Nearest ESZ</td>
+                        <td>1.459039</td>
+                        <td>3.398557</td>
+                        <td>3.653662</td>
+                        <td>km</td>
+                    </tr>
+
+                    <tr>
+                        <td>Route Length</td>
+                        <td>788.785</td>
+                        <td>789.902</td>
+                        <td>799.260</td>
+                        <td>km</td>
+                    </tr>
+
+                    <tr>
+                        <td>Highway Interactions</td>
+                        <td>60</td>
+                        <td>55</td>
+                        <td>55</td>
+                        <td>interactions</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- CENTERLINE INTERSECTION LENGTHS -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">CENTERLINE ANALYSIS</span>
+                <h3>Land-use Intersection Lengths</h3>
+                <p>
+                    HSR centerline intersection lengths. These are separate
+                    from the 3.5 m footprint impact-area calculations.
+                </p>
+            </div>
+
+            <span class="analysis-unit">km</span>
+        </div>
+
+        <div class="table-wrapper">
+
+            <table class="data-table">
+
+                <thead>
+                    <tr>
+                        <th>Land-use / Feature</th>
+                        <th>Route 1</th>
+                        <th>Route 2</th>
+                        <th>Route 3</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Forest Intersection</td>
+                        <td>13.815291</td>
+                        <td>15.927911</td>
+                        <td>16.029821</td>
+                    </tr>
+
+                    <tr>
+                        <td>Agriculture Intersection</td>
+                        <td>250.905164</td>
+                        <td>449.120527</td>
+                        <td>437.911220</td>
+                    </tr>
+
+                    <tr>
+                        <td>Built-up Intersection</td>
+                        <td>223.739566</td>
+                        <td>210.884850</td>
+                        <td>226.904203</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wetland Intersection</td>
+                        <td>7.069507</td>
+                        <td>18.071516</td>
+                        <td>12.786078</td>
+                    </tr>
+
+                    <tr>
+                        <td>Waterbody Intersection</td>
+                        <td>1.476821</td>
+                        <td>7.428458</td>
+                        <td>6.001669</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOPSIS SUMMARY -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">DECISION MODEL</span>
+                <h3>TOPSIS Comparison</h3>
+                <p>
+                    Calculated scores from the baseline AHP weighting.
+                </p>
+            </div>
+        </div>
+
+        <div class="topsis-comparison-grid">
+
+            <div>
+                <span>Route 1</span>
+                <strong>0.612012</strong>
+                <small>Rank 1</small>
+            </div>
+
+            <div>
+                <span>Route 2</span>
+                <strong>0.419965</strong>
+                <small>Rank 3</small>
+            </div>
+
+            <div>
+                <span>Route 3</span>
+                <strong>0.420054</strong>
+                <small>Rank 2</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="method-note">
+
+        <div class="method-note-title">
+            Comparison note
+        </div>
+
+        <p>
+            The comparison presents calculated route metrics without
+            treating any single criterion as sufficient for route
+            selection. Environmental area values use the 3.5 m ground
+            footprint, while the intersection-length section uses the
+            original HSR centerline. Education uses a 100 m centerline
+            threshold and ESZ uses nearest-distance analysis.
+        </p>
+
+    </div>
+
+</section>
+
+
+   <section id="gis" class="page-section">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">GEOSPATIAL ANALYSIS</span>
+            <h2>GIS Route Explorer</h2>
+            <p>
+                Interactive alignment, infrastructure and environmental
+                layers for the three HSR alternatives.
+            </p>
+        </div>
+
+        <span class="status-badge">
+            <span class="status-dot"></span>
+            GIS ENGINE ACTIVE
+        </span>
+    </div>
+
+
+    <!-- GIS KPI STRIP -->
+    <div class="kpi-grid gis-kpi-grid">
+
+        <div class="kpi-card">
+            <span class="kpi-label">ROUTES</span>
+            <strong>3</strong>
+            <small>R1 · R2 · R3</small>
+        </div>
+
+        <div class="kpi-card">
+            <span class="kpi-label">HIGHWAY INTERACTIONS</span>
+            <strong>170</strong>
+            <small>All route alternatives</small>
+        </div>
+
+        <div class="kpi-card">
+            <span class="kpi-label">STATION CANDIDATES</span>
+            <strong>479</strong>
+            <small>Spatial candidates</small>
+        </div>
+
+        <div class="kpi-card">
+            <span class="kpi-label">GROUND FOOTPRINT</span>
+            <strong>3.5 m</strong>
+            <small>±1.75 m centerline</small>
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         INTERACTIVE MAP
+         ===================================================== -->
+
+    <div class="gis-workspace">
+
+        <div class="gis-toolbar">
+
+            <div>
+                <strong>Interactive HSR Alignment Map</strong>
+                <span>
+                    Routes · highways · stations · environmental layers
+                </span>
+            </div>
+
+            <div class="gis-toolbar-meta">
+                <span>EPSG:32643</span>
+                <span>3.5 m footprint</span>
+            </div>
+
+        </div>
+
+        <div class="gis-map-container">
+
+            <iframe
+                id="hsrMap"
+                src="../data/results/hsr_routes_clean.html"
+                title="HSR Route Interactive GIS Map"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         ROUTE SUMMARY — OUTSIDE MAP
+         ===================================================== -->
+
+    <div class="analysis-card gis-external-card">
+
+        <div class="analysis-card-header">
+
+            <div>
+                <span class="eyebrow">ROUTE ANALYSIS</span>
+                <h3>HSR Route Summary</h3>
+                <p>
+                    Comparative route-level engineering and environmental
+                    metrics.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="route-summary-grid">
+
+            <!-- ROUTE 1 -->
+            <div class="route-summary-card">
+
+                <div class="route-summary-title">
+                    <span>ROUTE 1</span>
+                </div>
+
+                <div class="route-summary-length">
+                    <span>Route Length</span>
+                    <strong id="gis-r1-length">788.785 km</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Forest</span>
+                    <strong id="gis-r1-forest">0.048307 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Agriculture</span>
+                    <strong id="gis-r1-agriculture">0.878612 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Built-up</span>
+                    <strong id="gis-r1-builtup">0.781871 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Wetland</span>
+                    <strong id="gis-r1-wetland">0.024743 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Education</span>
+                    <strong id="gis-r1-education">39</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Highway Interactions</span>
+                    <strong id="gis-r1-highway">60</strong>
+                </div>
+
+            </div>
+
+
+            <!-- ROUTE 2 -->
+            <div class="route-summary-card">
+
+                <div class="route-summary-title">
+                    <span>ROUTE 2</span>
+                </div>
+
+                <div class="route-summary-length">
+                    <span>Route Length</span>
+                    <strong id="gis-r2-length">789.902 km</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Forest</span>
+                    <strong id="gis-r2-forest">0.055493 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Agriculture</span>
+                    <strong id="gis-r2-agriculture">1.571022 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Built-up</span>
+                    <strong id="gis-r2-builtup">0.736322 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Wetland</span>
+                    <strong id="gis-r2-wetland">0.063228 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Education</span>
+                    <strong id="gis-r2-education">31</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Highway Interactions</span>
+                    <strong id="gis-r2-highway">55</strong>
+                </div>
+
+            </div>
+
+
+            <!-- ROUTE 3 -->
+            <div class="route-summary-card">
+
+                <div class="route-summary-title">
+                    <span>ROUTE 3</span>
+                </div>
+
+                <div class="route-summary-length">
+                    <span>Route Length</span>
+                    <strong id="gis-r3-length">799.260 km</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Forest</span>
+                    <strong id="gis-r3-forest">0.056215 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Agriculture</span>
+                    <strong id="gis-r3-agriculture">1.532198 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Built-up</span>
+                    <strong id="gis-r3-builtup">0.793088 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Wetland</span>
+                    <strong id="gis-r3-wetland">0.044774 km²</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Education</span>
+                    <strong id="gis-r3-education">39</strong>
+                </div>
+
+                <div class="route-summary-row">
+                    <span>Highway Interactions</span>
+                    <strong id="gis-r3-highway">55</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DECISION SUPPORT — OUTSIDE MAP
+         ===================================================== -->
+
+    <div class="analysis-card gis-external-card">
+
+        <div class="analysis-card-header">
+
+            <div>
+                <span class="eyebrow">DECISION SUPPORT</span>
+                <h3>AHP & TOPSIS Results</h3>
+                <p>
+                    Transparent view of the multi-criteria decision
+                    analysis used for route evaluation.
+                </p>
+            </div>
+
+            <span class="analysis-unit">
+                AHP + TOPSIS
+            </span>
+
+        </div>
+
+
+        <div class="decision-gis-grid">
+
+            <!-- AHP -->
+            <div class="decision-panel">
+
+                <h4>AHP Criterion Weights</h4>
+
+                <div class="weight-row">
+                    <span>Forest</span>
+                    <strong>16.94%</strong>
+                </div>
+
+                <div class="weight-row">
+                    <span>Agriculture</span>
+                    <strong>10.20%</strong>
+                </div>
+
+                <div class="weight-row">
+                    <span>Built-up</span>
+                    <strong>9.44%</strong>
+                </div>
+
+                <div class="weight-row">
+                    <span>Education</span>
+                    <strong>5.87%</strong>
+                </div>
+
+                <div class="weight-row">
+                    <span>Wetland</span>
+                    <strong>20.02%</strong>
+                </div>
+
+                <div class="weight-row">
+                    <span>Waterbody</span>
+                    <strong>6.63%</strong>
+                </div>
+
+                <div class="weight-row">
+                    <span>ESZ</span>
+                    <strong>14.99%</strong>
+                </div>
+
+                <div class="weight-row">
+                    <span>Route Length</span>
+                    <strong>8.74%</strong>
+                </div>
+
+                <div class="weight-row">
+                    <span>Highway</span>
+                    <strong>7.16%</strong>
+                </div>
+
+                <div class="consistency-box">
+                    <span>Consistency Ratio</span>
+                    <strong>0.0133</strong>
+                </div>
+
+            </div>
+
+
+            <!-- TOPSIS -->
+            <div class="decision-panel">
+
+                <h4>TOPSIS Results</h4>
+
+                <table class="decision-table">
+
+                    <thead>
+                        <tr>
+                            <th>Route</th>
+                            <th>Score</th>
+                            <th>Rank</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Route 1</td>
+                            <td>0.612012</td>
+                            <td>1</td>
+                        </tr>
+
+                        <tr>
+                            <td>Route 2</td>
+                            <td>0.419965</td>
+                            <td>3</td>
+                        </tr>
+
+                        <tr>
+                            <td>Route 3</td>
+                            <td>0.420054</td>
+                            <td>2</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <div class="decision-note">
+                    <strong>Decision-support output</strong>
+                    <p>
+                        TOPSIS scores represent the calculated relative
+                        closeness values from the specified criteria and
+                        AHP weights.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         GIS PARAMETERS
+         ===================================================== -->
+
+    <div class="gis-info-grid">
+
+        <div class="info-card">
+
+            <div class="info-card-header">
+                <div>
+                    <h3>Spatial Analysis Layers</h3>
+                    <p>Interactive GIS data available in the map.</p>
+                </div>
+            </div>
+
+            <div class="layer-list">
+
+                <div class="layer-item">
+                    <span class="layer-indicator route-layer"></span>
+                    <div>
+                        <strong>HSR Routes</strong>
+                        <small>Route 1 · Route 2 · Route 3</small>
+                    </div>
+                </div>
+
+                <div class="layer-item">
+                    <span class="layer-indicator highway-layer"></span>
+                    <div>
+                        <strong>Highway Interactions</strong>
+                        <small>NH and identified major-road interactions</small>
+                    </div>
+                </div>
+
+                <div class="layer-item">
+                    <span class="layer-indicator station-layer"></span>
+                    <div>
+                        <strong>Station Candidates</strong>
+                        <small>Candidate locations and chainage search</small>
+                    </div>
+                </div>
+
+                <div class="layer-item">
+                    <span class="layer-indicator forest-layer"></span>
+                    <div>
+                        <strong>Environmental Layers</strong>
+                        <small>Forest · Agriculture · Built-up</small>
+                    </div>
+                </div>
+
+                <div class="layer-item">
+                    <span class="layer-indicator water-layer"></span>
+                    <div>
+                        <strong>Water & Wetlands</strong>
+                        <small>Water bodies and wetland impacts</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-card-header">
+                <div>
+                    <h3>Engineering Parameters</h3>
+                    <p>Current project assumptions.</p>
+                </div>
+            </div>
+
+            <div class="parameter-list">
+
+                <div class="parameter-row">
+                    <span>Ground footprint</span>
+                    <strong>3.5 m</strong>
+                </div>
+
+                <div class="parameter-row">
+                    <span>Offset each side</span>
+                    <strong>1.75 m</strong>
+                </div>
+
+                <div class="parameter-row">
+                    <span>Track gauge</span>
+                    <strong>1.435 m</strong>
+                </div>
+
+                <div class="parameter-row">
+                    <span>Planning ROW</span>
+                    <strong>17.5 m</strong>
+                </div>
+
+                <div class="parameter-row">
+                    <span>Education threshold</span>
+                    <strong>100 m</strong>
+                </div>
+
+                <div class="parameter-row">
+                    <span>Spatial CRS</span>
+                    <strong>EPSG:32643</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+            <section id="impact" class="page-section">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">ENVIRONMENTAL & SOCIAL ASSESSMENT</span>
+            <h2>Impact Analysis</h2>
+            <p>
+                Comparative assessment of land-use, environmental,
+                educational and water-related route impacts.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- IMPACT SUMMARY -->
+    <div class="impact-summary-grid">
+
+        <div class="impact-summary-card">
+            <span class="impact-label">FOREST IMPACT</span>
+            <strong id="impact-forest-value">—</strong>
+            <small>km² · 3.5 m footprint</small>
+        </div>
+
+        <div class="impact-summary-card">
+            <span class="impact-label">AGRICULTURE IMPACT</span>
+            <strong id="impact-agriculture-value">—</strong>
+            <small>km² · 3.5 m footprint</small>
+        </div>
+
+        <div class="impact-summary-card">
+            <span class="impact-label">BUILT-UP IMPACT</span>
+            <strong id="impact-builtup-value">—</strong>
+            <small>km² · 3.5 m footprint</small>
+        </div>
+
+        <div class="impact-summary-card">
+            <span class="impact-label">WETLAND IMPACT</span>
+            <strong id="impact-wetland-value">—</strong>
+            <small>km² · 3.5 m footprint</small>
+        </div>
+
+    </div>
+
+
+    <!-- MAIN IMPACT CHART -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <h3>Environmental Impact Comparison</h3>
+                <p>
+                    Direct ground-footprint impacts across the three
+                    HSR alternatives.
+                </p>
+            </div>
+
+            <span class="analysis-unit">
+                Area (km²)
+            </span>
+        </div>
+
+        <div class="impact-chart-container">
+            <canvas id="impactComparisonChart"></canvas>
+        </div>
+
+    </div>
+
+
+    <!-- SOCIAL + WATER ANALYSIS -->
+    <div class="impact-analysis-grid">
+
+        <div class="analysis-card">
+
+            <div class="analysis-card-header">
+                <div>
+                    <h3>Social & Educational Exposure</h3>
+                    <p>
+                        Education facilities within 100 m of the
+                        HSR centerline.
+                    </p>
+                </div>
+            </div>
+
+            <div class="impact-chart-small">
+                <canvas id="educationImpactChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <div class="analysis-card">
+
+            <div class="analysis-card-header">
+                <div>
+                    <h3>Water Environment</h3>
+                    <p>
+                        Bhuvan polygon intersections identified
+                        along each alternative.
+                    </p>
+                </div>
+            </div>
+
+            <div class="impact-chart-small">
+                <canvas id="waterImpactChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMPACT DETAILS TABLE -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <h3>Impact Metrics by Route</h3>
+                <p>
+                    Raw calculated values used by the decision-support
+                    analysis.
+                </p>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+
+            <table class="data-table">
+
+                <thead>
+                    <tr>
+                        <th>Impact Criterion</th>
+                        <th>Route 1</th>
+                        <th>Route 2</th>
+                        <th>Route 3</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Forest Area</td>
+                        <td id="impact-table-forest-r1">—</td>
+                        <td id="impact-table-forest-r2">—</td>
+                        <td id="impact-table-forest-r3">—</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Agriculture Area</td>
+                        <td id="impact-table-agriculture-r1">—</td>
+                        <td id="impact-table-agriculture-r2">—</td>
+                        <td id="impact-table-agriculture-r3">—</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Built-up Area</td>
+                        <td id="impact-table-builtup-r1">—</td>
+                        <td id="impact-table-builtup-r2">—</td>
+                        <td id="impact-table-builtup-r3">—</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wetland Impact</td>
+                        <td id="impact-table-wetland-r1">—</td>
+                        <td id="impact-table-wetland-r2">—</td>
+                        <td id="impact-table-wetland-r3">—</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Educational Facilities</td>
+                        <td id="impact-table-education-r1">—</td>
+                        <td id="impact-table-education-r2">—</td>
+                        <td id="impact-table-education-r3">—</td>
+                        <td>within 100 m</td>
+                    </tr>
+
+                    <tr>
+                        <td>Waterbody Polygon Intersections</td>
+                        <td id="impact-table-water-r1">—</td>
+                        <td id="impact-table-water-r2">—</td>
+                        <td id="impact-table-water-r3">—</td>
+                        <td>features</td>
+                    </tr>
+
+                    <tr>
+                        <td>Nearest ESZ</td>
+                        <td id="impact-table-esz-r1">—</td>
+                        <td id="impact-table-esz-r2">—</td>
+                        <td id="impact-table-esz-r3">—</td>
+                        <td>km</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- METHODOLOGY NOTE -->
+    <div class="method-note">
+
+        <div class="method-note-title">
+            Impact calculation basis
+        </div>
+
+        <p>
+            Environmental area impacts use the permanent 3.5 m
+            ground footprint, with 1.75 m on each side of the
+            HSR centerline. Educational facilities are evaluated
+            within 100 m of the centerline. ESZ is represented by
+            nearest perpendicular distance rather than treating
+            proximity as an intersection.
+        </p>
+
+    </div>
+
+</section>
+
+
+            <!-- ================= CRITERIA ANALYSIS ================= -->
+            <section id="criteria" class="page-section">
+
+                <div class="section-heading criteria-page-heading">
+                    <div>
+                        <span class="eyebrow">CRITERIA ANALYSIS</span>
+                        <h2>Understand How Each Route Factor Is Measured</h2>
+                        <p>
+                            Select a criterion to see what it measures, how the GIS calculation
+                            is performed, the analysis assumption, and the route-wise values.
+                        </p>
+                    </div>
+
+                    <span class="status-badge">9 CRITERIA</span>
+                </div>
+
+                <!-- HOW TO READ -->
+                <div class="criteria-read-strip">
+                    <div class="criteria-read-title">
+                        <span class="criteria-read-icon">ⓘ</span>
+                        <div>
+                            <strong>How to read this analysis</strong>
+                            <span>Different criteria use different spatial measurements.</span>
+                        </div>
+                    </div>
+
+                    <div class="criteria-read-points">
+                        <span><b>Land impact:</b> 3.5 m permanent ground footprint</span>
+                        <span><b>Education:</b> facilities within 100 m of centerline</span>
+                        <span><b>ESZ:</b> nearest perpendicular distance</span>
+                        <span><b>Highways:</b> identified road interactions</span>
+                    </div>
+                </div>
+
+                <!-- CRITERION SELECTOR -->
+                <div class="criteria-selector-panel">
+                    <div class="criteria-selector-heading">
+                        <div>
+                            <span class="section-kicker">SELECT AN ANALYSIS CRITERION</span>
+                            <h3>Explore the nine decision criteria</h3>
+                        </div>
+                        <span class="criteria-selector-note">Click any card to update the analysis</span>
+                    </div>
+
+                    <div class="criteria-selector">
+
+                        <button type="button" class="criterion-btn active" data-criterion="forest">
+                            <span class="criterion-icon">🌳</span>
+                            <span class="criterion-card-title">Forest</span>
+                            <span class="criterion-card-subtitle">Land impact · km²</span>
+                        </button>
+
+                        <button type="button" class="criterion-btn" data-criterion="agriculture">
+                            <span class="criterion-icon">🌾</span>
+                            <span class="criterion-card-title">Agriculture</span>
+                            <span class="criterion-card-subtitle">Land impact · km²</span>
+                        </button>
+
+                        <button type="button" class="criterion-btn" data-criterion="builtup">
+                            <span class="criterion-icon">🏢</span>
+                            <span class="criterion-card-title">Built-up</span>
+                            <span class="criterion-card-subtitle">Urban land · km²</span>
+                        </button>
+
+                        <button type="button" class="criterion-btn" data-criterion="education">
+                            <span class="criterion-icon">🎓</span>
+                            <span class="criterion-card-title">Education</span>
+                            <span class="criterion-card-subtitle">Proximity · 100 m</span>
+                        </button>
+
+                        <button type="button" class="criterion-btn" data-criterion="wetland">
+                            <span class="criterion-icon">💧</span>
+                            <span class="criterion-card-title">Wetland</span>
+                            <span class="criterion-card-subtitle">Land impact · km²</span>
+                        </button>
+
+                        <button type="button" class="criterion-btn" data-criterion="waterbody">
+                            <span class="criterion-icon">🌊</span>
+                            <span class="criterion-card-title">Waterbody</span>
+                            <span class="criterion-card-subtitle">Polygon features</span>
+                        </button>
+
+                        <button type="button" class="criterion-btn" data-criterion="esz">
+                            <span class="criterion-icon">🟣</span>
+                            <span class="criterion-card-title">ESZ</span>
+                            <span class="criterion-card-subtitle">Nearest distance</span>
+                        </button>
+
+                        <button type="button" class="criterion-btn" data-criterion="length">
+                            <span class="criterion-icon">🛤️</span>
+                            <span class="criterion-card-title">Route Length</span>
+                            <span class="criterion-card-subtitle">Alignment · km</span>
+                        </button>
+
+                        <button type="button" class="criterion-btn" data-criterion="highway">
+                            <span class="criterion-icon">🛣️</span>
+                            <span class="criterion-card-title">Highway</span>
+                            <span class="criterion-card-subtitle">Interactions</span>
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- SELECTED CRITERION EXPLAINER -->
+                <div class="criterion-explainer">
+
+                    <div class="criterion-visual">
+                        <div class="criterion-large-icon" id="criterion-large-icon">🌳</div>
+                        <div class="criterion-visual-title" id="criterion-visual-title">Forest Area</div>
+                        <div class="criterion-visual-label">SELECTED CRITERION</div>
+                    </div>
+
+                    <div class="criterion-explanation">
+
+                        <div class="criterion-heading-row">
+                            <div>
+                                <span class="section-kicker">SELECTED CRITERION</span>
+                                <h2 id="criterion-title">Forest Area</h2>
+                            </div>
+
+                            <span class="criterion-unit-badge" id="criterion-unit">km²</span>
+                        </div>
+
+                        <div class="criterion-info-grid">
+
+                            <div class="explanation-block">
+                                <div class="explanation-number">01</div>
+                                <div>
+                                    <h4>What are we measuring?</h4>
+                                    <p id="criterion-interpretation">
+                                        Direct forest area intersected by the permanent ground footprint.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="explanation-block">
+                                <div class="explanation-number">02</div>
+                                <div>
+                                    <h4>How is it calculated?</h4>
+                                    <p id="criterion-calculation">
+                                        3.5 m ground footprint intersected with forest polygons.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="assumption-box">
+                            <div class="assumption-icon">⚙</div>
+                            <div>
+                                <strong>Analysis assumption</strong>
+                                <p id="criterion-assumption">
+                                    Total ground-impact width = 3.5 m; 1.75 m on each side of the HSR centerline.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- METHOD VISUAL -->
+                <div class="criterion-method-card">
+
+                    <div class="criterion-method-header">
+                        <div>
+                            <span class="section-kicker">SPATIAL CALCULATION</span>
+                            <h3 id="criterion-method-title">How the 3.5 m ground footprint is applied</h3>
+                        </div>
+                        <span class="method-type-badge" id="criterion-method-badge">FOOTPRINT AREA</span>
+                    </div>
+
+                    <div id="criterion-method-content">
+
+                        <div class="footprint-diagram">
+
+                            <div class="footprint-side left">
+                                <strong>1.75 m</strong>
+                                <span>from centerline</span>
+                            </div>
+
+                            <div class="centerline-rail">
+                                <span>HSR</span>
+                                <strong>CENTERLINE</strong>
+                            </div>
+
+                            <div class="footprint-side right">
+                                <strong>1.75 m</strong>
+                                <span>from centerline</span>
+                            </div>
+
+                        </div>
+
+                        <div class="footprint-total">
+                            <span>Permanent ground footprint</span>
+                            <strong>3.5 m total width</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ROUTE VALUES + CHART -->
+                <div class="criteria-results-grid">
+
+                    <div class="analysis-card criterion-chart-card">
+
+                        <div class="analysis-card-header">
+                            <div>
+                                <span class="eyebrow">ROUTE COMPARISON</span>
+                                <h3 id="criterion-chart-title">Forest Area by Route</h3>
+                                <p>
+                                    Same criterion, calculated consistently for R1, R2 and R3.
+                                </p>
+                            </div>
+
+                            <span class="analysis-unit" id="criterion-chart-unit">km²</span>
+                        </div>
+
+                        <div class="criterion-chart-container">
+                            <canvas id="criterionChart"></canvas>
+                        </div>
+
+                    </div>
+
+                    <div class="analysis-card criterion-values-card">
+
+                        <div class="analysis-card-header">
+                            <div>
+                                <span class="eyebrow">ROUTE VALUES</span>
+                                <h3>Measured values</h3>
+                                <p>Raw criterion values used by the analysis.</p>
+                            </div>
+                        </div>
+
+                        <div class="criterion-route-value-grid">
+
+                            <div class="criterion-route-value">
+                                <span>ROUTE 1</span>
+                                <strong id="criterion-r1">0.048307</strong>
+                                <small id="criterion-r1-unit">km²</small>
+                            </div>
+
+                            <div class="criterion-route-value">
+                                <span>ROUTE 2</span>
+                                <strong id="criterion-r2">0.055493</strong>
+                                <small id="criterion-r2-unit">km²</small>
+                            </div>
+
+                            <div class="criterion-route-value">
+                                <span>ROUTE 3</span>
+                                <strong id="criterion-r3">0.056215</strong>
+                                <small id="criterion-r3-unit">km²</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- WHY IT MATTERS -->
+                <div class="criterion-why">
+
+                    <div class="why-icon">ⓘ</div>
+
+                    <div>
+                        <span class="section-kicker">INTERPRETATION</span>
+                        <h3>Why this criterion is included</h3>
+                        <p id="criterion-why-text">
+                            Measures the direct permanent ground-footprint interaction with forest land.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- DETAIL TABLE -->
+                <div class="analysis-card criterion-detail-card">
+
+                    <div class="analysis-card-header">
+                        <div>
+                            <span class="eyebrow">DETAILED VALUES</span>
+                            <h3>Criterion-wise route records</h3>
+                            <p>
+                                Values are shown with the unit and the measurement interpretation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Route</th>
+                                    <th>Value</th>
+                                    <th>Unit</th>
+                                    <th>What the value represents</th>
+                                </tr>
+                            </thead>
+                            <tbody id="criterion-table-body">
+                                <tr>
+                                    <td>R1</td>
+                                    <td>0.048307</td>
+                                    <td>km²</td>
+                                    <td>Direct forest area intersected by the permanent ground footprint.</td>
+                                </tr>
+                                <tr>
+                                    <td>R2</td>
+                                    <td>0.055493</td>
+                                    <td>km²</td>
+                                    <td>Direct forest area intersected by the permanent ground footprint.</td>
+                                </tr>
+                                <tr>
+                                    <td>R3</td>
+                                    <td>0.056215</td>
+                                    <td>km²</td>
+                                    <td>Direct forest area intersected by the permanent ground footprint.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section id="decision" class="page-section">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">MULTI-CRITERIA DECISION ANALYSIS</span>
+            <h2>AHP / TOPSIS</h2>
+            <p>
+                Transparent multi-criteria evaluation of the three
+                HSR alignment alternatives.
+            </p>
+        </div>
+
+        <span class="status-badge">
+            DECISION SUPPORT
+        </span>
+    </div>
+
+
+    <!-- AHP SUMMARY -->
+    <div class="decision-summary-grid">
+
+        <div class="decision-stat-card">
+            <span>AHP CRITERIA</span>
+            <strong>9</strong>
+            <small>Evaluation criteria</small>
+        </div>
+
+        <div class="decision-stat-card">
+            <span>CONSISTENCY RATIO</span>
+            <strong>0.0133</strong>
+            <small>AHP consistency measure</small>
+        </div>
+
+        <div class="decision-stat-card">
+            <span>ALTERNATIVES</span>
+            <strong>3</strong>
+            <small>R1 · R2 · R3</small>
+        </div>
+
+        <div class="decision-stat-card">
+            <span>METHOD</span>
+            <strong>AHP + TOPSIS</strong>
+            <small>Weighted MCDM framework</small>
+        </div>
+
+    </div>
+
+
+    <!-- AHP WEIGHTS -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">AHP</span>
+                <h3>Criterion Weights</h3>
+                <p>
+                    Relative criterion weights used in the TOPSIS analysis.
+                </p>
+            </div>
+        </div>
+
+        <div class="ahp-layout">
+
+            <div class="ahp-chart-container">
+                <canvas id="ahpWeightChart"></canvas>
+            </div>
+
+            <div class="weight-table">
+
+                <table class="data-table">
+
+                    <thead>
+                        <tr>
+                            <th>Criterion</th>
+                            <th>Weight</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td>Forest Area</td><td>16.94%</td></tr>
+                        <tr><td>Agriculture Area</td><td>10.20%</td></tr>
+                        <tr><td>Built-up Area</td><td>9.44%</td></tr>
+                        <tr><td>Educational Sector</td><td>5.87%</td></tr>
+                        <tr><td>Wetland Impact</td><td>20.02%</td></tr>
+                        <tr><td>Waterbody</td><td>6.63%</td></tr>
+                        <tr><td>Nearest ESZ</td><td>14.99%</td></tr>
+                        <tr><td>Route Length</td><td>8.74%</td></tr>
+                        <tr><td>Highway Interaction</td><td>7.16%</td></tr>
+                    </tbody>
+
+                </table>
+
+                <div class="consistency-box">
+                    <span>Consistency Ratio</span>
+                    <strong>0.0133</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- DECISION MATRIX -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">INPUT DATA</span>
+                <h3>Decision Matrix</h3>
+                <p>
+                    Raw criterion values supplied to the decision model.
+                </p>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+
+            <table class="data-table">
+
+                <thead>
+                    <tr>
+                        <th>Criterion</th>
+                        <th>Route 1</th>
+                        <th>Route 2</th>
+                        <th>Route 3</th>
+                        <th>Unit</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Forest Area</td>
+                        <td>0.048307</td>
+                        <td>0.055493</td>
+                        <td>0.056215</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Agriculture Area</td>
+                        <td>0.878612</td>
+                        <td>1.571022</td>
+                        <td>1.532198</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Built-up Area</td>
+                        <td>0.781871</td>
+                        <td>0.736322</td>
+                        <td>0.793088</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Educational Sector</td>
+                        <td>39</td>
+                        <td>31</td>
+                        <td>39</td>
+                        <td>facilities</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wetland Impact</td>
+                        <td>0.024743</td>
+                        <td>0.063228</td>
+                        <td>0.044774</td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Waterbody</td>
+                        <td>18</td>
+                        <td>65</td>
+                        <td>51</td>
+                        <td>features</td>
+                    </tr>
+
+                    <tr>
+                        <td>Nearest ESZ</td>
+                        <td>1.459039</td>
+                        <td>3.398557</td>
+                        <td>3.653662</td>
+                        <td>km</td>
+                    </tr>
+
+                    <tr>
+                        <td>Route Length</td>
+                        <td>788.785</td>
+                        <td>789.902</td>
+                        <td>799.260</td>
+                        <td>km</td>
+                    </tr>
+
+                    <tr>
+                        <td>Highway Interaction</td>
+                        <td>60</td>
+                        <td>55</td>
+                        <td>55</td>
+                        <td>interactions</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOPSIS -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+
+            <div>
+                <span class="eyebrow">TOPSIS</span>
+                <h3>Route Evaluation Results</h3>
+                <p>
+                    Relative closeness values calculated from the weighted
+                    decision matrix.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="topsis-layout">
+
+            <div class="topsis-chart-container">
+                <canvas id="topsisChart"></canvas>
+            </div>
+
+            <div class="topsis-result-table">
+
+                <table class="data-table">
+
+                    <thead>
+                        <tr>
+                            <th>Route</th>
+                            <th>Score</th>
+                            <th>Rank</th>
+                            <th>Distance +</th>
+                            <th>Distance −</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Route 1</td>
+                            <td>0.612012</td>
+                            <td>1</td>
+                            <td>0.191816</td>
+                            <td>0.302570</td>
+                        </tr>
+
+                        <tr>
+                            <td>Route 2</td>
+                            <td>0.419965</td>
+                            <td>3</td>
+                            <td>0.280984</td>
+                            <td>0.203442</td>
+                        </tr>
+
+                        <tr>
+                            <td>Route 3</td>
+                            <td>0.420054</td>
+                            <td>2</td>
+                            <td>0.266434</td>
+                            <td>0.192978</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- METHODOLOGY -->
+    <div class="method-note">
+
+        <div class="method-note-title">
+            Decision-support interpretation
+        </div>
+
+        <p>
+            AHP provides the criterion weights used by the decision model.
+            TOPSIS evaluates the alternatives using their weighted
+            normalized criterion values and calculates relative closeness
+            to the ideal and negative-ideal solutions. The resulting
+            scores are analytical outputs of the specified model and
+            should be interpreted together with the underlying GIS evidence.
+        </p>
+
+    </div>
+
+</section>
+
+
+            <section id="sensitivity" class="page-section">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">ROBUSTNESS ANALYSIS</span>
+            <h2>Sensitivity Analysis</h2>
+            <p>
+                Examination of TOPSIS results under different
+                criterion-weight scenarios.
+            </p>
+        </div>
+
+        <span class="status-badge">
+            8 SCENARIOS
+        </span>
+    </div>
+
+
+    <!-- SUMMARY -->
+    <div class="decision-summary-grid">
+
+        <div class="decision-stat-card">
+            <span>SCENARIOS TESTED</span>
+            <strong>8</strong>
+            <small>Weight configurations</small>
+        </div>
+
+        <div class="decision-stat-card">
+            <span>ALTERNATIVES</span>
+            <strong>3</strong>
+            <small>R1 · R2 · R3</small>
+        </div>
+
+        <div class="decision-stat-card">
+            <span>BASELINE SCORE</span>
+            <strong>0.612012</strong>
+            <small>Route 1</small>
+        </div>
+
+        <div class="decision-stat-card">
+            <span>ANALYSIS TYPE</span>
+            <strong>TOPSIS</strong>
+            <small>Weight sensitivity</small>
+        </div>
+
+    </div>
+
+
+    <!-- SCENARIO SELECTOR -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+
+            <div>
+                <span class="eyebrow">SCENARIO EXPLORER</span>
+                <h3>Weight Scenario</h3>
+                <p>
+                    Select a scenario to inspect the resulting
+                    TOPSIS scores.
+                </p>
+            </div>
+
+            <select id="sensitivityScenario"
+                    class="analysis-select">
+
+                <option value="baseline">
+                    Baseline AHP
+                </option>
+
+                <option value="equal">
+                    Equal Weights
+                </option>
+
+                <option value="environmental">
+                    Environmental Focus
+                </option>
+
+                <option value="agriculture">
+                    Agriculture Focus
+                </option>
+
+                <option value="social">
+                    Social Development Focus
+                </option>
+
+                <option value="infrastructure">
+                    Infrastructure Focus
+                </option>
+
+                <option value="water">
+                    Water Environment Focus
+                </option>
+
+                <option value="forest">
+                    Forest Focus
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="sensitivity-selected">
+
+            <div>
+                <span>Selected Scenario</span>
+                <strong id="selectedScenarioName">
+                    Baseline AHP
+                </strong>
+            </div>
+
+            <div>
+                <span>Route 1</span>
+                <strong id="selectedR1Score">
+                    0.612012
+                </strong>
+            </div>
+
+            <div>
+                <span>Route 2</span>
+                <strong id="selectedR2Score">
+                    0.419965
+                </strong>
+            </div>
+
+            <div>
+                <span>Route 3</span>
+                <strong id="selectedR3Score">
+                    0.420054
+                </strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CHART -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+
+            <div>
+                <span class="eyebrow">TOPSIS SCORE</span>
+                <h3>Scenario Comparison</h3>
+                <p>
+                    Relative TOPSIS scores for the selected weighting
+                    scenario.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="sensitivity-chart-container">
+            <canvas id="sensitivityChart"></canvas>
+        </div>
+
+    </div>
+
+
+    <!-- ALL SCENARIOS -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+
+            <div>
+                <span class="eyebrow">COMPLETE RESULTS</span>
+                <h3>All Sensitivity Scenarios</h3>
+                <p>
+                    TOPSIS scores across all tested weighting configurations.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table class="data-table sensitivity-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Scenario</th>
+                        <th>Route 1</th>
+                        <th>Route 2</th>
+                        <th>Route 3</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Baseline AHP</td>
+                        <td>0.612012</td>
+                        <td>0.419965</td>
+                        <td>0.420054</td>
+                    </tr>
+
+                    <tr>
+                        <td>Equal Weights</td>
+                        <td>0.540434</td>
+                        <td>0.521867</td>
+                        <td>0.390529</td>
+                    </tr>
+
+                    <tr>
+                        <td>Environmental Focus</td>
+                        <td>0.623205</td>
+                        <td>0.387451</td>
+                        <td>0.444094</td>
+                    </tr>
+
+                    <tr>
+                        <td>Agriculture Focus</td>
+                        <td>0.627658</td>
+                        <td>0.401517</td>
+                        <td>0.401890</td>
+                    </tr>
+
+                    <tr>
+                        <td>Social Development Focus</td>
+                        <td>0.579886</td>
+                        <td>0.459028</td>
+                        <td>0.396266</td>
+                    </tr>
+
+                    <tr>
+                        <td>Infrastructure Focus</td>
+                        <td>0.604688</td>
+                        <td>0.455733</td>
+                        <td>0.424041</td>
+                    </tr>
+
+                    <tr>
+                        <td>Water Environment Focus</td>
+                        <td>0.666638</td>
+                        <td>0.356767</td>
+                        <td>0.428961</td>
+                    </tr>
+
+                    <tr>
+                        <td>Forest Focus</td>
+                        <td>0.687211</td>
+                        <td>0.346309</td>
+                        <td>0.327491</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- STABILITY -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+
+            <div>
+                <span class="eyebrow">ROBUSTNESS</span>
+                <h3>Rank Stability</h3>
+                <p>
+                    Observed rank changes across the tested scenarios.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="stability-grid">
+
+            <div class="stability-card">
+
+                <span class="stability-route">ROUTE 1</span>
+
+                <strong>Rank 1</strong>
+
+                <p>
+                    Rank 1 in all eight tested scenarios.
+                </p>
+
+            </div>
+
+
+            <div class="stability-card">
+
+                <span class="stability-route">ROUTE 2</span>
+
+                <strong>Ranks 2–3</strong>
+
+                <p>
+                    Ranking changes depending on the weighting scenario.
+                </p>
+
+            </div>
+
+
+            <div class="stability-card">
+
+                <span class="stability-route">ROUTE 3</span>
+
+                <strong>Ranks 2–3</strong>
+
+                <p>
+                    Ranking changes depending on the weighting scenario.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NOTE -->
+    <div class="method-note">
+
+        <div class="method-note-title">
+            Interpretation
+        </div>
+
+        <p>
+            Sensitivity analysis evaluates how the calculated TOPSIS
+            scores change when the relative criterion weights are
+            altered. It is a robustness analysis of the decision model,
+            not a replacement for the underlying GIS evidence or
+            engineering assessment.
+        </p>
+
+    </div>
+
+</section>
+
+
+            <section id="methodology" class="page-section">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">SYSTEM DOCUMENTATION</span>
+            <h2>Methodology</h2>
+            <p>
+                GIS processing, impact measurement and multi-criteria
+                decision-support methodology used in the HSR analysis.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- WORKFLOW -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">WORKFLOW</span>
+                <h3>HSR Route Evaluation Pipeline</h3>
+                <p>
+                    Processing sequence from spatial datasets to
+                    decision-support outputs.
+                </p>
+            </div>
+        </div>
+
+        <div class="method-workflow">
+
+            <div class="workflow-step">
+                <span>01</span>
+                <strong>Route Data</strong>
+                <small>
+                    Three predefined HSR alignment alternatives:
+                    R1, R2 and R3.
+                </small>
+            </div>
+
+            <div class="workflow-arrow">→</div>
+
+            <div class="workflow-step">
+                <span>02</span>
+                <strong>GIS Processing</strong>
+                <small>
+                    Spatial intersection, proximity and distance
+                    calculations.
+                </small>
+            </div>
+
+            <div class="workflow-arrow">→</div>
+
+            <div class="workflow-step">
+                <span>03</span>
+                <strong>Impact Metrics</strong>
+                <small>
+                    Environmental, social and infrastructure
+                    indicators.
+                </small>
+            </div>
+
+            <div class="workflow-arrow">→</div>
+
+            <div class="workflow-step">
+                <span>04</span>
+                <strong>AHP Weighting</strong>
+                <small>
+                    Criterion weights and consistency assessment.
+                </small>
+            </div>
+
+            <div class="workflow-arrow">→</div>
+
+            <div class="workflow-step">
+                <span>05</span>
+                <strong>TOPSIS</strong>
+                <small>
+                    Weighted route evaluation and comparative scores.
+                </small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ENGINEERING ASSUMPTIONS -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">ENGINEERING BASIS</span>
+                <h3>Geometry & Spatial Assumptions</h3>
+                <p>
+                    Parameters applied consistently throughout the
+                    GIS analysis.
+                </p>
+            </div>
+        </div>
+
+        <div class="method-parameter-grid">
+
+            <div class="method-parameter">
+                <span>Ground Footprint</span>
+                <strong>3.5 m</strong>
+                <small>
+                    Permanent ground-impact width.
+                </small>
+            </div>
+
+            <div class="method-parameter">
+                <span>Centerline Offset</span>
+                <strong>±1.75 m</strong>
+                <small>
+                    Half of the 3.5 m footprint.
+                </small>
+            </div>
+
+            <div class="method-parameter">
+                <span>Track Gauge</span>
+                <strong>1.435 m</strong>
+                <small>
+                    Standard gauge; separate from impact footprint.
+                </small>
+            </div>
+
+            <div class="method-parameter">
+                <span>Planning ROW</span>
+                <strong>17.5 m</strong>
+                <small>
+                    Planning/reference corridor, not impact footprint.
+                </small>
+            </div>
+
+            <div class="method-parameter">
+                <span>Spatial CRS</span>
+                <strong>EPSG:32643</strong>
+                <small>
+                    Metric coordinate reference system used for
+                    spatial calculations.
+                </small>
+            </div>
+
+            <div class="method-parameter">
+                <span>Education Threshold</span>
+                <strong>100 m</strong>
+                <small>
+                    Centerline proximity threshold.
+                </small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CRITERIA -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">GIS CRITERIA</span>
+                <h3>Criterion Calculation Methods</h3>
+                <p>
+                    Definition of each analytical criterion.
+                </p>
+            </div>
+        </div>
+
+        <div class="method-table-wrapper">
+
+            <table class="data-table">
+
+                <thead>
+                    <tr>
+                        <th>Criterion</th>
+                        <th>Calculation</th>
+                        <th>Primary Unit</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Forest Area</td>
+                        <td>
+                            3.5 m ground footprint intersected
+                            with forest polygons.
+                        </td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Agriculture Area</td>
+                        <td>
+                            3.5 m ground footprint intersected
+                            with agriculture polygons.
+                        </td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Built-up Area</td>
+                        <td>
+                            3.5 m ground footprint intersected
+                            with built-up polygons.
+                        </td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Educational Sector</td>
+                        <td>
+                            Education facilities located within
+                            100 m of the HSR centerline.
+                        </td>
+                        <td>Facilities</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wetland Impact</td>
+                        <td>
+                            3.5 m ground footprint intersected
+                            with wetland polygons.
+                        </td>
+                        <td>km²</td>
+                    </tr>
+
+                    <tr>
+                        <td>Waterbody</td>
+                        <td>
+                            Bhuvan waterbody polygon features
+                            intersected by the HSR analysis.
+                        </td>
+                        <td>Features</td>
+                    </tr>
+
+                    <tr>
+                        <td>Nearest ESZ</td>
+                        <td>
+                            Closest perpendicular distance from
+                            the HSR centerline to the identified
+                            ESZ feature/boundary.
+                        </td>
+                        <td>km</td>
+                    </tr>
+
+                    <tr>
+                        <td>Route Length</td>
+                        <td>
+                            Length of the supplied HSR centerline
+                            alignment geometry.
+                        </td>
+                        <td>km</td>
+                    </tr>
+
+                    <tr>
+                        <td>Highway Interaction</td>
+                        <td>
+                            Count of identified highway/major-road
+                            interactions in the supplied dataset.
+                        </td>
+                        <td>Interactions</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- INTERSECTION LENGTH -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">CENTERLINE ANALYSIS</span>
+                <h3>Intersection-Length Method</h3>
+                <p>
+                    Length measurements are intentionally separated
+                    from footprint-based impact areas.
+                </p>
+            </div>
+        </div>
+
+        <div class="method-explanation-grid">
+
+            <div class="method-explanation">
+
+                <h4>Impact Area</h4>
+
+                <p>
+                    The permanent 3.5 m ground footprint is intersected
+                    with the relevant polygon layer. The resulting
+                    intersected area is converted from square metres
+                    to square kilometres.
+                </p>
+
+                <code>
+                    Impact Area = Footprint ∩ Polygon
+                </code>
+
+            </div>
+
+            <div class="method-explanation">
+
+                <h4>Intersection Length</h4>
+
+                <p>
+                    The original HSR centerline is intersected with
+                    the relevant polygon layer. The resulting line
+                    length is converted from metres to kilometres.
+                </p>
+
+                <code>
+                    Length = Centerline ∩ Polygon
+                </code>
+
+            </div>
+
+        </div>
+
+        <div class="method-note">
+
+            <div class="method-note-title">
+                Important distinction
+            </div>
+
+            <p>
+                The 3.5 m footprint is used for permanent ground-impact
+                area calculations. It is not used to calculate the
+                centerline intersection lengths.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- HIGHWAY -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">INFRASTRUCTURE</span>
+                <h3>Highway Interaction Method</h3>
+            </div>
+        </div>
+
+        <div class="method-explanation-grid">
+
+            <div class="method-explanation">
+                <h4>Interaction Counting</h4>
+                <p>
+                    Each identified highway/major-road interaction
+                    is counted as an individual infrastructure
+                    interaction for route comparison.
+                </p>
+            </div>
+
+            <div class="method-explanation">
+                <h4>Road Classification</h4>
+                <p>
+                    National Highways, State Highways and MDR are
+                    conceptually distinct classes. Where the supplied
+                    dataset does not separately identify MDR, it is
+                    reported as not separately identifiable rather
+                    than being inferred from another road class.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- AHP TOPSIS -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">MCDM</span>
+                <h3>AHP → TOPSIS Method</h3>
+                <p>
+                    Multi-criteria decision-support workflow.
+                </p>
+            </div>
+        </div>
+
+        <div class="method-mcdm-grid">
+
+            <div class="method-mcdm-step">
+
+                <span>01</span>
+
+                <h4>Criteria Weights</h4>
+
+                <p>
+                    AHP pairwise comparisons are used to derive
+                    relative criterion weights.
+                </p>
+
+            </div>
+
+            <div class="method-mcdm-step">
+
+                <span>02</span>
+
+                <h4>Consistency Check</h4>
+
+                <p>
+                    The consistency ratio is calculated to assess
+                    the consistency of the pairwise comparison matrix.
+                </p>
+
+                <strong>CR = 0.0133</strong>
+
+            </div>
+
+            <div class="method-mcdm-step">
+
+                <span>03</span>
+
+                <h4>TOPSIS Normalization</h4>
+
+                <p>
+                    Criterion values are normalized and combined
+                    with the AHP-derived weights.
+                </p>
+
+            </div>
+
+            <div class="method-mcdm-step">
+
+                <span>04</span>
+
+                <h4>Ideal Solutions</h4>
+
+                <p>
+                    Positive and negative ideal solutions are
+                    established for the weighted alternatives.
+                </p>
+
+            </div>
+
+            <div class="method-mcdm-step">
+
+                <span>05</span>
+
+                <h4>Relative Closeness</h4>
+
+                <p>
+                    Each route receives a TOPSIS relative-closeness
+                    score for comparative analysis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SENSITIVITY -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">ROBUSTNESS</span>
+                <h3>Sensitivity Analysis</h3>
+            </div>
+        </div>
+
+        <p class="method-body-text">
+            Eight weighting scenarios are evaluated to examine how
+            TOPSIS scores and route ordering respond to changes in
+            criterion emphasis. The scenarios include baseline AHP,
+            equal weights, environmental focus, agriculture focus,
+            social development focus, infrastructure focus,
+            water environment focus and forest focus.
+        </p>
+
+    </div>
+
+
+    <!-- DATA SOURCES -->
+    <div class="analysis-card">
+
+        <div class="analysis-card-header">
+            <div>
+                <span class="eyebrow">DATA FOUNDATION</span>
+                <h3>Spatial Data Categories</h3>
+                <p>
+                    Dataset categories incorporated into the analysis.
+                </p>
+            </div>
+        </div>
+
+        <div class="source-grid">
+
+            <div class="source-item">
+                <strong>HSR Alignment</strong>
+                <span>Route 1 · Route 2 · Route 3</span>
+            </div>
+
+            <div class="source-item">
+                <strong>Bhuvan LULC</strong>
+                <span>Land-use / land-cover analysis</span>
+            </div>
+
+            <div class="source-item">
+                <strong>Education Facilities</strong>
+                <span>100 m centerline proximity analysis</span>
+            </div>
+
+            <div class="source-item">
+                <strong>Waterbody Data</strong>
+                <span>Polygon and point-based water analysis</span>
+            </div>
+
+            <div class="source-item">
+                <strong>Wetlands</strong>
+                <span>Polygon intersection analysis</span>
+            </div>
+
+            <div class="source-item">
+                <strong>Eco-Sensitive Zones</strong>
+                <span>Nearest-distance analysis</span>
+            </div>
+
+            <div class="source-item">
+                <strong>Highway Network</strong>
+                <span>Infrastructure interaction analysis</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section id="reports" class="page-section">
+
+    <div class="section-header">
+        <div>
+            <span class="section-kicker">DOCUMENTATION & EXPORT</span>
+            <h1>Reports & Export</h1>
+            <p>
+                Export route evaluation results, decision analysis,
+                sensitivity scenarios and engineering parameters.
+            </p>
+        </div>
+    </div>
+
+    <!-- Export Overview -->
+    <div class="report-overview">
+
+        <div class="report-info-card">
+            <div class="report-icon">▤</div>
+            <div>
+                <h3>Route Comparison Dataset</h3>
+                <p>
+                    Complete R1, R2 and R3 comparison including
+                    environmental, social and infrastructure criteria.
+                </p>
+                <button class="report-btn"
+                        onclick="exportRouteComparison()">
+                    Export CSV
+                </button>
+            </div>
+        </div>
+
+        <div class="report-info-card">
+            <div class="report-icon">◈</div>
+            <div>
+                <h3>AHP & TOPSIS Results</h3>
+                <p>
+                    Criterion weights, TOPSIS scores, distances
+                    and ranking results used in the decision model.
+                </p>
+                <button class="report-btn"
+                        onclick="exportDecisionResults()">
+                    Export CSV
+                </button>
+            </div>
+        </div>
+
+        <div class="report-info-card">
+            <div class="report-icon">◫</div>
+            <div>
+                <h3>Sensitivity Analysis</h3>
+                <p>
+                    All tested weighting scenarios and corresponding
+                    route scores and positions.
+                </p>
+                <button class="report-btn"
+                        onclick="exportSensitivityResults()">
+                    Export CSV
+                </button>
+            </div>
+        </div>
+
+        <div class="report-info-card">
+            <div class="report-icon">⚙</div>
+            <div>
+                <h3>Engineering Parameters</h3>
+                <p>
+                    Ground footprint, gauge, planning width,
+                    education buffer and spatial reference parameters.
+                </p>
+                <button class="report-btn"
+                        onclick="exportEngineeringParameters()">
+                    Export CSV
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Report Contents -->
+    <div class="report-content-grid">
+
+        <div class="content-card">
+            <div class="card-header">
+                <div>
+                    <span class="section-kicker">AVAILABLE DATA</span>
+                    <h2>Report Contents</h2>
+                </div>
+            </div>
+
+            <div class="report-checklist">
+
+                <div class="report-check">
+                    <span>✓</span>
+                    <div>
+                        <strong>Environmental Impact</strong>
+                        <small>
+                            Forest, agriculture, built-up and wetland
+                            footprint impacts.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="report-check">
+                    <span>✓</span>
+                    <div>
+                        <strong>Waterbody Analysis</strong>
+                        <small>
+                            Polygon intersections and waterbody
+                            proximity information.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="report-check">
+                    <span>✓</span>
+                    <div>
+                        <strong>Educational Sector</strong>
+                        <small>
+                            Education facilities within the defined
+                            100 m centerline search distance.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="report-check">
+                    <span>✓</span>
+                    <div>
+                        <strong>Eco-Sensitive Zone</strong>
+                        <small>
+                            Nearest ESZ distance and identified
+                            protected-area feature.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="report-check">
+                    <span>✓</span>
+                    <div>
+                        <strong>Highway Intersections</strong>
+                        <small>
+                            National Highway and other supplied
+                            road-class interaction counts.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="report-check">
+                    <span>✓</span>
+                    <div>
+                        <strong>Decision Analysis</strong>
+                        <small>
+                            AHP weights, TOPSIS scores and
+                            sensitivity scenarios.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Method Parameters -->
+        <div class="content-card">
+
+            <div class="card-header">
+                <div>
+                    <span class="section-kicker">ENGINEERING BASIS</span>
+                    <h2>Analysis Parameters</h2>
+                </div>
+            </div>
+
+            <div class="parameter-list">
+
+                <div class="parameter-row">
+                    <span>Ground Footprint</span>
+                    <strong>3.5 m</strong>
+                </div>
+
+                <div class="parameter-row">
+                    <span>Offset Each Side</span>
+                    <strong>1.75 m</strong>
+                </div>
+
+                <div class="parameter-row">
+                    <span>Track Gauge</span>
+                    <strong>1.435 m</strong>
+                </div>
+
+                <div class="parameter-row">
+                    <span>Planning / ROW Width</span>
+                    <strong>17.5 m</strong>
+                </div>
+
+                <div class="parameter-row">
+                    <span>Education Search Distance</span>
+                    <strong>100 m</strong>
+                </div>
+
+                <div class="parameter-row">
+                    <span>Spatial CRS</span>
+                    <strong>EPSG:32643</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Export All -->
+    <div class="report-export-panel">
+
+        <div>
+            <span class="section-kicker">COMPLETE PACKAGE</span>
+            <h2>Export Decision-Support Dataset</h2>
+            <p>
+                Generate a consolidated JSON package containing
+                route data, AHP/TOPSIS results, sensitivity analysis
+                and engineering assumptions.
+            </p>
+        </div>
+
+        <button class="report-primary-btn"
+                onclick="exportCompleteReport()">
+            ↓ Export Complete Report
+        </button>
+
+    </div>
+
+
+    <!-- Report Note -->
+    <div class="methodology-note">
+
+        <strong>Data interpretation</strong>
+
+        <p>
+            Exported results represent the GIS-derived values and
+            decision-support calculations used by this application.
+            They should be interpreted together with the methodology,
+            spatial datasets and engineering assumptions documented
+            in this system.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= FOOTER STATUS ================= -->
+    <footer class="bottom-status">
+
+        <span>
+            ● System Ready
+        </span>
+
+        <span>
+            GIS Analysis Engine
+        </span>
+
+        <span>
+            EPSG:32643
+        </span>
+
+        <span>
+            HSR Ground Footprint: 3.5 m
+        </span>
+
+    </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/app.js"></script>
+<script id="criteriaPresentationController">
+/*
+ * Criteria presentation layer.
+ * The existing js/app.js remains responsible for route data,
+ * criterion calculations, tables and Chart.js rendering.
+ */
+(function () {
+    const presentation = {
+        forest: {
+            icon: "🌳",
+            title: "Forest Area",
+            why: "Measures the direct permanent ground-footprint interaction with forest land.",
+            methodTitle: "How the 3.5 m ground footprint is applied",
+            badge: "FOOTPRINT AREA",
+            method: "footprint",
+            unit: "km²"
+        },
+        agriculture: {
+            icon: "🌾",
+            title: "Agriculture Area",
+            why: "Measures agricultural land area intersected by the permanent 3.5 m ground footprint.",
+            methodTitle: "How the 3.5 m ground footprint is applied",
+            badge: "FOOTPRINT AREA",
+            method: "footprint",
+            unit: "km²"
+        },
+        builtup: {
+            icon: "🏢",
+            title: "Built-up Area",
+            why: "Measures built-up land area intersected by the permanent HSR ground footprint.",
+            methodTitle: "How the 3.5 m ground footprint is applied",
+            badge: "FOOTPRINT AREA",
+            method: "footprint",
+            unit: "km²"
+        },
+        education: {
+            icon: "🎓",
+            title: "Educational Sector",
+            why: "Identifies educational facilities located within the defined 100 m centerline analysis distance.",
+            methodTitle: "How the 100 m education analysis works",
+            badge: "PROXIMITY COUNT",
+            method: "education",
+            unit: "facilities"
+        },
+        wetland: {
+            icon: "💧",
+            title: "Wetland Impact",
+            why: "Measures direct wetland area intersected by the permanent 3.5 m ground footprint.",
+            methodTitle: "How the 3.5 m ground footprint is applied",
+            badge: "FOOTPRINT AREA",
+            method: "footprint",
+            unit: "km²"
+        },
+        waterbody: {
+            icon: "🌊",
+            title: "Waterbody Intersections",
+            why: "Counts Bhuvan waterbody polygon features intersected by the analysed HSR alignment.",
+            methodTitle: "How waterbody intersections are represented",
+            badge: "FEATURE COUNT",
+            method: "waterbody",
+            unit: "features"
+        },
+        esz: {
+            icon: "🟣",
+            title: "Nearest ESZ",
+            why: "Measures the closest perpendicular distance from the HSR centerline to the nearest identified ESZ.",
+            methodTitle: "How nearest ESZ distance is measured",
+            badge: "NEAREST DISTANCE",
+            method: "esz",
+            unit: "km"
+        },
+        length: {
+            icon: "🛤️",
+            title: "Route Length",
+            why: "Represents the calculated length of the supplied HSR centerline alignment.",
+            methodTitle: "How route length is measured",
+            badge: "CENTERLINE LENGTH",
+            method: "length",
+            unit: "km"
+        },
+        highway: {
+            icon: "🛣️",
+            title: "Highway Interaction",
+            why: "Represents identified highway and major-road interactions in the supplied dataset.",
+            methodTitle: "How highway interactions are counted",
+            badge: "INTERACTION COUNT",
+            method: "highway",
+            unit: "interactions"
+        }
+    };
+
+    function methodMarkup(type) {
+        if (type === "footprint") {
+            return `
+                <div class="footprint-diagram">
+                    <div class="footprint-side left">
+                        <strong>1.75 m</strong>
+                        <span>from centerline</span>
+                    </div>
+                    <div class="centerline-rail">
+                        <span>HSR</span>
+                        <strong>CENTERLINE</strong>
+                    </div>
+                    <div class="footprint-side right">
+                        <strong>1.75 m</strong>
+                        <span>from centerline</span>
+                    </div>
+                </div>
+                <div class="footprint-total">
+                    <span>Permanent ground footprint</span>
+                    <strong>3.5 m total width</strong>
+                </div>
+            `;
+        }
+
+        if (type === "education") {
+            return `
+                <div class="method-flow-visual">
+                    <div class="method-flow-line">
+                        <span class="method-point">EDUCATION FACILITY</span>
+                        <span class="method-distance">≤ 100 m</span>
+                        <span class="method-point center">HSR CENTERLINE</span>
+                    </div>
+                </div>
+                <div class="footprint-total">
+                    <span>Analysis rule</span>
+                    <strong>Count facilities within 100 m of the centerline</strong>
+                </div>
+            `;
+        }
+
+        if (type === "waterbody") {
+            return `
+                <div class="method-card-grid">
+                    <div class="method-mini-card">
+                        <span class="method-mini-icon">🌊</span>
+                        <strong>Bhuvan polygons</strong>
+                        <small>Waterbody polygon features are used for the criterion.</small>
+                    </div>
+                    <div class="method-mini-card">
+                        <span class="method-mini-icon">#</span>
+                        <strong>Feature count</strong>
+                        <small>Counts intersected polygon features, not verified unique waterbodies.</small>
+                    </div>
+                    <div class="method-mini-card">
+                        <span class="method-mini-icon">↔</span>
+                        <strong>Separate length</strong>
+                        <small>Centerline waterbody intersection length is reported separately.</small>
+                    </div>
+                </div>
+            `;
+        }
+
+        if (type === "esz") {
+            return `
+                <div class="method-distance-visual">
+                    <div class="esz-route-line"></div>
+                    <div class="esz-distance-line"><span>perpendicular distance</span></div>
+                    <div class="esz-zone">ESZ</div>
+                </div>
+                <div class="footprint-total">
+                    <span>Analysis rule</span>
+                    <strong>Nearest perpendicular distance from centerline to the identified ESZ</strong>
+                </div>
+            `;
+        }
+
+        if (type === "length") {
+            return `
+                <div class="method-linear-visual">
+                    <div class="linear-track"></div>
+                    <span>START</span>
+                    <strong>HSR CENTERLINE ALIGNMENT</strong>
+                    <span>END</span>
+                </div>
+                <div class="footprint-total">
+                    <span>Measurement</span>
+                    <strong>Calculated centerline alignment length in km</strong>
+                </div>
+            `;
+        }
+
+        return `
+            <div class="method-card-grid">
+                <div class="method-mini-card">
+                    <span class="method-mini-icon">GIS</span>
+                    <strong>Spatial dataset</strong>
+                    <small>Uses the identified road interactions in the supplied GIS dataset.</small>
+                </div>
+                <div class="method-mini-card">
+                    <span class="method-mini-icon">#</span>
+                    <strong>Interaction count</strong>
+                    <small>Reports identified highway and major-road interactions.</small>
+                </div>
+                <div class="method-mini-card">
+                    <span class="method-mini-icon">i</span>
+                    <strong>Classification note</strong>
+                    <small>NH, SH and MDR are conceptually distinct; MDR is not separately identifiable where unsupported.</small>
+                </div>
+            </div>
+        `;
+    }
+
+    function updatePresentation(key) {
+        const item = presentation[key];
+        if (!item) return;
+
+        const icon = document.getElementById("criterion-large-icon");
+        const visualTitle = document.getElementById("criterion-visual-title");
+        const why = document.getElementById("criterion-why-text");
+        const methodTitle = document.getElementById("criterion-method-title");
+        const methodBadge = document.getElementById("criterion-method-badge");
+        const methodContent = document.getElementById("criterion-method-content");
+
+        if (icon) icon.textContent = item.icon;
+        if (visualTitle) visualTitle.textContent = item.title;
+        if (why) why.textContent = item.why;
+        if (methodTitle) methodTitle.textContent = item.methodTitle;
+        if (methodBadge) methodBadge.textContent = item.badge;
+        if (methodContent) methodContent.innerHTML = methodMarkup(item.method);
+
+        const chartUnit = document.getElementById("criterion-chart-unit");
+        if (chartUnit) chartUnit.textContent = item.unit;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".criterion-btn").forEach(function (button) {
+            button.addEventListener("click", function () {
+                updatePresentation(this.dataset.criterion);
+            });
+        });
+
+        updatePresentation("forest");
+    });
+})();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+route,highway_interaction_km,nearest_waterbody_distance_m,waterbodies_within_100m,waterbodies_within_500m,wetland_count,wetland_area_ha,intersecting_esz_count,nearest_esz_distance_m
+Route 1,4.4961,5.87,1,14,29,1.4140086423625733,0,1459.789044443838
+Route 2,2.4149,2.7,2,13,56,3.61365534694922,0,3399.306778185169
+Route 3,4.6965,187.48,0,6,45,2.55739406106956,0,3654.411139925547

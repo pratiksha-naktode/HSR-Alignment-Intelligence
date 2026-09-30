@@ -1,0 +1,25 @@
+scenario,route,topsis_score,rank
+Agriculture Focus,Route 1,0.6276584020216681,1
+Agriculture Focus,Route 3,0.4018901055558842,2
+Agriculture Focus,Route 2,0.40151704194686,3
+Baseline AHP,Route 1,0.6120121855463975,1
+Baseline AHP,Route 3,0.42005386471729267,2
+Baseline AHP,Route 2,0.41996496611800527,3
+Environmental Focus,Route 1,0.6232048210306967,1
+Environmental Focus,Route 3,0.44409404711969147,2
+Environmental Focus,Route 2,0.38745086131688494,3
+Equal Weights,Route 1,0.5404340606881627,1
+Equal Weights,Route 2,0.5218669271130681,2
+Equal Weights,Route 3,0.3905287750011334,3
+Forest Focus,Route 1,0.687211296021816,1
+Forest Focus,Route 2,0.34630879452580543,2
+Forest Focus,Route 3,0.3274913057027353,3
+Infrastructure Focus,Route 1,0.6046878836917644,1
+Infrastructure Focus,Route 2,0.45573302037228686,2
+Infrastructure Focus,Route 3,0.4240408390939305,3
+Social Development Focus,Route 1,0.5798858652705139,1
+Social Development Focus,Route 2,0.45902794268673497,2
+Social Development Focus,Route 3,0.3962660155020847,3
+Water Environment Focus,Route 1,0.6666381076764423,1
+Water Environment Focus,Route 3,0.4289608013484299,2
+Water Environment Focus,Route 2,0.35676718072620744,3

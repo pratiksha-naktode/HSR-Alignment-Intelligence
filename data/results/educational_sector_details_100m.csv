@@ -1,0 +1,110 @@
+route,name,name_en,amenity,building,operator_type,capacity,city,osm_id,distance_from_centerline_m
+Route 1,Sancta Maria International School,,school,,,,,879137458,79.62627196323977
+Route 1,Poojya Doddappa Appa College,,college,,,,,133848594,36.06216106382656
+Route 1,"Smt. Veeramma Gangasiri College for Women, Kalaburgi",,,college,,,,870729962,55.99807702928539
+Route 1,Sadashivrao Mane Mahavidhyalaya,,college,,,,,445910869,0.0
+Route 1,Al Badar College,,college,,,,,133848791,98.57465253916264
+Route 1,Lokmanya Tilak Medical College,,college,,,,,611830525,24.598169399956948
+Route 1,,,,college,,,,427247585,45.08514544527053
+Route 1,Office,,,college,,,,359812276,51.68896336460668
+Route 1,,,,university,,,,69684427,50.512873133189125
+Route 1,Production department,,,college,,,,901989077,49.201444923870476
+Route 1,Vani Vidyalaya,,school,,,,,665546548,6.0051875648625925
+Route 1,ITI Mulund,,college,,,,,1120052248,78.0732053562396
+Route 1,Mulund Vidhya Mandir School,,,school,,,Mulund (West),319225311,20.62181480923144
+Route 1,Mulund College of Commerce - MCC,,college,,,,Mulund (West),665546545,96.75674601843077
+Route 1,SNDT College,,college,,,,ghatkopar,1119968793,31.511402030178235
+Route 1,Indian Railways Institute of Civil Engineering,,college,yes,,,,106483319,65.37821029078476
+Route 1,Dharavi Municipal School,,school,,,,,53349816,72.0165458907453
+Route 1,Shikshan Sadhana Mandal's Sadhana Vidyalaya,,,school,,,Mumbai,353395899,25.069844438490694
+Route 1,Vani Vidhyalay Junior College,,,college,,,,353396043,23.523541008299087
+Route 1,Matunga Premier School,,school,yes,,,,117083034,92.82108461798025
+Route 1,,,,college,,,,427247586,36.39770431783779
+Route 1,Guru Nanak National High School,,school,yes,,,Mumbai,357112846,14.028201850235982
+Route 1,,,,school,,,,978615008,48.87057357574515
+Route 1,Mulund Vidya Mandir,,school,,,,,665546549,5.530348603486094
+Route 1,,,,college,,,,353760972,56.096200118987376
+Route 1,VPS High School,,school,,,,,440450850,21.927744632555815
+Route 1,,,,college,,,,1330603448,54.16525841649862
+Route 1,,,school,yes,,,,355953881,51.25189313458558
+Route 1,ZPHS school,,,school,,,Hyderabad,1138695318,66.40920117011618
+Route 1,Dhirubhai Ambani Knowledge City,,college,,,,,151585572,75.08931650466447
+Route 1,,Ramniranjan Jhunjhunwala College,college,,,,,1123859440,53.187578806900724
+Route 1,St. Josephs High School,,school,,,,,1123730797,46.83041760965393
+Route 1,Vidya Prasarak Mandal Polytechnic,,college,,,,,234978129,10.566101306626512
+Route 1,,,,college,,,Thane,352965428,64.2967054214046
+Route 1,St Xaviers High School,,,school,,,,415727729,65.1924069269751
+Route 1,Krushi Mahavidyalay,Agriculture College,college,,,,,281844136,11.220896994042883
+Route 1,Terna Engineering College,,college,,,,,563573699,46.99777569577872
+Route 1,Vani Vidhyalaya Junior College,,,college,,,Mulund (West),5274583,12.974435171619284
+Route 1,"College of Engineering, Pune","College of Engineering, Pune",college,,,,,3718263,4.006857448011705
+Route 2,St john's high school,,,school,,,,361505753,14.257662331232398
+Route 2,Poojya Doddappa Appa College,,college,,,,,133848594,3.010861228131486
+Route 2,"Smt. Veeramma Gangasiri College for Women, Kalaburgi",,,college,,,,870729962,16.55484609135626
+Route 2,,,,school,,,,354776503,56.52990820037627
+Route 2,Lokamaniya Tilak High School,,school,,,,,626376015,83.83054716515815
+Route 2,Office,,,college,,,,359812276,44.03725996714048
+Route 2,AISSMS College of Hotel Management,,college,,,,,170934920,95.61836725607348
+Route 2,Shadan Women's College of Pharmacy,,college,,,,,737605957,18.353376150100697
+Route 2,,,,school,,,,340948091,99.29057927455811
+Route 2,,,,school,,,,340948088,90.31633133495882
+Route 2,,,,school,,,,346413857,25.813896936213236
+Route 2,,,,college,,,,353760972,62.14340559793245
+Route 2,BMC school,,school,,,,,626348904,50.695765111592884
+Route 2,Kumud Vidyamandir,,school,,,,mumbai,626243775,5.4532305198259206
+Route 2,Swami Muktanand High School,,school,,,,,626185282,22.346794626148533
+Route 2,Sardar Kanhoji Angre Vidyalay,,school,,,,,290034472,46.87236236361629
+Route 2,,,,school,,,,340948089,94.27657094816334
+Route 2,Dr. Babasaheb Ambedkar High School AND GRAND NALANDA HALL,,school,apartments,,,MUMBAI,222784833,24.57108675257004
+Route 2,VPS High School,,school,,,,,440450850,14.334323011169538
+Route 2,,,school,,,,,573585813,59.33859798898955
+Route 2,,,school,yes,,,,355953881,78.48546966600011
+Route 2,NMMC School,,school,,,,,578783774,34.20681078656003
+Route 2,Hyderabad Public School,,school,,,,,29252418,17.257980194233802
+Route 2,PCCOE Mechanical and Civil Engineeering departments,,,college,,,,359540651,88.06104320076894
+Route 2,ZPHS school,,,school,,,Hyderabad,1138695318,93.26853515723715
+Route 2,City International School,,,school,,,Pune,360225143,76.42777182136606
+Route 2,Shri Shivaji Preparatory Military School,,school,,,,,280784413,1.9900139478610401
+Route 2,Krushi Mahavidyalay,Agriculture College,college,,,,,281844136,19.141042543017214
+Route 2,Janta Vidyalay,,,college,,,khopoli,1099979111,64.17928352048946
+Route 2,Terna Engineering College,,college,,,,,563573699,50.335308075671314
+Route 2,St. Francis womens college,,,college,,,,5320494,19.392802824536133
+Route 3,,,,school,,,,354776503,60.775834404649395
+Route 3,,,school,,,,,291324679,40.35679924144072
+Route 3,Lokamaniya Tilak High School,,school,,,,,626376015,81.86876039713245
+Route 3,Bombay Girls' High School,,school,yes,,,,357187182,36.32557098295473
+Route 3,SMES High School,,school,yes,,,,979397734,31.642113753772175
+Route 3,Presentation Convent School,,school,,,,,560471198,84.46672336242399
+Route 3,D.Y. Patil,,college,,,,,752309310,87.78712860115367
+Route 3,Arts and Commerce Wing,,,school,,,,120169299,80.47472480439836
+Route 3,Police Training Academy,,college,,,,,626142590,35.40682123009318
+Route 3,,,,school,,,,346413857,17.194199733864412
+Route 3,"Tron School Of Animation , Graphics And Artology.",,,college,,,Pune,359982651,98.34685736307246
+Route 3,A.I.’s Allana Boys High School & Jr. College,,college,,,,,979397741,27.467305843109106
+Route 3,Science Wing,,,school,,,,136169138,85.66064661769099
+Route 3,,,,school,,,,136169142,49.82978066773727
+Route 3,,,,college,,,,353760972,68.04378165039677
+Route 3,Presentation Convent School,,,school,,,,353790868,94.46570034333982
+Route 3,Cardinal Gracias High School,,school,,,,,291324678,53.74537910564533
+Route 3,BMC school,,school,,,,,626348904,54.58138651414105
+Route 3,Kumud Vidyamandir,,school,,,,mumbai,626243775,14.2869270598599
+Route 3,Swami Muktanand High School,,school,,,,,626185282,13.580796314181313
+Route 3,JSPM Blossom Public School,,school,,,,,901183816,90.70434750408378
+Route 3,JSPM Tathawade,,college,,,,,901183817,52.47884205650429
+Route 3,Indira Institute of management,,,college,,,,364858909,90.62138713697695
+Route 3,Dr. Babasaheb Ambedkar High School AND GRAND NALANDA HALL,,school,apartments,,,MUMBAI,222784833,64.06741496954693
+Route 3,,,university,,,,,291324675,41.17886022574019
+Route 3,,,school,,,,,573585813,58.97323306615464
+Route 3,,,school,yes,,,,355953881,79.25780118058627
+Route 3,NMMC School,,school,,,,,578783774,29.383493268379848
+Route 3,ZPHS school,,,school,,,Hyderabad,1138695318,93.80131330089286
+Route 3,MES Vidya Mandir School & Junior College,,school,,,,,1001998400,70.2691261033267
+Route 3,Podar International School,,school,yes,,,Ambegaon,360321613,4.382942861396231
+Route 3,Rajarshi Shahu College of Engineering,Rajarshi Shahu College of Engineering,,college,,,,359521817,80.2089495855056
+Route 3,Mumbai University,,university,,,,,49682797,0.0
+Route 3,"Indira college of arts, commerce and science (ICACS)",,,college,,,,359478000,39.59805295346474
+Route 3,Indira Group of Institute (IGI),,college,,university,,,752309308,0.0
+Route 3,Indira Institute of Management Pune (IIMP),,,college,,,,359530436,24.710002507827642
+Route 3,National Institute of Securities Markets,,college,,,,Patalganga Industrial Area,658280556,69.84111826698062
+Route 3,Terna Engineering College,,college,,,,,563573699,60.34396758799838
+Route 3,,,school,,,,,1192464441,49.03568769437242

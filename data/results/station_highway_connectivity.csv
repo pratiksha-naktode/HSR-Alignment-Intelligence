@@ -1,0 +1,480 @@
+candidate_id,route,chainage_km,highways_within_500m,highways_within_1km,highways_within_5km,nearest_highway_distance_m,nearest_highway_distance_km,nearest_highway,nearest_highway_type,nearest_highway_state,highway_within_500m,highway_within_1km,highway_within_5km
+Route_1_ST_001,Route 1,0.0,1,1,12,100.76,0.1008,Bandra-Worli Sea Link,Other Major Road,Maharashtra,True,True,True
+Route_1_ST_002,Route 1,5.0,0,0,7,1981.39,1.9814,Western Expressway,Other Major Road,Maharashtra,False,False,True
+Route_1_ST_003,Route 1,10.0,0,0,2,1465.23,1.4652,Eastern Expressway,Other Major Road,Maharashtra,False,False,True
+Route_1_ST_004,Route 1,15.0,1,1,1,434.5,0.4345,Eastern Expressway,Other Major Road,Maharashtra,True,True,True
+Route_1_ST_005,Route 1,20.0,0,1,5,965.13,0.9651,Eastern Expressway,Other Major Road,Maharashtra,False,True,True
+Route_1_ST_006,Route 1,25.0,0,1,15,687.98,0.688,Mulund-Airoli Road,Other Major Road,Maharashtra,False,True,True
+Route_1_ST_007,Route 1,30.0,0,0,12,1671.42,1.6714,Airoli-Katai Naka Freeway,State Expressway,Maharashtra,False,False,True
+Route_1_ST_008,Route 1,35.0,1,1,10,40.16,0.0402,Airoli-Shilpata Road,Other Major Road,Maharashtra,True,True,True
+Route_1_ST_009,Route 1,40.0,0,0,1,3310.3,3.3103,Airoli-Shilpata Road,Other Major Road,Maharashtra,False,False,True
+Route_1_ST_010,Route 1,45.0,0,0,3,1285.51,1.2855,NH-348A,National Highway,Maharashtra,False,False,True
+Route_1_ST_011,Route 1,50.0,1,1,3,136.94,0.1369,Sion-Panvel Expressway,Other Major Road,Maharashtra,True,True,True
+Route_1_ST_012,Route 1,55.0,0,0,10,1808.25,1.8083,Sion-Panvel Expressway,Other Major Road,Maharashtra,False,False,True
+Route_1_ST_013,Route 1,60.0,0,1,19,700.02,0.7,NH-48,National Highway,Maharashtra,False,True,True
+Route_1_ST_014,Route 1,65.0,0,1,14,603.29,0.6033,Mumbai-Pune Expressway,State Expressway,Maharashtra,False,True,True
+Route_1_ST_015,Route 1,70.0,0,1,4,723.76,0.7238,NH-48,National Highway,Maharashtra,False,True,True
+Route_1_ST_016,Route 1,75.0,1,1,2,287.59,0.2876,NH-48,National Highway,Maharashtra,True,True,True
+Route_1_ST_017,Route 1,80.0,0,0,2,1708.14,1.7081,NH-48,National Highway,Maharashtra,False,False,True
+Route_1_ST_018,Route 1,85.0,0,1,3,990.02,0.99,NH-548A,National Highway,Maharashtra,False,True,True
+Route_1_ST_019,Route 1,90.0,0,1,3,989.82,0.9898,NH-548A,National Highway,Maharashtra,False,True,True
+Route_1_ST_020,Route 1,95.0,0,0,1,3152.19,3.1522,NH-548A,National Highway,Maharashtra,False,False,True
+Route_1_ST_021,Route 1,100.0,0,0,0,,,,,,False,False,False
+Route_1_ST_022,Route 1,105.0,0,0,11,1915.28,1.9153,NH-48,National Highway,Maharashtra,False,False,True
+Route_1_ST_023,Route 1,110.0,1,2,11,65.39,0.0654,NH-48,National Highway,Maharashtra,True,True,True
+Route_1_ST_024,Route 1,115.0,1,1,4,485.84,0.4858,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_1_ST_025,Route 1,120.0,1,1,2,109.23,0.1092,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_1_ST_026,Route 1,125.0,1,2,2,71.37,0.0714,NH-48,National Highway,Maharashtra,True,True,True
+Route_1_ST_027,Route 1,130.0,1,1,2,229.98,0.23,NH-48,National Highway,Maharashtra,True,True,True
+Route_1_ST_028,Route 1,135.0,1,1,2,489.19,0.4892,NH-48,National Highway,Maharashtra,True,True,True
+Route_1_ST_029,Route 1,140.0,0,1,4,970.97,0.971,NH-548D,National Highway,Maharashtra,False,True,True
+Route_1_ST_030,Route 1,145.0,0,0,5,1809.69,1.8097,NH-548D,National Highway,Maharashtra,False,False,True
+Route_1_ST_031,Route 1,150.0,0,2,4,695.53,0.6955,NH-48,National Highway,Maharashtra,False,True,True
+Route_1_ST_032,Route 1,155.0,0,0,3,2483.36,2.4834,NH-48,National Highway,Maharashtra,False,False,True
+Route_1_ST_033,Route 1,160.0,0,0,2,3951.59,3.9516,NH-60,National Highway,Maharashtra,False,False,True
+Route_1_ST_034,Route 1,165.0,1,2,2,181.86,0.1819,NH-60,National Highway,Maharashtra,True,True,True
+Route_1_ST_035,Route 1,170.0,1,1,8,46.24,0.0462,NH-60,National Highway,Maharashtra,True,True,True
+Route_1_ST_036,Route 1,175.0,0,0,11,1022.38,1.0224,NH-965,National Highway,Maharashtra,False,False,True
+Route_1_ST_037,Route 1,180.0,0,0,7,1005.8,1.0058,NH-65,National Highway,Maharashtra,False,False,True
+Route_1_ST_038,Route 1,185.0,0,0,5,1343.11,1.3431,NH-965,National Highway,Maharashtra,False,False,True
+Route_1_ST_039,Route 1,190.0,0,0,5,1729.32,1.7293,NH-965,National Highway,Maharashtra,False,False,True
+Route_1_ST_040,Route 1,195.0,0,0,2,3726.19,3.7262,NH-65,National Highway,Maharashtra,False,False,True
+Route_1_ST_041,Route 1,200.0,0,0,1,2650.06,2.6501,NH-65,National Highway,Maharashtra,False,False,True
+Route_1_ST_042,Route 1,205.0,0,0,0,,,,,,False,False,False
+Route_1_ST_043,Route 1,210.0,0,0,0,,,,,,False,False,False
+Route_1_ST_044,Route 1,215.0,0,0,0,,,,,,False,False,False
+Route_1_ST_045,Route 1,220.0,0,0,1,4865.49,4.8655,NH-965,National Highway,Maharashtra,False,False,True
+Route_1_ST_046,Route 1,225.0,0,0,1,1565.47,1.5655,NH-965,National Highway,Maharashtra,False,False,True
+Route_1_ST_047,Route 1,230.0,0,0,1,4261.25,4.2612,NH-965,National Highway,Maharashtra,False,False,True
+Route_1_ST_048,Route 1,235.0,0,0,0,,,,,,False,False,False
+Route_1_ST_049,Route 1,240.0,0,0,1,1460.9,1.4609,NH-965D,National Highway,Maharashtra,False,False,True
+Route_1_ST_050,Route 1,245.0,0,0,1,3195.09,3.1951,NH-965D,National Highway,Maharashtra,False,False,True
+Route_1_ST_051,Route 1,250.0,0,0,0,,,,,,False,False,False
+Route_1_ST_052,Route 1,255.0,0,0,0,,,,,,False,False,False
+Route_1_ST_053,Route 1,260.0,0,0,0,,,,,,False,False,False
+Route_1_ST_054,Route 1,265.0,0,0,1,2966.84,2.9668,NH-160,National Highway,Maharashtra,False,False,True
+Route_1_ST_055,Route 1,270.0,0,0,3,1333.07,1.3331,NH-160,National Highway,Maharashtra,False,False,True
+Route_1_ST_056,Route 1,275.0,0,0,4,1919.05,1.919,NH-160,National Highway,Maharashtra,False,False,True
+Route_1_ST_057,Route 1,280.0,0,0,2,1135.62,1.1356,NH-965G,National Highway,Maharashtra,False,False,True
+Route_1_ST_058,Route 1,285.0,1,1,2,39.14,0.0391,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_059,Route 1,290.0,1,1,1,48.8,0.0488,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_060,Route 1,295.0,1,1,1,17.93,0.0179,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_061,Route 1,300.0,1,1,1,11.67,0.0117,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_062,Route 1,305.0,1,1,1,3.98,0.004,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_063,Route 1,310.0,1,1,1,15.79,0.0158,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_064,Route 1,315.0,1,1,1,35.68,0.0357,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_065,Route 1,320.0,1,1,6,33.45,0.0335,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_066,Route 1,325.0,1,1,6,16.84,0.0168,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_067,Route 1,330.0,1,1,1,15.59,0.0156,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_068,Route 1,335.0,1,1,2,89.43,0.0894,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_069,Route 1,340.0,2,2,4,37.22,0.0372,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_070,Route 1,345.0,0,2,7,606.36,0.6064,NH-965G,National Highway,Maharashtra,False,True,True
+Route_1_ST_071,Route 1,350.0,1,1,6,469.88,0.4699,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_072,Route 1,355.0,1,1,4,13.18,0.0132,NH-965G,National Highway,Maharashtra,True,True,True
+Route_1_ST_073,Route 1,360.0,1,1,4,46.93,0.0469,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_074,Route 1,365.0,1,1,2,8.82,0.0088,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_075,Route 1,370.0,1,1,2,42.63,0.0426,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_076,Route 1,375.0,1,1,2,6.23,0.0062,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_077,Route 1,380.0,1,1,4,15.17,0.0152,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_078,Route 1,385.0,1,5,5,493.29,0.4933,NH-548E,National Highway,Maharashtra,True,True,True
+Route_1_ST_079,Route 1,390.0,1,1,15,11.84,0.0118,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_080,Route 1,395.0,1,6,15,459.18,0.4592,NH-965C,National Highway,Maharashtra,True,True,True
+Route_1_ST_081,Route 1,400.0,1,1,3,0.37,0.0004,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_082,Route 1,405.0,1,1,1,24.47,0.0245,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_083,Route 1,410.0,1,1,1,50.67,0.0507,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_084,Route 1,415.0,1,1,1,45.45,0.0455,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_085,Route 1,420.0,1,1,1,15.98,0.016,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_086,Route 1,425.0,1,1,5,6.35,0.0064,NH-965,National Highway,Maharashtra,True,True,True
+Route_1_ST_087,Route 1,430.0,1,1,5,4.76,0.0048,NH-65,National Highway,Maharashtra,True,True,True
+Route_1_ST_088,Route 1,435.0,0,0,2,1596.36,1.5964,NH-65,National Highway,Maharashtra,False,False,True
+Route_1_ST_089,Route 1,440.0,0,0,1,4718.14,4.7181,NH-65,National Highway,Maharashtra,False,False,True
+Route_1_ST_090,Route 1,445.0,0,0,1,4483.78,4.4838,NH-65,National Highway,Maharashtra,False,False,True
+Route_1_ST_091,Route 1,450.0,0,0,1,3918.22,3.9182,NH-65,National Highway,Maharashtra,False,False,True
+Route_1_ST_092,Route 1,455.0,0,0,3,1331.16,1.3312,NH-166,National Highway,Maharashtra,False,False,True
+Route_1_ST_093,Route 1,460.0,1,1,10,331.78,0.3318,NH-166,National Highway,Maharashtra,True,True,True
+Route_1_ST_094,Route 1,465.0,0,2,12,641.15,0.6411,NH-166,National Highway,Maharashtra,False,True,True
+Route_1_ST_095,Route 1,470.0,0,0,3,2697.02,2.697,NH-52,National Highway,Maharashtra,False,False,True
+Route_1_ST_096,Route 1,475.0,0,0,0,,,,,,False,False,False
+Route_1_ST_097,Route 1,480.0,0,0,0,,,,,,False,False,False
+Route_1_ST_098,Route 1,485.0,0,0,1,2136.6,2.1366,NH-465,National Highway,Maharashtra,False,False,True
+Route_1_ST_099,Route 1,490.0,0,0,1,2063.03,2.063,NH-465,National Highway,Maharashtra,False,False,True
+Route_1_ST_100,Route 1,495.0,0,0,0,,,,,,False,False,False
+Route_1_ST_101,Route 1,500.0,2,2,2,336.92,0.3369,NH-548B,National Highway,Maharashtra,True,True,True
+Route_1_ST_102,Route 1,505.0,0,0,3,3043.38,3.0434,NH-548B,National Highway,Maharashtra,False,False,True
+Route_1_ST_103,Route 1,510.0,0,0,3,3416.69,3.4167,Afzalpur Road,National Highway,Karnataka,False,False,True
+Route_1_ST_104,Route 1,515.0,0,0,3,3082.19,3.0822,Afzalpur Road,National Highway,Karnataka,False,False,True
+Route_1_ST_105,Route 1,520.0,0,0,2,2308.12,2.3081,NH-150,National Highway,Maharashtra,False,False,True
+Route_1_ST_106,Route 1,525.0,1,1,2,185.4,0.1854,NH-150,National Highway,Maharashtra,True,True,True
+Route_1_ST_107,Route 1,530.0,0,1,4,704.69,0.7047,Solapur-Kurnool Corridor,National Highway,Maharashtra,False,True,True
+Route_1_ST_108,Route 1,535.0,0,0,3,4231.22,4.2312,Solapur-Kurnool Corridor,National Highway,Karnataka,False,False,True
+Route_1_ST_109,Route 1,540.0,0,0,0,,,,,,False,False,False
+Route_1_ST_110,Route 1,545.0,0,0,0,,,,,,False,False,False
+Route_1_ST_111,Route 1,550.0,0,0,0,,,,,,False,False,False
+Route_1_ST_112,Route 1,555.0,0,0,0,,,,,,False,False,False
+Route_1_ST_113,Route 1,560.0,0,0,0,,,,,,False,False,False
+Route_1_ST_114,Route 1,565.0,0,0,0,,,,,,False,False,False
+Route_1_ST_115,Route 1,570.0,0,0,1,4148.96,4.149,Kalaburagi Road,National Highway,Karnataka,False,False,True
+Route_1_ST_116,Route 1,575.0,0,1,3,931.22,0.9312,Kalaburagi Road,National Highway,Karnataka,False,True,True
+Route_1_ST_117,Route 1,580.0,0,1,5,684.84,0.6848,NH-50,National Highway,Karnataka,False,True,True
+Route_1_ST_118,Route 1,585.0,0,0,3,1166.92,1.1669,NH-150,National Highway,Karnataka,False,False,True
+Route_1_ST_119,Route 1,590.0,0,0,1,1438.66,1.4387,NH-150,National Highway,Karnataka,False,False,True
+Route_1_ST_120,Route 1,595.0,0,0,1,1625.86,1.6259,NH-150,National Highway,Karnataka,False,False,True
+Route_1_ST_121,Route 1,600.0,0,1,1,994.32,0.9943,NH-150,National Highway,Karnataka,False,True,True
+Route_1_ST_122,Route 1,605.0,0,0,1,2817.96,2.818,NH-150,National Highway,Karnataka,False,False,True
+Route_1_ST_123,Route 1,610.0,0,0,2,2076.71,2.0767,NH-150,National Highway,Karnataka,False,False,True
+Route_1_ST_124,Route 1,615.0,0,1,2,904.83,0.9048,NH-150,National Highway,Karnataka,False,True,True
+Route_1_ST_125,Route 1,620.0,0,0,2,2865.64,2.8656,NH-150,National Highway,Karnataka,False,False,True
+Route_1_ST_126,Route 1,625.0,0,0,2,3388.73,3.3887,NH-150,National Highway,Karnataka,False,False,True
+Route_1_ST_127,Route 1,630.0,0,0,0,,,,,,False,False,False
+Route_1_ST_128,Route 1,635.0,0,0,0,,,,,,False,False,False
+Route_1_ST_129,Route 1,640.0,0,0,0,,,,,,False,False,False
+Route_1_ST_130,Route 1,645.0,0,0,0,,,,,,False,False,False
+Route_1_ST_131,Route 1,650.0,0,0,0,,,,,,False,False,False
+Route_1_ST_132,Route 1,655.0,0,0,0,,,,,,False,False,False
+Route_1_ST_133,Route 1,660.0,0,0,0,,,,,,False,False,False
+Route_1_ST_134,Route 1,665.0,0,0,0,,,,,,False,False,False
+Route_1_ST_135,Route 1,670.0,0,0,0,,,,,,False,False,False
+Route_1_ST_136,Route 1,675.0,0,0,0,,,,,,False,False,False
+Route_1_ST_137,Route 1,680.0,0,0,1,3499.48,3.4995,NH-167N,National Highway,Telangana,False,False,True
+Route_1_ST_138,Route 1,685.0,0,1,3,989.86,0.9899,NH-167N,National Highway,Telangana,False,True,True
+Route_1_ST_139,Route 1,690.0,0,0,3,3723.0,3.723,NH-167N,National Highway,Telangana,False,False,True
+Route_1_ST_140,Route 1,695.0,0,0,0,,,,,,False,False,False
+Route_1_ST_141,Route 1,700.0,0,0,0,,,,,,False,False,False
+Route_1_ST_142,Route 1,705.0,0,0,0,,,,,,False,False,False
+Route_1_ST_143,Route 1,710.0,0,0,0,,,,,,False,False,False
+Route_1_ST_144,Route 1,715.0,0,0,0,,,,,,False,False,False
+Route_1_ST_145,Route 1,720.0,0,0,0,,,,,,False,False,False
+Route_1_ST_146,Route 1,725.0,0,0,0,,,,,,False,False,False
+Route_1_ST_147,Route 1,730.0,0,0,0,,,,,,False,False,False
+Route_1_ST_148,Route 1,735.0,0,0,0,,,,,,False,False,False
+Route_1_ST_149,Route 1,740.0,0,0,1,2775.79,2.7758,,National Highway,Telangana,False,False,True
+Route_1_ST_150,Route 1,745.0,0,0,1,2025.9,2.0259,,National Highway,Telangana,False,False,True
+Route_1_ST_151,Route 1,750.0,0,0,0,,,,,,False,False,False
+Route_1_ST_152,Route 1,755.0,0,0,0,,,,,,False,False,False
+Route_1_ST_153,Route 1,760.0,0,0,0,,,,,,False,False,False
+Route_1_ST_154,Route 1,765.0,0,0,1,1529.37,1.5294,Nehru Outer Ring Road (Hyderabad),State Expressway,Telangana,False,False,True
+Route_1_ST_155,Route 1,770.0,0,0,2,3408.75,3.4088,Nehru Outer Ring Road (Hyderabad),State Expressway,Telangana,False,False,True
+Route_1_ST_156,Route 1,775.0,0,1,4,972.6,0.9726,NH-65,National Highway,Telangana,False,True,True
+Route_1_ST_157,Route 1,780.0,0,1,5,842.05,0.8421,Miyapur Road,Other Major Road,Telangana,False,True,True
+Route_1_ST_158,Route 1,785.0,0,0,2,2560.28,2.5603,NH-65,National Highway,Telangana,False,False,True
+Route_1_END,Route 1,788.78495,0,0,2,2560.28,2.5603,NH-65,National Highway,Telangana,False,False,True
+Route_2_ST_001,Route 2,0.0,0,0,4,3051.17,3.0512,Eastern Expressway,Other Major Road,Maharashtra,False,False,True
+Route_2_ST_002,Route 2,5.0,0,0,1,1169.1,1.1691,Eastern Expressway,Other Major Road,Maharashtra,False,False,True
+Route_2_ST_003,Route 2,10.0,0,0,0,,,,,,False,False,False
+Route_2_ST_004,Route 2,15.0,0,0,2,4150.31,4.1503,NH-348A,National Highway,Maharashtra,False,False,True
+Route_2_ST_005,Route 2,20.0,0,0,3,1206.16,1.2062,NH-348A,National Highway,Maharashtra,False,False,True
+Route_2_ST_006,Route 2,25.0,1,1,3,112.64,0.1126,Sion-Panvel Expressway,Other Major Road,Maharashtra,True,True,True
+Route_2_ST_007,Route 2,30.0,0,1,10,686.6,0.6866,NH-548,National Highway,Maharashtra,False,True,True
+Route_2_ST_008,Route 2,35.0,1,2,20,453.12,0.4531,NE4,National Highway,Maharashtra,True,True,True
+Route_2_ST_009,Route 2,40.0,0,0,14,1131.14,1.1311,NH-48,National Highway,Maharashtra,False,False,True
+Route_2_ST_010,Route 2,45.0,1,1,2,428.44,0.4284,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_011,Route 2,50.0,1,1,2,169.47,0.1695,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_012,Route 2,55.0,1,1,2,69.13,0.0691,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_013,Route 2,60.0,1,1,9,51.6,0.0516,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_014,Route 2,65.0,1,3,10,29.64,0.0296,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_015,Route 2,70.0,1,1,11,278.83,0.2788,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_016,Route 2,75.0,1,2,11,39.39,0.0394,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_017,Route 2,80.0,0,1,4,662.53,0.6625,Mumbai-Pune Expressway,State Expressway,Maharashtra,False,True,True
+Route_2_ST_018,Route 2,85.0,1,1,2,102.67,0.1027,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_2_ST_019,Route 2,90.0,1,2,2,127.45,0.1275,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_020,Route 2,95.0,1,1,2,273.61,0.2736,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_021,Route 2,100.0,1,1,4,414.3,0.4143,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_022,Route 2,105.0,0,1,4,866.44,0.8664,NH-548D,National Highway,Maharashtra,False,True,True
+Route_2_ST_023,Route 2,110.0,0,0,5,1801.47,1.8015,NH-48,National Highway,Maharashtra,False,False,True
+Route_2_ST_024,Route 2,115.0,0,2,4,815.26,0.8153,NH-48,National Highway,Maharashtra,False,True,True
+Route_2_ST_025,Route 2,120.0,0,0,3,2530.9,2.5309,NH-48,National Highway,Maharashtra,False,False,True
+Route_2_ST_026,Route 2,125.0,0,0,2,3792.83,3.7928,NH-60,National Highway,Maharashtra,False,False,True
+Route_2_ST_027,Route 2,130.0,1,2,2,190.72,0.1907,NH-60,National Highway,Maharashtra,True,True,True
+Route_2_ST_028,Route 2,135.0,1,1,8,33.85,0.0339,NH-60,National Highway,Maharashtra,True,True,True
+Route_2_ST_029,Route 2,140.0,1,1,11,14.98,0.015,NH-60,National Highway,Maharashtra,True,True,True
+Route_2_ST_030,Route 2,145.0,1,1,10,8.07,0.0081,NH-65,National Highway,Maharashtra,True,True,True
+Route_2_ST_031,Route 2,150.0,1,1,7,11.19,0.0112,NH-60,National Highway,Maharashtra,True,True,True
+Route_2_ST_032,Route 2,155.0,3,3,3,13.06,0.0131,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_033,Route 2,160.0,1,1,2,4.5,0.0045,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_034,Route 2,165.0,1,1,2,55.64,0.0556,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_035,Route 2,170.0,1,1,1,240.16,0.2402,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_036,Route 2,175.0,1,1,1,20.32,0.0203,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_037,Route 2,180.0,0,0,3,2013.34,2.0133,NH-48,National Highway,Maharashtra,False,False,True
+Route_2_ST_038,Route 2,185.0,0,0,5,1147.22,1.1472,NH-965DD,National Highway,Maharashtra,False,False,True
+Route_2_ST_039,Route 2,190.0,3,3,5,138.55,0.1385,NH-965DD,National Highway,Maharashtra,True,True,True
+Route_2_ST_040,Route 2,195.0,1,1,3,27.3,0.0273,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_041,Route 2,200.0,2,2,3,200.96,0.201,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_042,Route 2,205.0,1,1,3,361.64,0.3616,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_043,Route 2,210.0,1,1,1,171.13,0.1711,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_044,Route 2,215.0,1,1,1,139.46,0.1395,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_045,Route 2,220.0,0,1,1,624.18,0.6242,NH-48,National Highway,Maharashtra,False,True,True
+Route_2_ST_046,Route 2,225.0,1,1,1,65.31,0.0653,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_047,Route 2,230.0,1,1,1,95.86,0.0959,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_048,Route 2,235.0,1,1,2,219.22,0.2192,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_049,Route 2,240.0,1,2,5,2.27,0.0023,NH-48,National Highway,Maharashtra,True,True,True
+Route_2_ST_050,Route 2,245.0,1,1,5,10.01,0.01,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_051,Route 2,250.0,1,1,1,10.24,0.0102,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_052,Route 2,255.0,1,1,1,20.06,0.0201,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_053,Route 2,260.0,1,1,1,73.01,0.073,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_054,Route 2,265.0,1,1,1,200.88,0.2009,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_055,Route 2,270.0,1,1,1,239.61,0.2396,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_056,Route 2,275.0,1,1,1,108.76,0.1088,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_057,Route 2,280.0,1,1,1,106.47,0.1065,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_058,Route 2,285.0,1,1,1,85.37,0.0854,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_059,Route 2,290.0,1,1,1,63.0,0.063,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_060,Route 2,295.0,0,1,4,801.75,0.8017,NH-548C,National Highway,Maharashtra,False,True,True
+Route_2_ST_061,Route 2,300.0,1,4,4,287.94,0.2879,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_062,Route 2,305.0,1,1,1,455.88,0.4559,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_063,Route 2,310.0,1,1,1,239.49,0.2395,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_064,Route 2,315.0,1,1,1,471.52,0.4715,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_065,Route 2,320.0,1,1,1,222.98,0.223,NH-548C,National Highway,Maharashtra,True,True,True
+Route_2_ST_066,Route 2,325.0,0,1,3,999.85,0.9998,NH-548C,National Highway,Maharashtra,False,True,True
+Route_2_ST_067,Route 2,330.0,0,1,3,578.81,0.5788,NH-548E,National Highway,Maharashtra,False,True,True
+Route_2_ST_068,Route 2,335.0,0,1,1,543.78,0.5438,NH-548E,National Highway,Maharashtra,False,True,True
+Route_2_ST_069,Route 2,340.0,1,1,1,402.82,0.4028,NH-548E,National Highway,Maharashtra,True,True,True
+Route_2_ST_070,Route 2,345.0,1,1,1,41.21,0.0412,NH-548E,National Highway,Maharashtra,True,True,True
+Route_2_ST_071,Route 2,350.0,1,1,4,179.26,0.1793,NH-548E,National Highway,Maharashtra,True,True,True
+Route_2_ST_072,Route 2,355.0,1,1,4,379.48,0.3795,NH-548E,National Highway,Maharashtra,True,True,True
+Route_2_ST_073,Route 2,360.0,1,1,1,337.38,0.3374,NH-548E,National Highway,Maharashtra,True,True,True
+Route_2_ST_074,Route 2,365.0,1,1,2,243.64,0.2436,NH-548E,National Highway,Maharashtra,True,True,True
+Route_2_ST_075,Route 2,370.0,1,1,2,47.57,0.0476,NH-548E,National Highway,Maharashtra,True,True,True
+Route_2_ST_076,Route 2,375.0,1,1,5,82.12,0.0821,NH-548E,National Highway,Maharashtra,True,True,True
+Route_2_ST_077,Route 2,380.0,1,2,9,61.54,0.0615,NH-965,National Highway,Maharashtra,True,True,True
+Route_2_ST_078,Route 2,385.0,3,6,14,129.99,0.13,NH-561A,National Highway,Maharashtra,True,True,True
+Route_2_ST_079,Route 2,390.0,0,1,14,852.55,0.8525,NH-965,National Highway,Maharashtra,False,True,True
+Route_2_ST_080,Route 2,395.0,1,1,3,124.19,0.1242,NH-965,National Highway,Maharashtra,True,True,True
+Route_2_ST_081,Route 2,400.0,1,1,1,314.13,0.3141,NH-965,National Highway,Maharashtra,True,True,True
+Route_2_ST_082,Route 2,405.0,1,1,1,201.71,0.2017,NH-965,National Highway,Maharashtra,True,True,True
+Route_2_ST_083,Route 2,410.0,1,1,1,139.76,0.1398,NH-965,National Highway,Maharashtra,True,True,True
+Route_2_ST_084,Route 2,415.0,1,1,2,115.66,0.1157,NH-965,National Highway,Maharashtra,True,True,True
+Route_2_ST_085,Route 2,420.0,1,1,5,109.97,0.11,NH-965,National Highway,Maharashtra,True,True,True
+Route_2_ST_086,Route 2,425.0,1,1,5,115.28,0.1153,NH-65,National Highway,Maharashtra,True,True,True
+Route_2_ST_087,Route 2,430.0,0,0,1,2946.36,2.9464,NH-65,National Highway,Maharashtra,False,False,True
+Route_2_ST_088,Route 2,435.0,0,0,0,,,,,,False,False,False
+Route_2_ST_089,Route 2,440.0,0,0,1,3123.09,3.1231,NH-65,National Highway,Maharashtra,False,False,True
+Route_2_ST_090,Route 2,445.0,0,0,2,3666.65,3.6666,NH-166,National Highway,Maharashtra,False,False,True
+Route_2_ST_091,Route 2,450.0,0,1,5,575.51,0.5755,Solapur Bypass,National Highway,Maharashtra,False,True,True
+Route_2_ST_092,Route 2,455.0,0,1,12,992.13,0.9921,NH-166,National Highway,Maharashtra,False,True,True
+Route_2_ST_093,Route 2,460.0,1,1,12,127.57,0.1276,NH-52,National Highway,Maharashtra,True,True,True
+Route_2_ST_094,Route 2,465.0,0,0,1,4171.72,4.1717,NH-52,National Highway,Maharashtra,False,False,True
+Route_2_ST_095,Route 2,470.0,0,0,0,,,,,,False,False,False
+Route_2_ST_096,Route 2,475.0,0,0,0,,,,,,False,False,False
+Route_2_ST_097,Route 2,480.0,1,1,1,241.14,0.2411,NH-465,National Highway,Maharashtra,True,True,True
+Route_2_ST_098,Route 2,485.0,0,0,1,3931.42,3.9314,NH-465,National Highway,Maharashtra,False,False,True
+Route_2_ST_099,Route 2,490.0,0,0,2,3306.14,3.3061,NH-548B,National Highway,Maharashtra,False,False,True
+Route_2_ST_100,Route 2,495.0,0,0,2,1189.46,1.1895,NH-548B,National Highway,Maharashtra,False,False,True
+Route_2_ST_101,Route 2,500.0,0,0,2,3975.54,3.9755,NH-548B,National Highway,Maharashtra,False,False,True
+Route_2_ST_102,Route 2,505.0,0,0,3,2577.65,2.5776,Afzalpur Road,National Highway,Karnataka,False,False,True
+Route_2_ST_103,Route 2,510.0,0,0,4,4096.96,4.097,NH-150,National Highway,Maharashtra,False,False,True
+Route_2_ST_104,Route 2,515.0,0,1,2,803.2,0.8032,NH-150,National Highway,Maharashtra,False,True,True
+Route_2_ST_105,Route 2,520.0,0,1,4,893.45,0.8935,NH-150,National Highway,Maharashtra,False,True,True
+Route_2_ST_106,Route 2,525.0,0,0,4,2079.47,2.0795,Solapur-Kurnool Corridor,National Highway,Karnataka,False,False,True
+Route_2_ST_107,Route 2,530.0,0,0,0,,,,,,False,False,False
+Route_2_ST_108,Route 2,535.0,0,0,0,,,,,,False,False,False
+Route_2_ST_109,Route 2,540.0,0,0,0,,,,,,False,False,False
+Route_2_ST_110,Route 2,545.0,0,0,0,,,,,,False,False,False
+Route_2_ST_111,Route 2,550.0,0,0,0,,,,,,False,False,False
+Route_2_ST_112,Route 2,555.0,0,0,0,,,,,,False,False,False
+Route_2_ST_113,Route 2,560.0,0,0,1,4671.12,4.6711,Kalaburagi Road,National Highway,Karnataka,False,False,True
+Route_2_ST_114,Route 2,565.0,0,0,1,2963.01,2.963,Kalaburagi Road,National Highway,Karnataka,False,False,True
+Route_2_ST_115,Route 2,570.0,0,0,5,1912.03,1.912,Kalaburagi Road,National Highway,Karnataka,False,False,True
+Route_2_ST_116,Route 2,575.0,0,1,5,767.93,0.7679,NH-150,National Highway,Karnataka,False,True,True
+Route_2_ST_117,Route 2,580.0,0,0,1,1259.16,1.2592,NH-150,National Highway,Karnataka,False,False,True
+Route_2_ST_118,Route 2,585.0,0,0,1,1961.46,1.9615,NH-150,National Highway,Karnataka,False,False,True
+Route_2_ST_119,Route 2,590.0,0,1,1,784.87,0.7849,NH-150,National Highway,Karnataka,False,True,True
+Route_2_ST_120,Route 2,595.0,0,1,1,760.21,0.7602,NH-150,National Highway,Karnataka,False,True,True
+Route_2_ST_121,Route 2,600.0,0,0,1,2978.26,2.9783,NH-150,National Highway,Karnataka,False,False,True
+Route_2_ST_122,Route 2,605.0,0,0,2,1898.27,1.8983,NH-150,National Highway,Karnataka,False,False,True
+Route_2_ST_123,Route 2,610.0,0,1,2,599.81,0.5998,NH-150,National Highway,Karnataka,False,True,True
+Route_2_ST_124,Route 2,615.0,0,0,2,3106.34,3.1063,NH-150,National Highway,Karnataka,False,False,True
+Route_2_ST_125,Route 2,620.0,0,0,0,,,,,,False,False,False
+Route_2_ST_126,Route 2,625.0,0,0,0,,,,,,False,False,False
+Route_2_ST_127,Route 2,630.0,0,0,0,,,,,,False,False,False
+Route_2_ST_128,Route 2,635.0,0,0,0,,,,,,False,False,False
+Route_2_ST_129,Route 2,640.0,0,0,0,,,,,,False,False,False
+Route_2_ST_130,Route 2,645.0,0,0,0,,,,,,False,False,False
+Route_2_ST_131,Route 2,650.0,0,0,0,,,,,,False,False,False
+Route_2_ST_132,Route 2,655.0,0,0,0,,,,,,False,False,False
+Route_2_ST_133,Route 2,660.0,0,0,0,,,,,,False,False,False
+Route_2_ST_134,Route 2,665.0,0,0,0,,,,,,False,False,False
+Route_2_ST_135,Route 2,670.0,0,0,0,,,,,,False,False,False
+Route_2_ST_136,Route 2,675.0,0,0,3,1132.31,1.1323,NH-167N,National Highway,Telangana,False,False,True
+Route_2_ST_137,Route 2,680.0,0,0,3,1208.03,1.208,NH-167N,National Highway,Telangana,False,False,True
+Route_2_ST_138,Route 2,685.0,0,0,0,,,,,,False,False,False
+Route_2_ST_139,Route 2,690.0,0,0,0,,,,,,False,False,False
+Route_2_ST_140,Route 2,695.0,0,0,0,,,,,,False,False,False
+Route_2_ST_141,Route 2,700.0,0,0,0,,,,,,False,False,False
+Route_2_ST_142,Route 2,705.0,0,0,0,,,,,,False,False,False
+Route_2_ST_143,Route 2,710.0,0,0,0,,,,,,False,False,False
+Route_2_ST_144,Route 2,715.0,0,0,0,,,,,,False,False,False
+Route_2_ST_145,Route 2,720.0,0,0,0,,,,,,False,False,False
+Route_2_ST_146,Route 2,725.0,0,0,0,,,,,,False,False,False
+Route_2_ST_147,Route 2,730.0,0,0,1,4646.22,4.6462,,National Highway,Telangana,False,False,True
+Route_2_ST_148,Route 2,735.0,1,1,1,284.45,0.2844,,National Highway,Telangana,True,True,True
+Route_2_ST_149,Route 2,740.0,0,0,0,,,,,,False,False,False
+Route_2_ST_150,Route 2,745.0,0,0,0,,,,,,False,False,False
+Route_2_ST_151,Route 2,750.0,0,0,0,,,,,,False,False,False
+Route_2_ST_152,Route 2,755.0,0,0,1,3355.74,3.3557,Nehru Outer Ring Road (Hyderabad),State Expressway,Telangana,False,False,True
+Route_2_ST_153,Route 2,760.0,0,0,1,1544.33,1.5443,Nehru Outer Ring Road (Hyderabad),State Expressway,Telangana,False,False,True
+Route_2_ST_154,Route 2,765.0,0,0,4,1827.75,1.8277,NH-65,National Highway,Telangana,False,False,True
+Route_2_ST_155,Route 2,770.0,0,1,4,735.2,0.7352,Miyapur Road,Other Major Road,Telangana,False,True,True
+Route_2_ST_156,Route 2,775.0,0,0,3,2386.71,2.3867,Miyapur Road,Other Major Road,Telangana,False,False,True
+Route_2_ST_157,Route 2,780.0,1,1,5,368.54,0.3685,NH-65,National Highway,Telangana,True,True,True
+Route_2_ST_158,Route 2,785.0,0,0,10,1532.95,1.533,NH-65,National Highway,Telangana,False,False,True
+Route_2_END,Route 2,789.90222,0,0,10,1532.95,1.533,NH-65,National Highway,Telangana,False,False,True
+Route_3_ST_001,Route 3,0.0,1,1,12,309.64,0.3096,Bandra-Worli Sea Link,Other Major Road,Maharashtra,True,True,True
+Route_3_ST_002,Route 3,5.0,3,3,6,15.71,0.0157,Western Expressway,Other Major Road,Maharashtra,True,True,True
+Route_3_ST_003,Route 3,10.0,0,0,4,1922.19,1.9222,Western Expressway,Other Major Road,Maharashtra,False,False,True
+Route_3_ST_004,Route 3,15.0,0,1,1,740.16,0.7402,Eastern Expressway,Other Major Road,Maharashtra,False,True,True
+Route_3_ST_005,Route 3,20.0,0,0,1,3667.61,3.6676,Eastern Expressway,Other Major Road,Maharashtra,False,False,True
+Route_3_ST_006,Route 3,25.0,0,0,2,4841.48,4.8415,NH-348A,National Highway,Maharashtra,False,False,True
+Route_3_ST_007,Route 3,30.0,0,0,3,1660.15,1.6602,NH-348A,National Highway,Maharashtra,False,False,True
+Route_3_ST_008,Route 3,35.0,1,1,3,366.28,0.3663,Sion-Panvel Expressway,Other Major Road,Maharashtra,True,True,True
+Route_3_ST_009,Route 3,40.0,0,0,10,1731.65,1.7317,Sion-Panvel Expressway,Other Major Road,Maharashtra,False,False,True
+Route_3_ST_010,Route 3,45.0,1,1,19,408.65,0.4086,NH-48,National Highway,Maharashtra,True,True,True
+Route_3_ST_011,Route 3,50.0,1,1,14,23.74,0.0237,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_012,Route 3,55.0,1,1,6,34.08,0.0341,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_013,Route 3,60.0,1,1,2,120.08,0.1201,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_014,Route 3,65.0,1,1,2,25.74,0.0257,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_015,Route 3,70.0,1,1,3,52.77,0.0528,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_016,Route 3,75.0,6,6,10,144.65,0.1446,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_017,Route 3,80.0,1,1,13,272.29,0.2723,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_018,Route 3,85.0,0,0,9,1664.68,1.6647,NH-48,National Highway,Maharashtra,False,False,True
+Route_3_ST_019,Route 3,90.0,0,0,6,2083.77,2.0838,Mumbai-Pune Expressway,State Expressway,Maharashtra,False,False,True
+Route_3_ST_020,Route 3,95.0,1,1,4,22.33,0.0223,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_021,Route 3,100.0,1,1,2,18.7,0.0187,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_022,Route 3,105.0,1,1,2,28.27,0.0283,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_023,Route 3,110.0,1,1,1,23.86,0.0239,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_024,Route 3,115.0,1,1,4,73.42,0.0734,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_025,Route 3,120.0,1,1,4,54.5,0.0545,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_026,Route 3,125.0,1,1,4,0.26,0.0003,Mumbai-Pune Expressway,State Expressway,Maharashtra,True,True,True
+Route_3_ST_027,Route 3,130.0,1,1,4,34.19,0.0342,NH-48,National Highway,Maharashtra,True,True,True
+Route_3_ST_028,Route 3,135.0,1,1,1,57.69,0.0577,NH-48,National Highway,Maharashtra,True,True,True
+Route_3_ST_029,Route 3,140.0,1,1,2,77.83,0.0778,NH-48,National Highway,Maharashtra,True,True,True
+Route_3_ST_030,Route 3,145.0,1,2,4,23.64,0.0236,NH-48,National Highway,Maharashtra,True,True,True
+Route_3_ST_031,Route 3,150.0,1,1,4,1.05,0.0011,NH-48,National Highway,Maharashtra,True,True,True
+Route_3_ST_032,Route 3,155.0,1,1,4,18.74,0.0187,NH-48,National Highway,Maharashtra,True,True,True
+Route_3_ST_033,Route 3,160.0,4,4,6,17.4,0.0174,NH-65,National Highway,Maharashtra,True,True,True
+Route_3_ST_034,Route 3,165.0,1,1,4,38.83,0.0388,NH-65,National Highway,Maharashtra,True,True,True
+Route_3_ST_035,Route 3,170.0,1,1,5,94.77,0.0948,NH-65,National Highway,Maharashtra,True,True,True
+Route_3_ST_036,Route 3,175.0,1,1,4,0.6,0.0006,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_037,Route 3,180.0,2,2,2,271.71,0.2717,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_038,Route 3,185.0,0,0,2,3422.67,3.4227,NH-965,National Highway,Maharashtra,False,False,True
+Route_3_ST_039,Route 3,190.0,0,0,0,,,,,,False,False,False
+Route_3_ST_040,Route 3,195.0,0,0,0,,,,,,False,False,False
+Route_3_ST_041,Route 3,200.0,0,0,1,4292.94,4.2929,NH-965,National Highway,Maharashtra,False,False,True
+Route_3_ST_042,Route 3,205.0,0,0,1,1522.07,1.5221,NH-965,National Highway,Maharashtra,False,False,True
+Route_3_ST_043,Route 3,210.0,0,0,1,4885.38,4.8854,NH-965,National Highway,Maharashtra,False,False,True
+Route_3_ST_044,Route 3,215.0,0,0,0,,,,,,False,False,False
+Route_3_ST_045,Route 3,220.0,0,1,1,817.14,0.8171,NH-965D,National Highway,Maharashtra,False,True,True
+Route_3_ST_046,Route 3,225.0,0,0,1,3909.35,3.9093,NH-965D,National Highway,Maharashtra,False,False,True
+Route_3_ST_047,Route 3,230.0,0,0,0,,,,,,False,False,False
+Route_3_ST_048,Route 3,235.0,0,0,0,,,,,,False,False,False
+Route_3_ST_049,Route 3,240.0,0,0,0,,,,,,False,False,False
+Route_3_ST_050,Route 3,245.0,0,0,1,2680.86,2.6809,NH-160,National Highway,Maharashtra,False,False,True
+Route_3_ST_051,Route 3,250.0,0,1,3,968.55,0.9686,NH-160,National Highway,Maharashtra,False,True,True
+Route_3_ST_052,Route 3,255.0,0,0,3,2208.48,2.2085,NH-160,National Highway,Maharashtra,False,False,True
+Route_3_ST_053,Route 3,260.0,0,0,0,,,,,,False,False,False
+Route_3_ST_054,Route 3,265.0,0,0,0,,,,,,False,False,False
+Route_3_ST_055,Route 3,270.0,0,0,0,,,,,,False,False,False
+Route_3_ST_056,Route 3,275.0,0,0,1,3320.88,3.3209,NH-965,National Highway,Maharashtra,False,False,True
+Route_3_ST_057,Route 3,280.0,0,0,2,1499.49,1.4995,NH-965,National Highway,Maharashtra,False,False,True
+Route_3_ST_058,Route 3,285.0,1,1,2,35.03,0.035,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_059,Route 3,290.0,2,2,2,7.99,0.008,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_060,Route 3,295.0,1,1,2,0.51,0.0005,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_061,Route 3,300.0,1,1,4,5.54,0.0055,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_062,Route 3,305.0,1,2,5,64.23,0.0642,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_063,Route 3,310.0,1,1,3,29.42,0.0294,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_064,Route 3,315.0,1,1,1,69.86,0.0699,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_065,Route 3,320.0,1,1,4,209.46,0.2095,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_066,Route 3,325.0,1,1,5,47.22,0.0472,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_067,Route 3,330.0,2,2,2,22.2,0.0222,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_068,Route 3,335.0,1,1,2,1.14,0.0011,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_069,Route 3,340.0,1,1,2,93.29,0.0933,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_070,Route 3,345.0,1,1,5,10.2,0.0102,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_071,Route 3,350.0,1,2,9,103.97,0.104,NH-965,National Highway,Maharashtra,True,True,True
+Route_3_ST_072,Route 3,355.0,3,6,14,26.82,0.0268,NH-561A,National Highway,Maharashtra,True,True,True
+Route_3_ST_073,Route 3,360.0,0,0,14,1827.45,1.8275,NH-965,National Highway,Maharashtra,False,False,True
+Route_3_ST_074,Route 3,365.0,0,0,2,2571.35,2.5714,NH-965,National Highway,Maharashtra,False,False,True
+Route_3_ST_075,Route 3,370.0,0,0,1,4244.53,4.2445,NH-965,National Highway,Maharashtra,False,False,True
+Route_3_ST_076,Route 3,375.0,0,0,0,,,,,,False,False,False
+Route_3_ST_077,Route 3,380.0,0,0,0,,,,,,False,False,False
+Route_3_ST_078,Route 3,385.0,0,0,0,,,,,,False,False,False
+Route_3_ST_079,Route 3,390.0,0,0,1,1104.6,1.1046,NH-465,National Highway,Maharashtra,False,False,True
+Route_3_ST_080,Route 3,395.0,1,1,4,80.01,0.08,NH-465,National Highway,Maharashtra,True,True,True
+Route_3_ST_081,Route 3,400.0,1,1,4,53.83,0.0538,NH-166,National Highway,Maharashtra,True,True,True
+Route_3_ST_082,Route 3,405.0,1,1,1,350.66,0.3507,NH-166,National Highway,Maharashtra,True,True,True
+Route_3_ST_083,Route 3,410.0,1,1,3,483.23,0.4832,NH-166,National Highway,Maharashtra,True,True,True
+Route_3_ST_084,Route 3,415.0,0,1,10,916.44,0.9164,NH-166,National Highway,Maharashtra,False,True,True
+Route_3_ST_085,Route 3,420.0,0,1,12,573.86,0.5739,NH-52,National Highway,Maharashtra,False,True,True
+Route_3_ST_086,Route 3,425.0,0,0,1,3281.94,3.2819,NH-52,National Highway,Maharashtra,False,False,True
+Route_3_ST_087,Route 3,430.0,0,0,0,,,,,,False,False,False
+Route_3_ST_088,Route 3,435.0,0,0,0,,,,,,False,False,False
+Route_3_ST_089,Route 3,440.0,0,0,1,1322.98,1.323,NH-465,National Highway,Maharashtra,False,False,True
+Route_3_ST_090,Route 3,445.0,0,0,1,2748.02,2.748,NH-465,National Highway,Maharashtra,False,False,True
+Route_3_ST_091,Route 3,450.0,0,0,2,4452.42,4.4524,NH-548B,National Highway,Maharashtra,False,False,True
+Route_3_ST_092,Route 3,455.0,2,2,2,217.96,0.218,NH-548B,National Highway,Maharashtra,True,True,True
+Route_3_ST_093,Route 3,460.0,0,0,2,3272.35,3.2723,NH-548B,National Highway,Maharashtra,False,False,True
+Route_3_ST_094,Route 3,465.0,0,0,3,2859.28,2.8593,Afzalpur Road,National Highway,Karnataka,False,False,True
+Route_3_ST_095,Route 3,470.0,0,0,4,3684.83,3.6848,Afzalpur Road,National Highway,Karnataka,False,False,True
+Route_3_ST_096,Route 3,475.0,0,0,2,1660.78,1.6608,NH-150,National Highway,Maharashtra,False,False,True
+Route_3_ST_097,Route 3,480.0,1,1,3,496.27,0.4963,NH-150,National Highway,Maharashtra,True,True,True
+Route_3_ST_098,Route 3,485.0,0,0,4,1654.62,1.6546,Solapur-Kurnool Corridor,National Highway,Maharashtra,False,False,True
+Route_3_ST_099,Route 3,490.0,0,0,1,4879.16,4.8792,Solapur-Kurnool Corridor,National Highway,Karnataka,False,False,True
+Route_3_ST_100,Route 3,495.0,0,0,0,,,,,,False,False,False
+Route_3_ST_101,Route 3,500.0,0,0,0,,,,,,False,False,False
+Route_3_ST_102,Route 3,505.0,0,0,0,,,,,,False,False,False
+Route_3_ST_103,Route 3,510.0,0,0,0,,,,,,False,False,False
+Route_3_ST_104,Route 3,515.0,0,0,0,,,,,,False,False,False
+Route_3_ST_105,Route 3,520.0,0,0,1,4901.55,4.9016,Kalaburagi Road,National Highway,Karnataka,False,False,True
+Route_3_ST_106,Route 3,525.0,0,0,1,3653.36,3.6534,Kalaburagi Road,National Highway,Karnataka,False,False,True
+Route_3_ST_107,Route 3,530.0,0,0,1,4067.23,4.0672,Kalaburagi Road,National Highway,Karnataka,False,False,True
+Route_3_ST_108,Route 3,535.0,0,0,1,2854.5,2.8545,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_109,Route 3,540.0,0,0,1,3938.81,3.9388,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_110,Route 3,545.0,0,0,1,2442.37,2.4424,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_111,Route 3,550.0,0,0,1,1791.31,1.7913,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_112,Route 3,555.0,0,0,1,1188.22,1.1882,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_113,Route 3,560.0,1,1,1,459.29,0.4593,NH-50,National Highway,Karnataka,True,True,True
+Route_3_ST_114,Route 3,565.0,0,1,1,622.6,0.6226,NH-50,National Highway,Karnataka,False,True,True
+Route_3_ST_115,Route 3,570.0,0,0,1,1559.2,1.5592,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_116,Route 3,575.0,0,0,1,1472.75,1.4727,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_117,Route 3,580.0,1,1,1,385.61,0.3856,NH-50,National Highway,Karnataka,True,True,True
+Route_3_ST_118,Route 3,585.0,0,0,1,4433.33,4.4333,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_119,Route 3,590.0,0,0,4,4377.3,4.3773,NH-65,National Highway,Karnataka,False,False,True
+Route_3_ST_120,Route 3,595.0,0,1,6,572.41,0.5724,NH-65,National Highway,Karnataka,False,True,True
+Route_3_ST_121,Route 3,600.0,0,0,2,2599.68,2.5997,NH-65,National Highway,Karnataka,False,False,True
+Route_3_ST_122,Route 3,605.0,0,0,1,2300.72,2.3007,NH-65,National Highway,Karnataka,False,False,True
+Route_3_ST_123,Route 3,610.0,0,0,1,3054.17,3.0542,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_124,Route 3,615.0,0,0,1,1251.43,1.2514,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_125,Route 3,620.0,0,0,1,2215.72,2.2157,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_126,Route 3,625.0,0,0,1,3135.68,3.1357,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_127,Route 3,630.0,0,0,2,2160.36,2.1604,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_128,Route 3,635.0,0,0,2,1014.63,1.0146,NH-50,National Highway,Karnataka,False,False,True
+Route_3_ST_129,Route 3,640.0,0,1,3,883.02,0.883,NH-50,National Highway,Karnataka,False,True,True
+Route_3_ST_130,Route 3,645.0,1,1,7,219.14,0.2191,NH-161A,National Highway,Karnataka,True,True,True
+Route_3_ST_131,Route 3,650.0,2,2,5,276.81,0.2768,Bidar Road,National Highway,Karnataka,True,True,True
+Route_3_ST_132,Route 3,655.0,0,0,2,3851.57,3.8516,Bidar Road,National Highway,Karnataka,False,False,True
+Route_3_ST_133,Route 3,660.0,0,0,0,,,,,,False,False,False
+Route_3_ST_134,Route 3,665.0,0,0,0,,,,,,False,False,False
+Route_3_ST_135,Route 3,670.0,0,0,0,,,,,,False,False,False
+Route_3_ST_136,Route 3,675.0,0,0,2,1112.55,1.1126,NH-65,National Highway,Telangana,False,False,True
+Route_3_ST_137,Route 3,680.0,0,0,2,1834.97,1.835,NH-65,National Highway,Telangana,False,False,True
+Route_3_ST_138,Route 3,685.0,0,0,2,1774.5,1.7745,NH-65,National Highway,Telangana,False,False,True
+Route_3_ST_139,Route 3,690.0,0,0,1,4494.32,4.4943,NH-65,National Highway,Telangana,False,False,True
+Route_3_ST_140,Route 3,695.0,0,0,0,,,,,,False,False,False
+Route_3_ST_141,Route 3,700.0,0,0,0,,,,,,False,False,False
+Route_3_ST_142,Route 3,705.0,0,0,0,,,,,,False,False,False
+Route_3_ST_143,Route 3,710.0,0,0,0,,,,,,False,False,False
+Route_3_ST_144,Route 3,715.0,0,0,0,,,,,,False,False,False
+Route_3_ST_145,Route 3,720.0,0,0,0,,,,,,False,False,False
+Route_3_ST_146,Route 3,725.0,0,0,0,,,,,,False,False,False
+Route_3_ST_147,Route 3,730.0,0,0,0,,,,,,False,False,False
+Route_3_ST_148,Route 3,735.0,0,0,0,,,,,,False,False,False
+Route_3_ST_149,Route 3,740.0,0,0,0,,,,,,False,False,False
+Route_3_ST_150,Route 3,745.0,0,0,0,,,,,,False,False,False
+Route_3_ST_151,Route 3,750.0,0,0,1,3156.98,3.157,,National Highway,Telangana,False,False,True
+Route_3_ST_152,Route 3,755.0,0,0,1,1637.53,1.6375,,National Highway,Telangana,False,False,True
+Route_3_ST_153,Route 3,760.0,0,0,0,,,,,,False,False,False
+Route_3_ST_154,Route 3,765.0,0,0,0,,,,,,False,False,False
+Route_3_ST_155,Route 3,770.0,0,0,0,,,,,,False,False,False
+Route_3_ST_156,Route 3,775.0,0,0,1,1808.03,1.808,Nehru Outer Ring Road (Hyderabad),State Expressway,Telangana,False,False,True
+Route_3_ST_157,Route 3,780.0,0,0,2,3103.62,3.1036,Nehru Outer Ring Road (Hyderabad),State Expressway,Telangana,False,False,True
+Route_3_ST_158,Route 3,785.0,0,0,4,1091.49,1.0915,NH-65,National Highway,Telangana,False,False,True
+Route_3_ST_159,Route 3,790.0,0,1,5,527.84,0.5278,Miyapur Road,Other Major Road,Telangana,False,True,True
+Route_3_ST_160,Route 3,795.0,0,0,3,2684.85,2.6848,NH-65,National Highway,Telangana,False,False,True
+Route_3_END,Route 3,799.26005,0,0,3,2684.85,2.6848,NH-65,National Highway,Telangana,False,False,True

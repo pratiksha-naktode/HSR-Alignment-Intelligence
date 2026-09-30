@@ -1,0 +1,4 @@
+route,direct_3_5m_count,within_100m_centerline_count,final_education_count,educational_types
+Route 1,1,39,39,college: 14; school: 9
+Route 2,0,31,31,school: 12; college: 5
+Route 3,2,39,39,school: 17; college: 7; university: 2

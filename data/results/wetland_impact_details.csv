@@ -1,0 +1,131 @@
+route,wetbnd_id,wetname,level1,level2,level3,descr,intersection_area_m2,intersection_area_ha
+Route 1,2102,Vasai Creek,Coastal,Natural,Creek,Coastal - Natural - Creek,793.5334279573415,0.07935334279573415
+Route 1,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,1099.1520903582407,0.10991520903582407
+Route 1,2102, ,Coastal,Natural,Creek,Coastal - Natural - Creek,1040.4813221060022,0.10404813221060022
+Route 1,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,3532.910008924844,0.3532910008924844
+Route 1,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,149.17683583427427,0.014917683583427427
+Route 1,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,69.74665563693878,0.006974665563693879
+Route 1,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,1627.9739035469472,0.16279739035469473
+Route 1,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,72.76841212629071,0.0072768412126290715
+Route 1,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,792.0445669699284,0.07920445669699284
+Route 1,1106,Kalundri River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,288.8984623127309,0.028889846231273088
+Route 1,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,1401.3990330160857,0.14013990330160858
+Route 1,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,311.38383282478526,0.031138383282478525
+Route 1,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,627.7133080259548,0.06277133080259548
+Route 1,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,714.2679157869857,0.07142679157869856
+Route 1,1106,Kolkhewadi River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,169.49594248133832,0.01694959424813383
+Route 1,1106,Dharvi River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,173.61604869893304,0.017361604869893306
+Route 1,1106,Indrayani River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,2510.0001101012454,0.25100001101012454
+Route 1,1106,Mula River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,440.2353019959571,0.04402353019959571
+Route 1,1106,Mutha River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,611.7170843060325,0.061171708430603246
+Route 1,1106,Karha River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,208.43365446728984,0.020843365446728983
+Route 1,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,91.99572735755102,0.009199572735755102
+Route 1,1106,Karha River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,296.9510916512241,0.02969510916512241
+Route 1,1106,Nira River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,454.31269640010055,0.045431269640010055
+Route 1,1106,Sina River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,239.2568106786965,0.023925681067869648
+Route 1,1106,Bhima River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,1885.0629737165768,0.1885062973716577
+Route 1,1201, ,Inland,Man-made,Reservoir/Barrage,Inland - Man-made - Reservoir/Barrage,271.5034577866358,0.02715034577866358
+Route 1,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,422.10092594915125,0.04221009259491512
+Route 1,1106,Kagina River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,2280.6410215310943,0.22806410215310943
+Route 1,9999, , , ,Others (non-wetland area),Others (non-wetland area),2165.959654033357,0.21659596540333567
+Route 2,2102,Vasai Creek,Coastal,Natural,Creek,Coastal - Natural - Creek,3330.749061388024,0.3330749061388024
+Route 2,2102, ,Coastal,Natural,Creek,Coastal - Natural - Creek,2784.9196238946083,0.27849196238946083
+Route 2,2102, ,Coastal,Natural,Creek,Coastal - Natural - Creek,1056.3649427012338,0.10563649427012338
+Route 2,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,1340.089692290284,0.13400896922902839
+Route 2,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,7392.552656794346,0.7392552656794347
+Route 2,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,3619.7145557455333,0.36197145557455335
+Route 2,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,2861.712224143406,0.28617122241434056
+Route 2,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,778.2003295502318,0.07782003295502318
+Route 2,2201, ,Coastal,Man-made,Salt Pan,Coastal - Man-made - Salt Pan,1885.176641430599,0.1885176641430599
+Route 2,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,145.68394234337967,0.014568394234337968
+Route 2,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,63.48537334364262,0.006348537334364262
+Route 2,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,1624.4900387640273,0.16244900387640274
+Route 2,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,455.82087815873797,0.0455820878158738
+Route 2,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,106.72362192259266,0.010672362192259265
+Route 2,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,758.0242811799833,0.07580242811799832
+Route 2,1106,Kalundri River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,283.7264542886127,0.028372645428861268
+Route 2,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,1383.2261528066585,0.13832261528066586
+Route 2,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,368.75688885147906,0.0368756888851479
+Route 2,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,648.2504133223853,0.06482504133223853
+Route 2,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,672.1723013423523,0.06721723013423522
+Route 2,1106,Kolkhewadi River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,205.4304214118794,0.02054304214118794
+Route 2,1106,Dharvi River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,206.31060015372623,0.020631060015372623
+Route 2,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,1963.023100914657,0.1963023100914657
+Route 2,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,140.4379822852562,0.01404379822852562
+Route 2,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,492.9159555934318,0.04929159555934318
+Route 2,1106,Indrayani River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,2611.7076358296067,0.26117076358296065
+Route 2,1106,Mula River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,445.1294256105336,0.044512942561053356
+Route 2,1106,Mutha River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,255.11185578332396,0.025511185578332395
+Route 2,1201,Vir Reservoir,Inland,Man-made,Reservoir/Barrage,Inland - Man-made - Reservoir/Barrage,1377.4883887716055,0.13774883887716055
+Route 2,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,796.1315288376643,0.07961315288376643
+Route 2,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,192.72625741802946,0.019272625741802947
+Route 2,1106,Sina River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,243.5494844599216,0.024354948445992158
+Route 2,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,596.923066974348,0.0596923066974348
+Route 2,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,1786.6155662837477,0.17866155662837477
+Route 2,1106,Bhima River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,1836.4838064431963,0.18364838064431963
+Route 2,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,1024.609722914613,0.1024609722914613
+Route 2,1106,Krishna River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,878.3605585858412,0.08783605585858412
+Route 2,1106,Chandrabhaga River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,1773.8475448034073,0.17738475448034074
+Route 2,1106,Vasna River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,1443.5043114662699,0.144350431146627
+Route 2,1106,Kudali River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,214.58062493764106,0.021458062493764106
+Route 2,1106,Vena River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,378.396181032867,0.0378396181032867
+Route 2,1106,Yerla River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,187.624509904884,0.0187624509904884
+Route 2,1202,Pingli Talav,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,527.4603924890969,0.052746039248909686
+Route 2,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,130.62495616804816,0.013062495616804816
+Route 2,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,167.55243752482428,0.01675524375248243
+Route 2,1106,Man River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,525.1904315489213,0.05251904315489213
+Route 2,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,46.6907719817113,0.00466907719817113
+Route 2,1106,Man River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,4400.727477605487,0.4400727477605487
+Route 2,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,210.02728224729924,0.021002728224729924
+Route 2,1106,Dhok Nala,Inland,Natural,River/Stream,Inland - Natural - River/Stream,246.00672231161178,0.024600672231161178
+Route 2,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,190.65370824108675,0.019065370824108675
+Route 2,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,328.35387492088375,0.03283538749208838
+Route 2,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,489.89600520229885,0.04898960052022989
+Route 2,1106,Kagina River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,3466.3093975084207,0.3466309397508421
+Route 2,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,196.9367801986969,0.019693678019869692
+Route 2,9999, , , ,Others (non-wetland area),Others (non-wetland area),1690.5005182232414,0.16905005182232413
+Route 3,2102,Vasai Creek,Coastal,Natural,Creek,Coastal - Natural - Creek,3404.578503089394,0.3404578503089394
+Route 3,2102, ,Coastal,Natural,Creek,Coastal - Natural - Creek,2790.385034576451,0.2790385034576451
+Route 3,2102, ,Coastal,Natural,Creek,Coastal - Natural - Creek,252.24106552107997,0.025224106552107998
+Route 3,2105, ,Coastal,Natural,Salt Marsh,Coastal - Natural - Salt Marsh,187.64312679418566,0.018764312679418565
+Route 3,2102, ,Coastal,Natural,Creek,Coastal - Natural - Creek,1040.6350392738777,0.10406350392738778
+Route 3,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,1375.3626663759233,0.13753626663759233
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,7297.805774930729,0.7297805774930729
+Route 3,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,3359.304826659535,0.3359304826659535
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,2756.5139514523553,0.2756513951452355
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,844.3103415079942,0.08443103415079942
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,358.4306914920213,0.03584306914920213
+Route 3,2201, ,Coastal,Man-made,Salt Pan,Coastal - Man-made - Salt Pan,1963.24410181612,0.196324410181612
+Route 3,2201, ,Coastal,Man-made,Salt Pan,Coastal - Man-made - Salt Pan,14.29594662696963,0.001429594662696963
+Route 3,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,147.9867270791936,0.014798672707919359
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,75.00742229899433,0.007500742229899433
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,1623.3105275385442,0.16233105275385443
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,140.59853057060332,0.014059853057060331
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,2045.1544438536023,0.20451544438536023
+Route 3,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,85.75529125846073,0.008575529125846073
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,779.4316021123091,0.0779431602112309
+Route 3,1106,Kalundri River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,280.01228045781977,0.02800122804578198
+Route 3,2104, ,Coastal,Natural,Intertidal Mud-flat,Coastal - Natural - Inter-tidal Mud-flat,1313.020064802588,0.1313020064802588
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,365.1752591143215,0.03651752591143215
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,629.8577059227046,0.06298577059227045
+Route 3,2106, ,Coastal,Natural,Mangrove,Coastal - Natural - Mangrove,745.3797198278214,0.07453797198278214
+Route 3,1106,Kolkhewadi River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,157.35166001902482,0.015735166001902483
+Route 3,1106,Patalganga River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,1538.9529638197487,0.15389529638197486
+Route 3,1106,Pauna River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,318.96223540781875,0.03189622354078187
+Route 3,1106,Mula River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,240.63130493177187,0.024063130493177185
+Route 3,1106,Mutha River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,416.6009287400438,0.04166009287400438
+Route 3,1106,Karha River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,206.70021912483753,0.020670021912483752
+Route 3,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,294.9923081391661,0.02949923081391661
+Route 3,1106,Karha River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,1744.1656299826245,0.17441656299826244
+Route 3,1106,Nira River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,566.3237026274065,0.05663237026274065
+Route 3,1106,Sina River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,200.95027578323658,0.020095027578323658
+Route 3,1106,Bhima River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,1857.4107662968122,0.18574107662968123
+Route 3,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,249.05416472058482,0.024905416472058482
+Route 3,1106,Karanja River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,289.8863330111294,0.02898863330111294
+Route 3,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,194.90643936789195,0.019490643936789193
+Route 3,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,813.2851412649648,0.08132851412649647
+Route 3,1201, ,Inland,Man-made,Reservoir/Barrage,Inland - Man-made - Reservoir/Barrage,128.27098900801295,0.012827098900801295
+Route 3,1106,Benitora River,Inland,Natural,River/Stream,Inland - Natural - River/Stream,495.4686791384034,0.04954686791384034
+Route 3,1106, ,Inland,Natural,River/Stream,Inland - Natural - River/Stream,547.0612716857843,0.05470612716857843
+Route 3,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,410.1374432626036,0.04101374432626036
+Route 3,1202, ,Inland,Man-made,Tank/Pond,Inland - Man-made - Tank/Pond,227.33341844634734,0.022733341844634734

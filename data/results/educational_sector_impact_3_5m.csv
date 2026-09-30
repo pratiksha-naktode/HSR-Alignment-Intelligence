@@ -1,0 +1,4 @@
+route,educational_sector_count,educational_types
+Route 1,1,college: 1
+Route 2,0,
+Route 3,2,university: 1; college: 1

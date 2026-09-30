@@ -1,0 +1,4 @@
+route,C1_Forest Area_raw,C2_Agriculture Area_raw,C3_Built-up Area_raw,C4_Educational Sector_raw,C5_Wetland Impact_raw,C6_Bhuvan Waterbody Polygon Intersections_raw,C7_Nearest ESZ_raw,C8_Route Length_raw,C9_Highway Intersection_raw,forest_intersection_length_km,agriculture_intersection_length_km,builtup_intersection_length_km,wetland_intersection_length_km,waterbody_intersection_length_km,topsis_score,topsis_rank
+Route 1,0.04830729,0.8786123,0.78187089,39,0.02474273,18,1.45903904,788.78495,60,13.8152906,250.90516379,223.73956556,7.06950652,1.47682052,0.61201219,1
+Route 3,0.05621451,1.53219794,0.79308827,39,0.04477389,51,3.65366194,799.26005,55,16.02982063,437.91121967,226.9042034,12.78607829,6.00166857,0.42005386,2
+Route 2,0.05549314,1.5710217,0.73632199,31,0.06322768,65,3.39855724,789.90222,55,15.92791066,449.12052675,210.88484982,18.07151553,7.42845763,0.41996497,3

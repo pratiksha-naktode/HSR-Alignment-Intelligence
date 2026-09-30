@@ -1,0 +1,4 @@
+route,total_interactions,total_interaction_length_km,short_crossing_count,extended_overlap_count,short_crossing_length_km,extended_overlap_length_km,extended_length_percentage,national_highway_length_km,state_expressway_length_km,other_major_road_length_km
+Route 1,60,4.4961,46,14,0.1223,4.3738,97.2799,4.4489,0.0409,0.0062
+Route 2,55,2.4149,42,13,0.141,2.2739,94.1629,2.3998,0.011,0.0041
+Route 3,55,4.6965,38,17,0.1442,4.5523,96.929,3.6527,1.0159,0.0279

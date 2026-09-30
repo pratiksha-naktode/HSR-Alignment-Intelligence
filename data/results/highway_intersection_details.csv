@@ -1,0 +1,171 @@
+route,highway_id,road_name,road_type,lane_status,category,status,gis_length_km,intersection_length_m
+Route 1,national_highway_uapdated_30_06_2022_department.453,NH-167N,National Highway,2L,Transport Infrastructure,PRAPOSED,8.69008135098,2.038815873577737
+Route 1,national_highway_uapdated_30_06_2022_department.488,Miyapur Road,Other Major Road,4L,Transport Infrastructure,EXISTING,6.83065962919,2.062287557326059
+Route 1,national_highway_uapdated_30_06_2022_department.491,NH-65,National Highway,6L,Transport Infrastructure,EXISTING,18.00471803040,2.1911167014024153
+Route 1,national_highway_uapdated_30_06_2022_department.706,,National Highway,,Transport Infrastructure,PRAPOSED,0E-11,2.016720468484087
+Route 1,national_highway_uapdated_30_06_2022_department.820,NH-167N,National Highway,2L,Transport Infrastructure,EXISTING,23.11167602910,2.0005943726977407
+Route 1,national_highway_uapdated_30_06_2022_department.827,Nehru Outer Ring Road (Hyderabad),State Expressway,8L,Transport Infrastructure,EXISTING,22.83768314500,2.0097704232283404
+Route 1,national_highway_uapdated_30_06_2022_department.3307,NH-50,National Highway,4L,Transport Infrastructure,EXISTING,4.60953756196,2.01069008518466
+Route 1,national_highway_uapdated_30_06_2022_department.3359,NH-150,National Highway,IL,Transport Infrastructure,EXISTING,36.92075553900,2.0023869920445883
+Route 1,national_highway_uapdated_30_06_2022_department.5628,NH-548A,National Highway,4L,Transport Infrastructure,EXISTING,27.65530408990,2.02426786752231
+Route 1,national_highway_uapdated_30_06_2022_department.5898,NH-753F,National Highway,2L,Transport Infrastructure,EXISTING,11.37403482360,2.0625948944607764
+Route 1,national_highway_uapdated_30_06_2022_department.5928,NH-48,National Highway,2L,Transport Infrastructure,EXISTING,26.18332044270,2.80267668923218
+Route 1,national_highway_uapdated_30_06_2022_department.5970,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,30.84433944330,758.5698984111516
+Route 1,national_highway_uapdated_30_06_2022_department.5972,NH-965,National Highway,4L,Transport Infrastructure,EXISTING,5.29565358432,352.53667555276513
+Route 1,national_highway_uapdated_30_06_2022_department.5981,NH-965D,National Highway,2L,Transport Infrastructure,EXISTING,45.99564282160,2.116121431446604
+Route 1,national_highway_uapdated_30_06_2022_department.5985,NH-965,National Highway,4L,Transport Infrastructure,EXISTING,6.71209706613,2.002784090172316
+Route 1,national_highway_uapdated_30_06_2022_department.5987,NH-65,National Highway,6L,Transport Infrastructure,EXISTING,6.46712019994,3.8169516956074454
+Route 1,national_highway_uapdated_30_06_2022_department.5989,NH-548E,National Highway,2L,Transport Infrastructure,EXISTING,25.99053147900,2.7573058966709727
+Route 1,national_highway_uapdated_30_06_2022_department.5992,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,25.90460676940,374.15078562397315
+Route 1,national_highway_uapdated_30_06_2022_department.5995,NH-65,National Highway,4L,Transport Infrastructure,EXISTING,1.28085054208,482.10944418791576
+Route 1,national_highway_uapdated_30_06_2022_department.5998,NH-965G,National Highway,2L,Transport Infrastructure,EXISTING,40.62975558560,1148.8967861033382
+Route 1,national_highway_uapdated_30_06_2022_department.5999,NH-160,National Highway,2L,Transport Infrastructure,EXISTING,22.66534120640,13.214638386970254
+Route 1,national_highway_uapdated_30_06_2022_department.6008,NH-465,National Highway,2L,Transport Infrastructure,EXISTING,31.87627297750,2.000011475510574
+Route 1,national_highway_uapdated_30_06_2022_department.6090,NH-965G,National Highway,2L,Transport Infrastructure,EXISTING,21.00722541370,299.95116636581866
+Route 1,national_highway_uapdated_30_06_2022_department.6091,NH-965G,National Highway,2L,Transport Infrastructure,EXISTING,12.46218012130,142.15488752384647
+Route 1,national_highway_uapdated_30_06_2022_department.6127,NH-60,National Highway,4L,Transport Infrastructure,EXISTING,6.06788615846,2.126886160358319
+Route 1,national_highway_uapdated_30_06_2022_department.6144,NH-965C,National Highway,2L,Transport Infrastructure,EXISTING,0.21156584679,2.0525516607685983
+Route 1,national_highway_uapdated_30_06_2022_department.6145,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,0.20329862678,100.97544472413507
+Route 1,national_highway_uapdated_30_06_2022_department.6146,NH-561A,National Highway,2L,Transport Infrastructure,EXISTING,0.10139949178,0.758917607086084
+Route 1,national_highway_uapdated_30_06_2022_department.6149,NH-561A,National Highway,2L,Transport Infrastructure,EXISTING,0.59394477461,26.907797304362827
+Route 1,national_highway_uapdated_30_06_2022_department.6158,NH-465,National Highway,2L,Transport Infrastructure,EXISTING,23.38520764210,2.2383066803007328
+Route 1,national_highway_uapdated_30_06_2022_department.6161,Mumbai-Pune Expressway,State Expressway,6L,Transport Infrastructure,EXISTING,39.49000062630,29.86940901613589
+Route 1,national_highway_uapdated_30_06_2022_department.6162,Mumbai-Pune Expressway,State Expressway,6L,Transport Infrastructure,EXISTING,4.28741589844,3.3640844873570774
+Route 1,national_highway_uapdated_30_06_2022_department.6165,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,6.10493773990,2.9715868095300584
+Route 1,national_highway_uapdated_30_06_2022_department.6166,Mumbai-Pune Expressway,State Expressway,6L,Transport Infrastructure,EXISTING,6.36463822308,3.6597753134131987
+Route 1,national_highway_uapdated_30_06_2022_department.6199,NH-150,National Highway,2L,Transport Infrastructure,EXISTING,30.18695556290,2.030661604530961
+Route 1,national_highway_uapdated_30_06_2022_department.6203,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,2.37484704439,51.94793332047141
+Route 1,national_highway_uapdated_30_06_2022_department.6243,NH-548A,National Highway,4L,Transport Infrastructure,EXISTING,25.65088995400,2.0029512794783693
+Route 1,national_highway_uapdated_30_06_2022_department.6276,NE4,National Highway,8L,Transport Infrastructure,PRAPOSED,2.67670407316,2.105228403809905
+Route 1,national_highway_uapdated_30_06_2022_department.6279,NH-65,National Highway,6L,Transport Infrastructure,EXISTING,25.96549229680,54.70089799802636
+Route 1,national_highway_uapdated_30_06_2022_department.6288,NH-160,National Highway,2L,Transport Infrastructure,EXISTING,2.09161124933,68.88058887041254
+Route 1,national_highway_uapdated_30_06_2022_department.6294,NH-965G,National Highway,,Transport Infrastructure,EXISTING,21.67187072860,2.004473816539363
+Route 1,national_highway_uapdated_30_06_2022_department.6301,NH-52,National Highway,4L,Transport Infrastructure,EXISTING,13.54894335710,2.0364358298092555
+Route 1,national_highway_uapdated_30_06_2022_department.6321,Solapur Bypass,National Highway,6L,Transport Infrastructure,EXISTING,21.06809799530,2.430275811950886
+Route 1,national_highway_uapdated_30_06_2022_department.6325,Airoli-Katai Naka Freeway,State Expressway,6L,Transport Infrastructure,PRAPOSED,10.80552886490,2.0006404284728703
+Route 1,national_highway_uapdated_30_06_2022_department.6326,Mulund-Airoli Road,Other Major Road,4L,Transport Infrastructure,EXISTING,7.52275776728,2.138619640639579
+Route 1,national_highway_uapdated_30_06_2022_department.6327,Airoli-Shilpata Road,Other Major Road,4L,Transport Infrastructure,EXISTING,12.25428954710,2.0021595918939274
+Route 1,national_highway_uapdated_30_06_2022_department.6352,NH-548C,National Highway,2L,Transport Infrastructure,EXISTING,3.04449201025,3.0575279136045186
+Route 1,national_highway_uapdated_30_06_2022_department.6364,NH-348A,National Highway,8L,Transport Infrastructure,EXISTING,2.34564499283,2.0001242669644568
+Route 1,national_highway_uapdated_30_06_2022_department.6372,NH-561A,National Highway,2L,Transport Infrastructure,EXISTING,0.83455972605,2.059988027466651
+Route 1,national_highway_uapdated_30_06_2022_department.6469,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,13.43547348720,3.5854791809004483
+Route 1,national_highway_uapdated_30_06_2022_department.6472,NH-965G,National Highway,2L,Transport Infrastructure,UNDER CONSTRUCTION,4.69089666513,5.380025143422776
+Route 1,national_highway_uapdated_30_06_2022_department.6473,NH-965G,National Highway,2L,Transport Infrastructure,PRAPOSED,2.57261001074,5.210390089137274
+Route 1,national_highway_uapdated_30_06_2022_department.6621,NH-65,National Highway,4L,Transport Infrastructure,EXISTING,1.28085054208,482.10944418791576
+Route 1,national_highway_uapdated_30_06_2022_department.6687,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,6.54298756068,2.3364353246886584
+Route 1,national_highway_uapdated_30_06_2022_department.6743,NH-548B,National Highway,2L,Transport Infrastructure,EXISTING,18.33018989820,2.0029664577054356
+Route 1,national_highway_uapdated_30_06_2022_department.9482,NH-166,National Highway,4L,Transport Infrastructure,EXISTING,21.72448097460,2.0139125600326873
+Route 1,national_highway_uapdated_30_06_2022_department.9936,NH-548,National Highway,8L,Transport Infrastructure,EXISTING,4.51448181138,2.0181124721564765
+Route 1,national_highway_uapdated_30_06_2022_department.10005,NH-548D,National Highway,2L,Transport Infrastructure,EXISTING,23.03351496940,2.044592214231336
+Route 1,national_highway_uapdated_30_06_2022_department.10009,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,4.72899311959,2.8274330852720784
+Route 1,national_highway_uapdated_30_06_2022_department.10292,Solapur-Kurnool Corridor,National Highway,6L,Transport Infrastructure,,23.72481438233,2.705177491732467
+Route 2,national_highway_uapdated_30_06_2022_department.453,NH-167N,National Highway,2L,Transport Infrastructure,PRAPOSED,8.69008135098,2.001602180505833
+Route 2,national_highway_uapdated_30_06_2022_department.488,Miyapur Road,Other Major Road,4L,Transport Infrastructure,EXISTING,6.83065962919,2.049238943428105
+Route 2,national_highway_uapdated_30_06_2022_department.490,Inner Ring Road,National Highway,4L,Transport Infrastructure,EXISTING,2.57499552405,2.005196271802766
+Route 2,national_highway_uapdated_30_06_2022_department.491,NH-65,National Highway,6L,Transport Infrastructure,EXISTING,18.00471803040,4.431206992520126
+Route 2,national_highway_uapdated_30_06_2022_department.706,,National Highway,,Transport Infrastructure,PRAPOSED,0E-11,2.0412425489968338
+Route 2,national_highway_uapdated_30_06_2022_department.820,NH-167N,National Highway,2L,Transport Infrastructure,EXISTING,23.11167602910,2.0000269150240113
+Route 2,national_highway_uapdated_30_06_2022_department.827,Nehru Outer Ring Road (Hyderabad),State Expressway,8L,Transport Infrastructure,EXISTING,22.83768314500,2.040316443013026
+Route 2,national_highway_uapdated_30_06_2022_department.3307,NH-50,National Highway,4L,Transport Infrastructure,EXISTING,4.60953756196,2.0120509225208876
+Route 2,national_highway_uapdated_30_06_2022_department.3359,NH-150,National Highway,IL,Transport Infrastructure,EXISTING,36.92075553900,2.0037845306419952
+Route 2,national_highway_uapdated_30_06_2022_department.5898,NH-753F,National Highway,2L,Transport Infrastructure,EXISTING,11.37403482360,2.0757302086547553
+Route 2,national_highway_uapdated_30_06_2022_department.5919,NH-548C,National Highway,2L,Transport Infrastructure,EXISTING,57.12149069620,971.5966082048651
+Route 2,national_highway_uapdated_30_06_2022_department.5927,NH-48,National Highway,4L,Transport Infrastructure,EXISTING,2.43286399645,6.262662223595953
+Route 2,national_highway_uapdated_30_06_2022_department.5928,NH-48,National Highway,2L,Transport Infrastructure,EXISTING,26.18332044270,2.6901996191817323
+Route 2,national_highway_uapdated_30_06_2022_department.5953,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,29.66156052920,137.70866108810094
+Route 2,national_highway_uapdated_30_06_2022_department.5970,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,30.84433944330,97.71276588658664
+Route 2,national_highway_uapdated_30_06_2022_department.5972,NH-965,National Highway,4L,Transport Infrastructure,EXISTING,5.29565358432,31.1809608607067
+Route 2,national_highway_uapdated_30_06_2022_department.5973,NH-561A,National Highway,2L,Transport Infrastructure,EXISTING,2.70823178257,2.0002465806084215
+Route 2,national_highway_uapdated_30_06_2022_department.5975,NH-548C,National Highway,2L,Transport Infrastructure,EXISTING,28.54175994060,2.0099381656031903
+Route 2,national_highway_uapdated_30_06_2022_department.5988,NH-965G,National Highway,2L,Transport Infrastructure,EXISTING,32.20983969560,2.0661171783626244
+Route 2,national_highway_uapdated_30_06_2022_department.5990,NH-548E,National Highway,2L,Transport Infrastructure,EXISTING,27.36558878040,8.158156852899337
+Route 2,national_highway_uapdated_30_06_2022_department.6008,NH-465,National Highway,2L,Transport Infrastructure,EXISTING,31.87627297750,2.1380259592264466
+Route 2,national_highway_uapdated_30_06_2022_department.6085,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,37.71906941450,172.9945285125453
+Route 2,national_highway_uapdated_30_06_2022_department.6127,NH-60,National Highway,4L,Transport Infrastructure,EXISTING,6.06788615846,256.8319199820452
+Route 2,national_highway_uapdated_30_06_2022_department.6128,NH-65,National Highway,4L,Transport Infrastructure,EXISTING,5.76643606622,144.74197174799872
+Route 2,national_highway_uapdated_30_06_2022_department.6144,NH-965C,National Highway,2L,Transport Infrastructure,EXISTING,0.21156584679,1.4578020157086433
+Route 2,national_highway_uapdated_30_06_2022_department.6145,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,0.20329862678,19.04563589721445
+Route 2,national_highway_uapdated_30_06_2022_department.6154,NH-65,National Highway,4L,Transport Infrastructure,EXISTING,12.04221509890,2.2758567373415803
+Route 2,national_highway_uapdated_30_06_2022_department.6158,NH-465,National Highway,2L,Transport Infrastructure,EXISTING,23.38520764210,2.0837240557456753
+Route 2,national_highway_uapdated_30_06_2022_department.6161,Mumbai-Pune Expressway,State Expressway,6L,Transport Infrastructure,EXISTING,39.49000062630,2.0000519895938083
+Route 2,national_highway_uapdated_30_06_2022_department.6162,Mumbai-Pune Expressway,State Expressway,6L,Transport Infrastructure,EXISTING,4.28741589844,3.6350642633931733
+Route 2,national_highway_uapdated_30_06_2022_department.6165,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,6.10493773990,3.8928266068448005
+Route 2,national_highway_uapdated_30_06_2022_department.6166,Mumbai-Pune Expressway,State Expressway,6L,Transport Infrastructure,EXISTING,6.36463822308,3.365256465244367
+Route 2,national_highway_uapdated_30_06_2022_department.6169,NH-48,National Highway,4L,Transport Infrastructure,EXISTING,6.46153828373,65.42144872853257
+Route 2,national_highway_uapdated_30_06_2022_department.6199,NH-150,National Highway,2L,Transport Infrastructure,EXISTING,30.18695556290,2.1429443380180238
+Route 2,national_highway_uapdated_30_06_2022_department.6200,NH-60,National Highway,2L,Transport Infrastructure,EXISTING,7.70437715396,174.28390711421787
+Route 2,national_highway_uapdated_30_06_2022_department.6203,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,2.37484704439,9.101877549734798
+Route 2,national_highway_uapdated_30_06_2022_department.6242,NH-48,National Highway,4L,Transport Infrastructure,EXISTING,24.77261475070,70.38843059139893
+Route 2,national_highway_uapdated_30_06_2022_department.6276,NE4,National Highway,8L,Transport Infrastructure,PRAPOSED,2.67670407316,2.08995295253212
+Route 2,national_highway_uapdated_30_06_2022_department.6279,NH-65,National Highway,6L,Transport Infrastructure,EXISTING,25.96549229680,13.068326811482928
+Route 2,national_highway_uapdated_30_06_2022_department.6301,NH-52,National Highway,4L,Transport Infrastructure,EXISTING,13.54894335710,2.038211555509068
+Route 2,national_highway_uapdated_30_06_2022_department.6321,Solapur Bypass,National Highway,6L,Transport Infrastructure,EXISTING,21.06809799530,2.207237293293599
+Route 2,national_highway_uapdated_30_06_2022_department.6333,Eastern Expressway,Other Major Road,6L,Transport Infrastructure,EXISTING,22.07239250100,2.002098792319331
+Route 2,national_highway_uapdated_30_06_2022_department.6364,NH-348A,National Highway,8L,Transport Infrastructure,EXISTING,2.34564499283,2.0001506402588682
+Route 2,national_highway_uapdated_30_06_2022_department.6569,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,10.39664315540,34.67209154248206
+Route 2,national_highway_uapdated_30_06_2022_department.6687,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,6.54298756068,2.2872582864595405
+Route 2,national_highway_uapdated_30_06_2022_department.6743,NH-548B,National Highway,2L,Transport Infrastructure,EXISTING,18.33018989820,2.0135864834278667
+Route 2,national_highway_uapdated_30_06_2022_department.6762,NH-160,National Highway,4L,Transport Infrastructure,EXISTING,43.53964292350,2.008150247417349
+Route 2,national_highway_uapdated_30_06_2022_department.9482,NH-166,National Highway,4L,Transport Infrastructure,EXISTING,21.72448097460,2.014547288639723
+Route 2,national_highway_uapdated_30_06_2022_department.9936,NH-548,National Highway,8L,Transport Infrastructure,EXISTING,4.51448181138,2.0017265638700317
+Route 2,national_highway_uapdated_30_06_2022_department.10005,NH-548D,National Highway,2L,Transport Infrastructure,EXISTING,23.03351496940,3.1211589128693253
+Route 2,national_highway_uapdated_30_06_2022_department.10012,NH-965DD,National Highway,2L,Transport Infrastructure,EXISTING,58.33018942330,2.062347361487614
+Route 2,national_highway_uapdated_30_06_2022_department.10014,NH-965D,National Highway,2L,Transport Infrastructure,EXISTING,43.25956861200,2.377267234591059
+Route 2,national_highway_uapdated_30_06_2022_department.10257,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,29.66156052920,76.35641432715794
+Route 2,national_highway_uapdated_30_06_2022_department.10259,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,8.72128051633,40.05162010953431
+Route 2,national_highway_uapdated_30_06_2022_department.10292,Solapur-Kurnool Corridor,National Highway,6L,Transport Infrastructure,,23.72481438233,2.6822287568097174
+Route 3,national_highway_uapdated_30_06_2022_department.488,Miyapur Road,Other Major Road,4L,Transport Infrastructure,EXISTING,6.83065962919,2.025057347188045
+Route 3,national_highway_uapdated_30_06_2022_department.491,NH-65,National Highway,6L,Transport Infrastructure,EXISTING,18.00471803040,2.2053953798093326
+Route 3,national_highway_uapdated_30_06_2022_department.499,NH-65,National Highway,4L,Transport Infrastructure,EXISTING,9.90668444259,2.0681451720639483
+Route 3,national_highway_uapdated_30_06_2022_department.706,,National Highway,,Transport Infrastructure,PRAPOSED,0E-11,2.0000176834985623
+Route 3,national_highway_uapdated_30_06_2022_department.827,Nehru Outer Ring Road (Hyderabad),State Expressway,8L,Transport Infrastructure,EXISTING,22.83768314500,2.0079621249038824
+Route 3,national_highway_uapdated_30_06_2022_department.3210,NH-50,National Highway,2L,Transport Infrastructure,EXISTING,46.33050375230,6.310652780851342
+Route 3,national_highway_uapdated_30_06_2022_department.3213,NH-65,National Highway,4L,Transport Infrastructure,EXISTING,30.34497759690,2.0000706562997363
+Route 3,national_highway_uapdated_30_06_2022_department.3268,NH-50,National Highway,4L,Transport Infrastructure,EXISTING,60.83199256600,3.466746296435942
+Route 3,national_highway_uapdated_30_06_2022_department.5603,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,7.70853684055,104.83690619100454
+Route 3,national_highway_uapdated_30_06_2022_department.5898,NH-753F,National Highway,2L,Transport Infrastructure,EXISTING,11.37403482360,2.7274124634192267
+Route 3,national_highway_uapdated_30_06_2022_department.5899,NH-65,National Highway,4L,Transport Infrastructure,EXISTING,3.94120660501,99.02427355885561
+Route 3,national_highway_uapdated_30_06_2022_department.5972,NH-965,National Highway,4L,Transport Infrastructure,EXISTING,5.29565358432,27.376134210874312
+Route 3,national_highway_uapdated_30_06_2022_department.5973,NH-561A,National Highway,2L,Transport Infrastructure,EXISTING,2.70823178257,2.000015493170441
+Route 3,national_highway_uapdated_30_06_2022_department.5974,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,50.04257288130,793.3288062875773
+Route 3,national_highway_uapdated_30_06_2022_department.5975,NH-548C,National Highway,2L,Transport Infrastructure,EXISTING,28.54175994060,2.306873428535947
+Route 3,national_highway_uapdated_30_06_2022_department.5980,NH-965,National Highway,4L,Transport Infrastructure,EXISTING,56.95939418930,4.8104201431897105
+Route 3,national_highway_uapdated_30_06_2022_department.5981,NH-965D,National Highway,2L,Transport Infrastructure,EXISTING,45.99564282160,2.056758787538315
+Route 3,national_highway_uapdated_30_06_2022_department.5989,NH-548E,National Highway,2L,Transport Infrastructure,EXISTING,25.99053147900,3.627157796499061
+Route 3,national_highway_uapdated_30_06_2022_department.5992,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,25.90460676940,784.5654998690956
+Route 3,national_highway_uapdated_30_06_2022_department.5994,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,13.90346899270,84.6894615266757
+Route 3,national_highway_uapdated_30_06_2022_department.5999,NH-160,National Highway,2L,Transport Infrastructure,EXISTING,22.66534120640,22.571951653173542
+Route 3,national_highway_uapdated_30_06_2022_department.6008,NH-465,National Highway,2L,Transport Infrastructure,EXISTING,31.87627297750,2.5534403082868864
+Route 3,national_highway_uapdated_30_06_2022_department.6091,NH-965G,National Highway,2L,Transport Infrastructure,EXISTING,12.46218012130,2.1980592821172587
+Route 3,national_highway_uapdated_30_06_2022_department.6144,NH-965C,National Highway,2L,Transport Infrastructure,EXISTING,0.21156584679,2.6197207819172896
+Route 3,national_highway_uapdated_30_06_2022_department.6145,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,0.20329862678,4.054366015711347
+Route 3,national_highway_uapdated_30_06_2022_department.6149,NH-561A,National Highway,2L,Transport Infrastructure,EXISTING,0.59394477461,11.740747858754549
+Route 3,national_highway_uapdated_30_06_2022_department.6154,NH-65,National Highway,4L,Transport Infrastructure,EXISTING,12.04221509890,426.09831207982063
+Route 3,national_highway_uapdated_30_06_2022_department.6158,NH-465,National Highway,2L,Transport Infrastructure,EXISTING,23.38520764210,96.68617408007654
+Route 3,national_highway_uapdated_30_06_2022_department.6160,NH-166,National Highway,4L,Transport Infrastructure,EXISTING,21.72448097460,68.14664952414407
+Route 3,national_highway_uapdated_30_06_2022_department.6161,Mumbai-Pune Expressway,State Expressway,6L,Transport Infrastructure,EXISTING,39.49000062630,756.4722143079879
+Route 3,national_highway_uapdated_30_06_2022_department.6162,Mumbai-Pune Expressway,State Expressway,6L,Transport Infrastructure,EXISTING,4.28741589844,9.150844547249749
+Route 3,national_highway_uapdated_30_06_2022_department.6163,NH-48,National Highway,4L,Transport Infrastructure,EXISTING,2.09902794621,2.0033305099126593
+Route 3,national_highway_uapdated_30_06_2022_department.6167,NH-548A,National Highway,2L,Transport Infrastructure,EXISTING,4.08299860161,2.197186190345376
+Route 3,national_highway_uapdated_30_06_2022_department.6168,Mumbai-Pune Expressway,State Expressway,6L,Transport Infrastructure,EXISTING,23.91409643820,246.27161766799205
+Route 3,national_highway_uapdated_30_06_2022_department.6170,Mumbai-Pune Expressway,State Expressway,6L,Transport Infrastructure,EXISTING,8.64806954135,2.035107776667137
+Route 3,national_highway_uapdated_30_06_2022_department.6199,NH-150,National Highway,2L,Transport Infrastructure,EXISTING,30.18695556290,2.0028562584890475
+Route 3,national_highway_uapdated_30_06_2022_department.6200,NH-60,National Highway,2L,Transport Infrastructure,EXISTING,7.70437715396,2.4079048227083635
+Route 3,national_highway_uapdated_30_06_2022_department.6203,NH-965,National Highway,2L,Transport Infrastructure,EXISTING,2.37484704439,18.276403030276413
+Route 3,national_highway_uapdated_30_06_2022_department.6276,NE4,National Highway,8L,Transport Infrastructure,PRAPOSED,2.67670407316,2.028686865843205
+Route 3,national_highway_uapdated_30_06_2022_department.6288,NH-160,National Highway,2L,Transport Infrastructure,EXISTING,2.09161124933,13.791388546782906
+Route 3,national_highway_uapdated_30_06_2022_department.6301,NH-52,National Highway,4L,Transport Infrastructure,EXISTING,13.54894335710,2.051373960195608
+Route 3,national_highway_uapdated_30_06_2022_department.6311,NH-548B,National Highway,2L,Transport Infrastructure,EXISTING,18.33018989820,2.2426911147816697
+Route 3,national_highway_uapdated_30_06_2022_department.6321,Solapur Bypass,National Highway,6L,Transport Infrastructure,EXISTING,21.06809799530,2.416806244153701
+Route 3,national_highway_uapdated_30_06_2022_department.6331,Western Expressway,Other Major Road,6L,Transport Infrastructure,EXISTING,30.43750359060,23.856710353394405
+Route 3,national_highway_uapdated_30_06_2022_department.6333,Eastern Expressway,Other Major Road,6L,Transport Infrastructure,EXISTING,22.07239250100,2.002047472273415
+Route 3,national_highway_uapdated_30_06_2022_department.6364,NH-348A,National Highway,8L,Transport Infrastructure,EXISTING,2.34564499283,2.0038377091535287
+Route 3,national_highway_uapdated_30_06_2022_department.6476,NH-965,National Highway,,Transport Infrastructure,EXISTING,6.16104212369,40.28130451834034
+Route 3,national_highway_uapdated_30_06_2022_department.6687,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,6.54298756068,2.4760543895701543
+Route 3,national_highway_uapdated_30_06_2022_department.9482,NH-166,National Highway,4L,Transport Infrastructure,EXISTING,21.72448097460,6.647991557184453
+Route 3,national_highway_uapdated_30_06_2022_department.9936,NH-548,National Highway,8L,Transport Infrastructure,EXISTING,4.51448181138,2.0463060723386706
+Route 3,national_highway_uapdated_30_06_2022_department.10008,NH-965,National Highway,4L,Transport Infrastructure,EXISTING,56.95939418930,266.5838491115528
+Route 3,national_highway_uapdated_30_06_2022_department.10258,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,19.86729772000,261.4052789027631
+Route 3,national_highway_uapdated_30_06_2022_department.10259,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,8.72128051633,3.3031633790638453
+Route 3,national_highway_uapdated_30_06_2022_department.10260,NH-48,National Highway,6L,Transport Infrastructure,EXISTING,7.72736937387,450.1067987720005
+Route 3,national_highway_uapdated_30_06_2022_department.10292,Solapur-Kurnool Corridor,National Highway,6L,Transport Infrastructure,,23.72481438233,2.3670858962273345

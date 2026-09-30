@@ -1,0 +1,4 @@
+route,educational_sector_count,amenity_types
+Route 1,1,college
+Route 2,0,
+Route 3,2,university; college

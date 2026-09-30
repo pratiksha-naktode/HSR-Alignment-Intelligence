@@ -1,0 +1,4 @@
+route,highway_interaction_km,nearest_waterbody_distance_m,waterbodies_within_100m,waterbodies_within_500m,wetland_count,wetland_area_ha,intersecting_esz_count,nearest_esz_distance_m,C1_highway_score,C2_waterbody_score,C3_wetland_score,C4_esz_score,Highway_AHP_Weight,Waterbody_AHP_Weight,Wetland_AHP_Weight,ESZ_AHP_Weight,Highway_Contribution,Waterbody_Contribution,Wetland_Contribution,ESZ_Contribution,Final_Score,Rank
+Route 3,4.6965,187.48,0,6,45,2.557394,0,3654.41114,0.0,1.0,0.480196,1.0,0.171562,0.143636,0.458835,0.225966,0.0,0.143636,0.220331,0.225966,0.589933,1
+Route 1,4.4961,5.87,1,14,29,1.414009,0,1459.789044,0.087833,0.017156,1.0,0.0,0.171562,0.143636,0.458835,0.225966,0.015069,0.002464,0.458835,0.0,0.476368,2
+Route 2,2.4149,2.7,2,13,56,3.613655,0,3399.306778,1.0,0.0,0.0,0.883759,0.171562,0.143636,0.458835,0.225966,0.171562,0.0,0.0,0.1997,0.371262,3

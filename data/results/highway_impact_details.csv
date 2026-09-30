@@ -1,0 +1,171 @@
+route,road_name,road_type,lane_statu,state_ut,gis_length,category,level_1,level_2,level_3,level_4,level_5,status,analysis_class
+Route 1,NH-167N,National Highway,2L,Telangana,8.69008135098,Transport Infrastructure,Roadways,,,,,PRAPOSED,National Highway
+Route 1,Miyapur Road,Other Major Road,4L,Telangana,6.83065962919,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,Other Major Road
+Route 1,NH-65,National Highway,6L,Telangana,18.00471803040,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 1,,National Highway,,Telangana,0E-11,Transport Infrastructure,Roadways,,,,,PRAPOSED,National Highway
+Route 1,NH-167N,National Highway,2L,Telangana,23.11167602910,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,Nehru Outer Ring Road (Hyderabad),State Expressway,8L,Telangana,22.83768314500,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,State Expressway
+Route 1,NH-50,National Highway,4L,Karnataka,4.60953756196,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-150,National Highway,IL,Karnataka,36.92075553900,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-548A,National Highway,4L,Maharashtra,27.65530408990,Transport Infrastructure,Roadways,,,,,EXISTING,National Highway
+Route 1,NH-753F,National Highway,2L,Maharashtra,11.37403482360,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 1,NH-48,National Highway,2L,Maharashtra,26.18332044270,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-965,National Highway,2L,Maharashtra,30.84433944330,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-965,National Highway,4L,Maharashtra,5.29565358432,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-965D,National Highway,2L,Maharashtra,45.99564282160,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Inter Corridor Route,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 1,NH-965,National Highway,4L,Maharashtra,6.71209706613,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-65,National Highway,6L,Maharashtra,6.46712019994,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 1,NH-548E,National Highway,2L,Maharashtra,25.99053147900,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-965,National Highway,2L,Maharashtra,25.90460676940,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-65,National Highway,4L,Maharashtra,1.28085054208,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 1,NH-965G,National Highway,2L,Maharashtra,40.62975558560,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-160,National Highway,2L,Maharashtra,22.66534120640,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-465,National Highway,2L,Maharashtra,31.87627297750,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-965G,National Highway,2L,Maharashtra,21.00722541370,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-965G,National Highway,2L,Maharashtra,12.46218012130,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-60,National Highway,4L,Maharashtra,6.06788615846,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 1,NH-965C,National Highway,2L,Maharashtra,0.21156584679,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-965,National Highway,2L,Maharashtra,0.20329862678,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-561A,National Highway,2L,Maharashtra,0.10139949178,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-561A,National Highway,2L,Maharashtra,0.59394477461,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-465,National Highway,2L,Maharashtra,23.38520764210,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,Mumbai-Pune Expressway,State Expressway,6L,Maharashtra,39.49000062630,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,State Expressway
+Route 1,Mumbai-Pune Expressway,State Expressway,6L,Maharashtra,4.28741589844,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,State Expressway
+Route 1,NH-48,National Highway,6L,Maharashtra,6.10493773990,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,Mumbai-Pune Expressway,State Expressway,6L,Maharashtra,6.36463822308,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,State Expressway
+Route 1,NH-150,National Highway,2L,Maharashtra,30.18695556290,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-965,National Highway,2L,Maharashtra,2.37484704439,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-548A,National Highway,4L,Maharashtra,25.65088995400,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NE4,National Highway,8L,Maharashtra,2.67670407316,Transport Infrastructure,Roadways,,Other National Highways,,,PRAPOSED,National Highway
+Route 1,NH-65,National Highway,6L,Maharashtra,25.96549229680,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 1,NH-160,National Highway,2L,Maharashtra,2.09161124933,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-965G,National Highway,,Maharashtra,21.67187072860,Transport Infrastructure,Roadways,,,,,EXISTING,National Highway
+Route 1,NH-52,National Highway,4L,Maharashtra,13.54894335710,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 1,Solapur Bypass,National Highway,6L,Maharashtra,21.06809799530,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,Airoli-Katai Naka Freeway,State Expressway,6L,Maharashtra,10.80552886490,Transport Infrastructure,Roadways,,Other National Highways,,,PRAPOSED,State Expressway
+Route 1,Mulund-Airoli Road,Other Major Road,4L,Maharashtra,7.52275776728,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,Other Major Road
+Route 1,Airoli-Shilpata Road,Other Major Road,4L,Maharashtra,12.25428954710,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,Other Major Road
+Route 1,NH-548C,National Highway,2L,Maharashtra,3.04449201025,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-348A,National Highway,8L,Maharashtra,2.34564499283,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-561A,National Highway,2L,Maharashtra,0.83455972605,Transport Infrastructure,Roadways,,,,,EXISTING,National Highway
+Route 1,NH-965,National Highway,2L,Maharashtra,13.43547348720,Transport Infrastructure,Roadways,,,,,EXISTING,National Highway
+Route 1,NH-965G,National Highway,2L,Maharashtra,4.69089666513,Transport Infrastructure,Roadways,,,,,UNDER CONSTRUCTION,National Highway
+Route 1,NH-965G,National Highway,2L,Maharashtra,2.57261001074,Transport Infrastructure,Roadways,,,,,PRAPOSED,National Highway
+Route 1,NH-65,National Highway,4L,Maharashtra,1.28085054208,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-48,National Highway,6L,Maharashtra,6.54298756068,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Coastal Roads,Others,EXISTING,National Highway
+Route 1,NH-548B,National Highway,2L,Maharashtra,18.33018989820,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-166,National Highway,4L,Maharashtra,21.72448097460,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-548,National Highway,8L,Maharashtra,4.51448181138,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-548D,National Highway,2L,Maharashtra,23.03351496940,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,NH-965,National Highway,2L,Maharashtra,4.72899311959,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 1,Solapur-Kurnool Corridor,National Highway,6L,Maharashtra,23.72481438233,Transport Infrastructure,Roadways,National Highway Network,High Speed Corridors,Economic Corridors,Bharatmala Pariyojana Phase I,,National Highway
+Route 2,NH-167N,National Highway,2L,Telangana,8.69008135098,Transport Infrastructure,Roadways,,,,,PRAPOSED,National Highway
+Route 2,Miyapur Road,Other Major Road,4L,Telangana,6.83065962919,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,Other Major Road
+Route 2,Inner Ring Road,National Highway,4L,Telangana,2.57499552405,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-65,National Highway,6L,Telangana,18.00471803040,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 2,,National Highway,,Telangana,0E-11,Transport Infrastructure,Roadways,,,,,PRAPOSED,National Highway
+Route 2,NH-167N,National Highway,2L,Telangana,23.11167602910,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,Nehru Outer Ring Road (Hyderabad),State Expressway,8L,Telangana,22.83768314500,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,State Expressway
+Route 2,NH-50,National Highway,4L,Karnataka,4.60953756196,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-150,National Highway,IL,Karnataka,36.92075553900,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-753F,National Highway,2L,Maharashtra,11.37403482360,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 2,NH-548C,National Highway,2L,Maharashtra,57.12149069620,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-48,National Highway,4L,Maharashtra,2.43286399645,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-48,National Highway,2L,Maharashtra,26.18332044270,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-48,National Highway,6L,Maharashtra,29.66156052920,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 2,NH-965,National Highway,2L,Maharashtra,30.84433944330,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-965,National Highway,4L,Maharashtra,5.29565358432,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-561A,National Highway,2L,Maharashtra,2.70823178257,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-548C,National Highway,2L,Maharashtra,28.54175994060,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-965G,National Highway,2L,Maharashtra,32.20983969560,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-548E,National Highway,2L,Maharashtra,27.36558878040,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-465,National Highway,2L,Maharashtra,31.87627297750,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-48,National Highway,6L,Maharashtra,37.71906941450,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 2,NH-60,National Highway,4L,Maharashtra,6.06788615846,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 2,NH-65,National Highway,4L,Maharashtra,5.76643606622,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 2,NH-965C,National Highway,2L,Maharashtra,0.21156584679,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-965,National Highway,2L,Maharashtra,0.20329862678,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-65,National Highway,4L,Maharashtra,12.04221509890,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-465,National Highway,2L,Maharashtra,23.38520764210,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,Mumbai-Pune Expressway,State Expressway,6L,Maharashtra,39.49000062630,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,State Expressway
+Route 2,Mumbai-Pune Expressway,State Expressway,6L,Maharashtra,4.28741589844,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,State Expressway
+Route 2,NH-48,National Highway,6L,Maharashtra,6.10493773990,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,Mumbai-Pune Expressway,State Expressway,6L,Maharashtra,6.36463822308,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,State Expressway
+Route 2,NH-48,National Highway,4L,Maharashtra,6.46153828373,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-150,National Highway,2L,Maharashtra,30.18695556290,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-60,National Highway,2L,Maharashtra,7.70437715396,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 2,NH-965,National Highway,2L,Maharashtra,2.37484704439,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-48,National Highway,4L,Maharashtra,24.77261475070,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NE4,National Highway,8L,Maharashtra,2.67670407316,Transport Infrastructure,Roadways,,Other National Highways,,,PRAPOSED,National Highway
+Route 2,NH-65,National Highway,6L,Maharashtra,25.96549229680,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 2,NH-52,National Highway,4L,Maharashtra,13.54894335710,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 2,Solapur Bypass,National Highway,6L,Maharashtra,21.06809799530,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,Eastern Expressway,Other Major Road,6L,Maharashtra,22.07239250100,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,Other Major Road
+Route 2,NH-348A,National Highway,8L,Maharashtra,2.34564499283,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-48,National Highway,6L,Maharashtra,10.39664315540,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 2,NH-48,National Highway,6L,Maharashtra,6.54298756068,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Coastal Roads,Others,EXISTING,National Highway
+Route 2,NH-548B,National Highway,2L,Maharashtra,18.33018989820,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-160,National Highway,4L,Maharashtra,43.53964292350,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-166,National Highway,4L,Maharashtra,21.72448097460,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-548,National Highway,8L,Maharashtra,4.51448181138,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-548D,National Highway,2L,Maharashtra,23.03351496940,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 2,NH-965DD,National Highway,2L,Maharashtra,58.33018942330,Transport Infrastructure,Roadways,,,,,EXISTING,National Highway
+Route 2,NH-965D,National Highway,2L,Maharashtra,43.25956861200,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Inter Corridor Route,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 2,NH-48,National Highway,6L,Maharashtra,29.66156052920,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 2,NH-48,National Highway,6L,Maharashtra,8.72128051633,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 2,Solapur-Kurnool Corridor,National Highway,6L,Maharashtra,23.72481438233,Transport Infrastructure,Roadways,National Highway Network,High Speed Corridors,Economic Corridors,Bharatmala Pariyojana Phase I,,National Highway
+Route 3,Miyapur Road,Other Major Road,4L,Telangana,6.83065962919,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,Other Major Road
+Route 3,NH-65,National Highway,6L,Telangana,18.00471803040,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 3,NH-65,National Highway,4L,Telangana,9.90668444259,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 3,,National Highway,,Telangana,0E-11,Transport Infrastructure,Roadways,,,,,PRAPOSED,National Highway
+Route 3,Nehru Outer Ring Road (Hyderabad),State Expressway,8L,Telangana,22.83768314500,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,State Expressway
+Route 3,NH-50,National Highway,2L,Karnataka,46.33050375230,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-65,National Highway,4L,Karnataka,30.34497759690,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 3,NH-50,National Highway,4L,Karnataka,60.83199256600,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965,National Highway,2L,Maharashtra,7.70853684055,Transport Infrastructure,Roadways,,,,,EXISTING,National Highway
+Route 3,NH-753F,National Highway,2L,Maharashtra,11.37403482360,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 3,NH-65,National Highway,4L,Maharashtra,3.94120660501,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965,National Highway,4L,Maharashtra,5.29565358432,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-561A,National Highway,2L,Maharashtra,2.70823178257,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965,National Highway,2L,Maharashtra,50.04257288130,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-548C,National Highway,2L,Maharashtra,28.54175994060,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965,National Highway,4L,Maharashtra,56.95939418930,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965D,National Highway,2L,Maharashtra,45.99564282160,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Inter Corridor Route,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 3,NH-548E,National Highway,2L,Maharashtra,25.99053147900,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965,National Highway,2L,Maharashtra,25.90460676940,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965,National Highway,2L,Maharashtra,13.90346899270,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-160,National Highway,2L,Maharashtra,22.66534120640,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-465,National Highway,2L,Maharashtra,31.87627297750,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965G,National Highway,2L,Maharashtra,12.46218012130,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965C,National Highway,2L,Maharashtra,0.21156584679,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965,National Highway,2L,Maharashtra,0.20329862678,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-561A,National Highway,2L,Maharashtra,0.59394477461,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-65,National Highway,4L,Maharashtra,12.04221509890,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-465,National Highway,2L,Maharashtra,23.38520764210,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-166,National Highway,4L,Maharashtra,21.72448097460,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,Mumbai-Pune Expressway,State Expressway,6L,Maharashtra,39.49000062630,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,State Expressway
+Route 3,Mumbai-Pune Expressway,State Expressway,6L,Maharashtra,4.28741589844,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,State Expressway
+Route 3,NH-48,National Highway,4L,Maharashtra,2.09902794621,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-548A,National Highway,2L,Maharashtra,4.08299860161,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,Mumbai-Pune Expressway,State Expressway,6L,Maharashtra,23.91409643820,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,State Expressway
+Route 3,Mumbai-Pune Expressway,State Expressway,6L,Maharashtra,8.64806954135,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,State Expressway
+Route 3,NH-150,National Highway,2L,Maharashtra,30.18695556290,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-60,National Highway,2L,Maharashtra,7.70437715396,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 3,NH-965,National Highway,2L,Maharashtra,2.37484704439,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NE4,National Highway,8L,Maharashtra,2.67670407316,Transport Infrastructure,Roadways,,Other National Highways,,,PRAPOSED,National Highway
+Route 3,NH-160,National Highway,2L,Maharashtra,2.09161124933,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-52,National Highway,4L,Maharashtra,13.54894335710,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,National Highway
+Route 3,NH-548B,National Highway,2L,Maharashtra,18.33018989820,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,Solapur Bypass,National Highway,6L,Maharashtra,21.06809799530,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,Western Expressway,Other Major Road,6L,Maharashtra,30.43750359060,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,Other Major Road
+Route 3,Eastern Expressway,Other Major Road,6L,Maharashtra,22.07239250100,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Economic Corridors,Bharatmala Pariyojana Phase I,EXISTING,Other Major Road
+Route 3,NH-348A,National Highway,8L,Maharashtra,2.34564499283,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965,National Highway,,Maharashtra,6.16104212369,Transport Infrastructure,Roadways,,,,,EXISTING,National Highway
+Route 3,NH-48,National Highway,6L,Maharashtra,6.54298756068,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,Coastal Roads,Others,EXISTING,National Highway
+Route 3,NH-166,National Highway,4L,Maharashtra,21.72448097460,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-548,National Highway,8L,Maharashtra,4.51448181138,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-965,National Highway,4L,Maharashtra,56.95939418930,Transport Infrastructure,Roadways,,Other National Highways,,,EXISTING,National Highway
+Route 3,NH-48,National Highway,6L,Maharashtra,19.86729772000,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 3,NH-48,National Highway,6L,Maharashtra,8.72128051633,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 3,NH-48,National Highway,6L,Maharashtra,7.72736937387,Transport Infrastructure,Roadways,National Highway Network,Other National Highways,National Corridor,,EXISTING,National Highway
+Route 3,Solapur-Kurnool Corridor,National Highway,6L,Maharashtra,23.72481438233,Transport Infrastructure,Roadways,National Highway Network,High Speed Corridors,Economic Corridors,Bharatmala Pariyojana Phase I,,National Highway

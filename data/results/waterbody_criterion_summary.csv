@@ -1,0 +1,4 @@
+route,nearest_waterbody_distance_m,waterbodies_within_10m,waterbodies_within_50m,waterbodies_within_100m,waterbodies_within_250m,waterbodies_within_500m
+Route 1,5.87,1,1,1,5,14
+Route 2,2.7,1,1,2,5,13
+Route 3,187.48,0,0,0,2,6

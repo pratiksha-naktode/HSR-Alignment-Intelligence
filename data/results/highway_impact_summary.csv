@@ -1,0 +1,4 @@
+route,nh_crossings,sh_crossings,mdr_crossings,state_expressway_crossings,other_major_road_crossings,total_intersections,unique_road_count,road_type_counts,state_counts,mdr_status
+Route 1,52,0,,5,3,60,32,"{'National Highway': 52, 'State Expressway': 5, 'Other Major Road': 3}","{'Maharashtra': 52, 'Telangana': 6, 'Karnataka': 2}",Not identifiable from supplied GatiShakti/MORTH dataset
+Route 2,49,0,,4,2,55,31,"{'National Highway': 49, 'State Expressway': 4, 'Other Major Road': 2}","{'Maharashtra': 46, 'Telangana': 7, 'Karnataka': 2}",Not identifiable from supplied GatiShakti/MORTH dataset
+Route 3,47,0,,5,3,55,29,"{'National Highway': 47, 'State Expressway': 5, 'Other Major Road': 3}","{'Maharashtra': 47, 'Telangana': 5, 'Karnataka': 3}",Not identifiable from supplied GatiShakti/MORTH dataset

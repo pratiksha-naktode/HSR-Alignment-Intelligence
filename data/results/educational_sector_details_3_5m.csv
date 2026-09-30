@@ -1,0 +1,4 @@
+route,name,name_en,amenity,building,osm_id,intersection_area_m2,intersection_area_ha
+Route 1,Sadashivrao Mane Mahavidhyalaya,,college,,445910869,904.5078544170091,0.0904507854417009
+Route 3,Mumbai University,,university,,49682797,362.6723805225513,0.03626723805225513
+Route 3,Indira Group of Institute (IGI),,college,,752309308,751.464319739076,0.07514643197390761

@@ -781,14 +781,9 @@ function updateCriterionChart(criterionKey) {
    ROUTE EXPLORER
    ========================================================= */
 
-    /* =========================================================
-   ROUTE EXPLORER
-   ========================================================= */
-
 function updateRouteExplorer(routeId) {
 
     if (!routeData || routeData.length === 0) {
-        console.warn("Route data not loaded");
         return;
     }
 
@@ -805,639 +800,387 @@ function updateRouteExplorer(routeId) {
             .trim();
 
         return id === normalizedId;
+
     });
 
     if (!route) {
-        console.warn(
-            "Route not found:",
-            routeId,
-            normalizedId,
-            routeData
-        );
+        console.warn("Route not found:", routeId);
         return;
     }
 
 
-    /* ============================
-       SELECTED ROUTE
-       ============================ */
+    const getNumber = (key, decimals = 3) => {
 
-    const routeName =
-        document.getElementById("selected-route-name");
+        const value = Number(route[key]);
 
-    if (routeName) {
-        routeName.textContent =
-            `Route ${normalizedId.replace("R", "")} — ${normalizedId}`;
-    }
+        return Number.isFinite(value)
+            ? value.toFixed(decimals)
+            : "—";
 
-
-    /* ============================
-       ROUTE LENGTH
-       ============================ */
-
-    const length =
-        document.getElementById("route-length");
-
-    if (length) {
-        length.textContent =
-            `${Number(
-                route["C8_Route Length_raw"] || 0
-            ).toFixed(3)} km`;
-    }
-
-
-    /* ============================
-       ENVIRONMENT
-       ============================ */
-
-    const forest =
-        document.getElementById("route-forest");
-
-    const agriculture =
-        document.getElementById("route-agriculture");
-
-    const builtup =
-        document.getElementById("route-builtup");
-
-    const wetland =
-        document.getElementById("route-wetland");
-
-    const education =
-        document.getElementById("route-education");
-
-    const waterbody =
-        document.getElementById("route-waterbody");
-
-
-    if (forest) {
-        forest.textContent =
-            `${Number(
-                route["C1_Forest Area_raw"] || 0
-            ).toFixed(6)} km²`;
-    }
-
-    if (agriculture) {
-        agriculture.textContent =
-            `${Number(
-                route["C2_Agriculture Area_raw"] || 0
-            ).toFixed(6)} km²`;
-    }
-
-    if (builtup) {
-        builtup.textContent =
-            `${Number(
-                route["C3_Built-up Area_raw"] || 0
-            ).toFixed(6)} km²`;
-    }
-
-    if (wetland) {
-        wetland.textContent =
-            `${Number(
-                route["C5_Wetland Impact_raw"] || 0
-            ).toFixed(6)} km²`;
-    }
-
-    if (education) {
-        education.textContent =
-            `${Number(
-                route["C4_Educational Sector_raw"] || 0
-            )} facilities`;
-    }
-
-    if (waterbody) {
-        waterbody.textContent =
-            `${Number(
-                route[
-                    "C6_Bhuvan Waterbody Polygon Intersections_raw"
-                ] || 0
-            )} features`;
-    }
-
-
-    /* ============================
-       ESZ
-       ============================ */
-
-    const eszDistance =
-        document.getElementById("route-esz-distance");
-
-    const eszName =
-        document.getElementById("route-esz-name");
-
-    if (eszDistance) {
-        eszDistance.textContent =
-            `${Number(
-                route["C7_Nearest ESZ_raw"] || 0
-            ).toFixed(3)} km`;
-    }
-
-    if (eszName) {
-        eszName.textContent =
-            route.nearest_esz_name ||
-            "Nearest identified ESZ";
-    }
-
-
-    /* ============================
-       HIGHWAY COUNTERS
-       ============================ */
-
-    const infrastructureFields = {
-
-        "route-nh":
-            "nh_count",
-
-        "route-sh":
-            "sh_count",
-
-        "route-expressway":
-            "state_expressway_count",
-
-        "route-major-road":
-            "other_major_road_count",
-
-        "route-mdr":
-            "mdr_count",
-
-        "route-highway-total":
-            "highway_interactions"
     };
 
 
-    Object.entries(
-        infrastructureFields
-    ).forEach(([elementId, field]) => {
+    document.getElementById("selected-route-name").textContent =
+        `Route ${normalizedId.replace("R", "")} — ${normalizedId}`;
 
-        const element =
-            document.getElementById(elementId);
 
-        if (element) {
+    document.getElementById("route-length").textContent =
+        getNumber("C8_Route Length_raw");
 
-            element.textContent =
-                Number(
-                    route[field] || 0
-                ).toLocaleString();
+
+    document.getElementById("route-forest").textContent =
+        getNumber("C1_Forest Area_raw", 6);
+
+
+    document.getElementById("route-agriculture").textContent =
+        getNumber("C2_Agriculture Area_raw", 6);
+
+
+    document.getElementById("route-builtup").textContent =
+        getNumber("C3_Built-up Area_raw", 6);
+
+
+    document.getElementById("route-wetland").textContent =
+        getNumber("C5_Wetland Impact_raw", 6);
+
+
+    document.getElementById("route-education").textContent =
+        getNumber("C4_Educational Sector_raw", 0);
+
+
+    document.getElementById("route-waterbody").textContent =
+        getNumber(
+            "C6_Bhuvan Waterbody Polygon Intersections_raw",
+            0
+        );
+
+
+    updateRouteExplorerCharts(normalizedId);
+
+}
+
+function updateRouteExplorerCharts(routeId) {
+
+    const data = {
+
+        R1: {
+            forest: 0.048307,
+            agriculture: 0.878612,
+            builtup: 0.781871,
+            wetland: 0.024743,
+            waterbody: 0.004953,
+            waterbodyCount: 18,
+
+            nh: 52,
+            sh: 0,
+            expressway: 5,
+            majorRoad: 3,
+            mdr: 0,
+            highway: 60,
+
+            esz: 1.459039,
+            eszName: "Sanjay Gandhi National Park",
+
+            intersections: {
+                forest: 13.815291,
+                agriculture: 250.905164,
+                builtup: 223.739566,
+                wetland: 7.069507,
+                waterbody: 1.476821
+            }
+        },
+
+        R2: {
+            forest: 0.055493,
+            agriculture: 1.571022,
+            builtup: 0.736322,
+            wetland: 0.063228,
+            waterbody: 0.026979,
+            waterbodyCount: 65,
+
+            nh: 49,
+            sh: 0,
+            expressway: 4,
+            majorRoad: 2,
+            mdr: 0,
+            highway: 55,
+
+            esz: 3.398557,
+            eszName: "Kesu Bramhanand Reddy National Park",
+
+            intersections: {
+                forest: 15.927911,
+                agriculture: 449.120527,
+                builtup: 210.884850,
+                wetland: 18.071516,
+                waterbody: 7.428458
+            }
+        },
+
+        R3: {
+            forest: 0.056215,
+            agriculture: 1.532198,
+            builtup: 0.793088,
+            wetland: 0.044774,
+            waterbody: 0.020807,
+            waterbodyCount: 51,
+
+            nh: 47,
+            sh: 0,
+            expressway: 5,
+            majorRoad: 3,
+            mdr: 0,
+            highway: 55,
+
+            esz: 3.653662,
+            eszName: "Kesu Bramhanand Reddy National Park",
+
+            intersections: {
+                forest: 16.029821,
+                agriculture: 437.911220,
+                builtup: 226.904203,
+                wetland: 12.786078,
+                waterbody: 6.001669
+            }
         }
-    });
+
+    };
 
 
-    /* ============================
-       ESZ METER
-       ============================ */
+    const d = data[routeId];
 
-    const meter =
-        document.getElementById("esz-meter-fill");
+    if (!d) return;
+
+
+    /*
+     * Infrastructure values
+     */
+
+    document.getElementById("route-nh").textContent = d.nh;
+    document.getElementById("route-sh").textContent = d.sh;
+    document.getElementById("route-expressway").textContent =
+        d.expressway;
+
+    document.getElementById("route-major-road").textContent =
+        d.majorRoad;
+
+    document.getElementById("route-mdr").textContent =
+        d.mdr;
+
+    document.getElementById("route-highway-total").textContent =
+        d.highway;
+
+
+    /*
+     * ESZ
+     */
+
+    document.getElementById("route-esz-distance").textContent =
+        d.esz.toFixed(3);
+
+    document.getElementById("route-esz-name").textContent =
+        d.eszName;
+
+
+    /*
+     * Intersection values
+     */
+
+    document.getElementById("intersection-forest").textContent =
+        d.intersections.forest.toFixed(3);
+
+    document.getElementById("intersection-agriculture").textContent =
+        d.intersections.agriculture.toFixed(3);
+
+    document.getElementById("intersection-builtup").textContent =
+        d.intersections.builtup.toFixed(3);
+
+    document.getElementById("intersection-wetland").textContent =
+        d.intersections.wetland.toFixed(3);
+
+    document.getElementById("intersection-waterbody").textContent =
+        d.intersections.waterbody.toFixed(3);
+
+
+    /*
+     * ESZ visual meter
+     *
+     * Higher distance = visually safer separation.
+     */
+
+    const meter = document.getElementById("esz-meter-fill");
 
     if (meter) {
 
-        const esz =
-            Number(
-                route["C7_Nearest ESZ_raw"] || 0
-            );
+        const percentage =
+            Math.min((d.esz / 5) * 100, 100);
 
-        meter.style.width =
-            `${Math.min((esz / 5) * 100, 100)}%`;
+        meter.style.width = `${percentage}%`;
+
     }
 
 
-    /* ============================
-       UPDATE CHARTS
-       ============================ */
+    /* Dynamic route interpretation */
+    const impacts = [
+        { name: "Forest", value: d.forest },
+        { name: "Agriculture", value: d.agriculture },
+        { name: "Built-up", value: d.builtup },
+        { name: "Wetland", value: d.wetland }
+    ].sort((a, b) => b.value - a.value);
 
-    updateRouteExplorerCharts(
-        normalizedId
-    );
+    const largest = impacts[0];
+    const largestEl = document.getElementById("route-largest-impact");
+    const largestNote = document.getElementById("route-largest-impact-note");
+    if (largestEl) largestEl.textContent = largest.name;
+    if (largestNote) {
+        largestNote.textContent =
+            `${largest.value.toFixed(6)} km² of mapped ${largest.name.toLowerCase()} area intersects the defined 3.5 m ground footprint.`;
+    }
 
+    const waterInline = document.getElementById("intersection-waterbody-inline");
+    if (waterInline) waterInline.textContent = d.intersections.waterbody.toFixed(3);
 
-    console.log(
-        "Route Explorer switched to:",
-        normalizedId,
-        route
-    );
+    /* Update relative intersection bars for the selected route */
+    const intersectionValues = {
+        forest: d.intersections.forest,
+        agriculture: d.intersections.agriculture,
+        builtup: d.intersections.builtup,
+        wetland: d.intersections.wetland,
+        waterbody: d.intersections.waterbody
+    };
+    const maxIntersection = Math.max(...Object.values(intersectionValues), 1);
+    Object.entries(intersectionValues).forEach(([key, value]) => {
+        const bar = document.getElementById(`intersection-bar-${key}`);
+        if (bar) bar.style.width = `${(value / maxIntersection) * 100}%`;
+    });
+
+    const waterCount = document.getElementById("route-waterbody-count");
+    if (waterCount) waterCount.textContent = d.waterbodyCount ?? "—";
+
+    createRouteExplorerCharts(d);
+
 }
-/* =========================================================
-   ROUTE EXPLORER CHARTS
-   ========================================================= */
-
 let routeEnvironmentalChart = null;
+let routeImpactDoughnut = null;
 let routeHighwayChart = null;
 let routeIntersectionChart = null;
 
 
-/* ---------------------------------------------------------
-   UPDATE ALL ROUTE EXPLORER CHARTS
-   --------------------------------------------------------- */
-
-/* =========================================================
-   ROUTE EXPLORER CHARTS
-   Native Canvas Renderer
-   ========================================================= */
-
-function updateRouteExplorerCharts(routeId) {
-
-    const route = routeData.find(item => {
-        const id = String(item.route)
-            .replace("Route_", "R")
-            .replace("Route ", "R")
-            .trim();
-
-        return id === routeId;
-    });
-
-    if (!route) {
-        console.warn("Route not found for charts:", routeId);
-        return;
-    }
-
-    function setupCanvas(id) {
-
-        const canvas = document.getElementById(id);
-
-        if (!canvas) {
-            console.error("Canvas not found:", id);
-            return null;
-        }
-
-        const parent = canvas.parentElement;
-
-        const width = parent.clientWidth || 600;
-        const height = parent.clientHeight || 300;
-
-        canvas.width = width;
-        canvas.height = height;
-
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
-
-        const ctx = canvas.getContext("2d");
-
-        ctx.clearRect(0, 0, width, height);
-
-        return {
-            canvas,
-            ctx,
-            width,
-            height
-        };
-    }
-
-
-    function drawBarChart(id, labels, values, title) {
-
-        const chart = setupCanvas(id);
-
-        if (!chart) return;
-
-        const {ctx, width, height} = chart;
-
-        const left = 65;
-        const right = 25;
-        const top = 35;
-        const bottom = 55;
-
-        const chartWidth = width - left - right;
-        const chartHeight = height - top - bottom;
-
-        const maxValue = Math.max(...values, 1);
-
-        ctx.font = "12px Arial";
-        ctx.fillStyle = "#667085";
-        ctx.textAlign = "center";
-
-        const barWidth =
-            chartWidth / values.length * 0.55;
-
-        values.forEach((value, index) => {
-
-            const x =
-                left +
-                (index + 0.5) *
-                (chartWidth / values.length);
-
-            const barHeight =
-                (value / maxValue) * chartHeight;
-
-            const y =
-                top +
-                chartHeight -
-                barHeight;
-
-            ctx.fillStyle = [
-                "#4E8B57",
-                "#C88719",
-                "#7656A6",
-                "#4A90C2",
-                "#1769AA"
-            ][index] || "#1769AA";
-
-            ctx.fillRect(
-                x - barWidth / 2,
-                y,
-                barWidth,
-                barHeight
-            );
-
-            ctx.fillStyle = "#172033";
-            ctx.font = "bold 12px Arial";
-
-            ctx.fillText(
-                Number(value).toFixed(3),
-                x,
-                y - 8
-            );
-
-            ctx.fillStyle = "#667085";
-            ctx.font = "11px Arial";
-
-            ctx.fillText(
-                labels[index],
-                x,
-                height - 20
-            );
-        });
-
-
-        ctx.fillStyle = "#172033";
-        ctx.font = "bold 12px Arial";
-        ctx.textAlign = "left";
-
-        ctx.fillText(
-            title,
-            10,
-            18
-        );
-    }
-
-
-    /* ============================
-       ENVIRONMENTAL CHART
-       ============================ */
-
-    drawBarChart(
-        "routeEnvironmentalChart",
-
-        [
-            "Forest",
-            "Agriculture",
-            "Built-up",
-            "Wetland"
-        ],
-
-        [
-            Number(route["C1_Forest Area_raw"]) || 0,
-            Number(route["C2_Agriculture Area_raw"]) || 0,
-            Number(route["C3_Built-up Area_raw"]) || 0,
-            Number(route["C5_Wetland Impact_raw"]) || 0
-        ],
-
-        "Impact Area (km²)"
-    );
-
-
-    /* ============================
-       HIGHWAY CHART
-       ============================ */
-
-    drawBarChart(
-        "routeHighwayChart",
-
-        [
-            "NH",
-            "SH",
-            "Expressway",
-            "Major Road",
-            "MDR"
-        ],
-
-        [
-            Number(route.nh_count) || 0,
-            Number(route.sh_count) || 0,
-            Number(route.state_expressway_count) || 0,
-            Number(route.other_major_road_count) || 0,
-            Number(route.mdr_count) || 0
-        ],
-
-        "Highway Interactions"
-    );
-
-
-    /* ============================
-       CENTERLINE INTERSECTION
-       ============================ */
-
-    drawBarChart(
-        "routeIntersectionChart",
-
-        [
-            "Forest",
-            "Agriculture",
-            "Built-up",
-            "Wetland",
-            "Water"
-        ],
-
-        [
-            Number(route.forest_intersection_length_km) || 0,
-            Number(route.agriculture_intersection_length_km) || 0,
-            Number(route.builtup_intersection_length_km) || 0,
-            Number(route.wetland_intersection_length_km) || 0,
-            Number(route.waterbody_intersection_length_km) || 0
-        ],
-
-        "Centerline Intersection Length (km)"
-    );
-
-
-    /* ============================
-       DOUGHNUT / COMPOSITION
-       ============================ */
-
-    const doughnut = setupCanvas(
-        "routeImpactDoughnut"
-    );
-
-    if (doughnut) {
-
-        const values = [
-
-            Number(route["C1_Forest Area_raw"]) || 0,
-
-            Number(route["C2_Agriculture Area_raw"]) || 0,
-
-            Number(route["C3_Built-up Area_raw"]) || 0,
-
-            Number(route["C5_Wetland Impact_raw"]) || 0
-        ];
-
-        const labels = [
-            "Forest",
-            "Agriculture",
-            "Built-up",
-            "Wetland"
-        ];
-
-        const colors = [
-            "#4E8B57",
-            "#C88719",
-            "#7656A6",
-            "#4A90C2"
-        ];
-
-        const total =
-            values.reduce(
-                (sum, value) => sum + value,
-                0
-            );
-
-        const cx =
-            doughnut.width / 2;
-
-        const cy =
-            doughnut.height / 2;
-
-        const radius =
-            Math.min(
-                doughnut.width,
-                doughnut.height
-            ) * 0.32;
-
-        let startAngle = -Math.PI / 2;
-
-        values.forEach(
-            (value, index) => {
-
-                const angle =
-                    total > 0
-                        ? (value / total) *
-                          Math.PI * 2
-                        : 0;
-
-                doughnut.ctx.beginPath();
-
-                doughnut.ctx.moveTo(
-                    cx,
-                    cy
-                );
-
-                doughnut.ctx.arc(
-                    cx,
-                    cy,
-                    radius,
-                    startAngle,
-                    startAngle + angle
-                );
-
-                doughnut.ctx.closePath();
-
-                doughnut.ctx.fillStyle =
-                    colors[index];
-
-                doughnut.ctx.fill();
-
-                startAngle += angle;
-            }
-        );
-
-
-        /* centre */
-
-        doughnut.ctx.beginPath();
-
-        doughnut.ctx.arc(
-            cx,
-            cy,
-            radius * 0.55,
-            0,
-            Math.PI * 2
-        );
-
-        doughnut.ctx.fillStyle = "#FFFFFF";
-
-        doughnut.ctx.fill();
-
-
-        doughnut.ctx.fillStyle =
-            "#172033";
-
-        doughnut.ctx.font =
-            "bold 14px Arial";
-
-        doughnut.ctx.textAlign =
-            "center";
-
-        doughnut.ctx.fillText(
-            "Impact",
-            cx,
-            cy + 5
-        );
-
-
-        /* legend */
-
-        doughnut.ctx.textAlign =
-            "left";
-
-        doughnut.ctx.font =
-            "11px Arial";
-
-        labels.forEach(
-            (label, index) => {
-
-                const x = 15;
-
-                const y =
-                    20 + index * 20;
-
-                doughnut.ctx.fillStyle =
-                    colors[index];
-
-                doughnut.ctx.fillRect(
-                    x,
-                    y - 9,
-                    10,
-                    10
-                );
-
-                doughnut.ctx.fillStyle =
-                    "#667085";
-
-                doughnut.ctx.fillText(
-                    label,
-                    x + 16,
-                    y
-                );
-            }
-        );
-    }
-
-
-    console.log(
-        "Route Explorer native charts rendered:",
-        routeId
-    );
-}
-
-/* Redraw when the route page becomes visible or the viewport changes. */
-window.addEventListener('resize', () => {
-    const select = document.getElementById('routeSelect');
-    if (select && routeData.length) {
-        window.requestAnimationFrame(() => updateRouteExplorerCharts(select.value));
-    }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const routeNav = document.querySelector('.nav-item[data-section="routes"]');
-    if (routeNav) {
-        routeNav.addEventListener('click', () => {
-            window.setTimeout(() => {
-                const select = document.getElementById('routeSelect');
-                if (select && routeData.length) {
-                    updateRouteExplorerCharts(select.value);
+function createRouteExplorerCharts(d) {
+
+    /* =====================================================
+       Environmental area chart — footprint metrics only.
+       Waterbody count is intentionally NOT mixed into km².
+       ===================================================== */
+    const environmentalCanvas = document.getElementById("routeEnvironmentalChart");
+    if (environmentalCanvas) {
+        if (routeEnvironmentalChart) routeEnvironmentalChart.destroy();
+        routeEnvironmentalChart = new Chart(environmentalCanvas, {
+            type: "bar",
+            data: {
+                labels: ["Forest", "Agriculture", "Built-up", "Wetland"],
+                datasets: [{
+                    label: "Ground-footprint impact (km²)",
+                    data: [d.forest, d.agriculture, d.builtup, d.wetland],
+                    backgroundColor: ["#4E8B57", "#C88719", "#7656A6", "#2F80ED"],
+                    borderRadius: 5,
+                    borderSkipped: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: context => `${context.raw.toFixed(6)} km²`
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: "Impact area (km²)" },
+                        ticks: { precision: 3 }
+                    },
+                    x: { grid: { display: false } }
                 }
-            }, 80);
+            }
         });
     }
-});
+
+    /* =====================================================
+       Highway interaction chart
+       ===================================================== */
+    const highwayCanvas = document.getElementById("routeHighwayChart");
+    if (highwayCanvas) {
+        if (routeHighwayChart) routeHighwayChart.destroy();
+        routeHighwayChart = new Chart(highwayCanvas, {
+            type: "bar",
+            data: {
+                labels: ["NH", "SH", "Expressway", "Major Road", "MDR"],
+                datasets: [{
+                    label: "Interactions",
+                    data: [d.nh, d.sh, d.expressway, d.majorRoad, d.mdr],
+                    backgroundColor: ["#1769AA", "#2F80ED", "#C88719", "#7656A6", "#667085"],
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, ticks: { precision: 0 } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+    }
+
+    /* =====================================================
+       Centerline intersection length chart
+       ===================================================== */
+    const intersectionCanvas = document.getElementById("routeIntersectionChart");
+    if (intersectionCanvas) {
+        if (routeIntersectionChart) routeIntersectionChart.destroy();
+        routeIntersectionChart = new Chart(intersectionCanvas, {
+            type: "bar",
+            data: {
+                labels: ["Forest", "Agriculture", "Built-up", "Wetland", "Water Bodies"],
+                datasets: [{
+                    label: "Centerline Intersection Length (km)",
+                    data: [
+                        d.intersections.forest,
+                        d.intersections.agriculture,
+                        d.intersections.builtup,
+                        d.intersections.wetland,
+                        d.intersections.waterbody
+                    ],
+                    backgroundColor: ["#4E8B57", "#C88719", "#7656A6", "#2F80ED", "#4A90C2"],
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                indexAxis: "y",
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: context => `${context.raw.toFixed(3)} km` } }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: { display: true, text: "Intersection length (km)" }
+                    },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
+    }
+}
 
 /* =========================================================
    IMPACT ANALYSIS
@@ -1752,6 +1495,18 @@ function updateImpactAnalysis() {
 /* =========================================================
    ROUTE EXPLORER SELECTOR
    ========================================================= */
+
+const routeSelect = document.getElementById("routeSelect");
+
+if (routeSelect) {
+
+    routeSelect.addEventListener("change", function () {
+
+        updateRouteExplorer(this.value);
+
+    });
+
+}
 
 /* =========================================================
    CLEAN EXISTING GIS MAP PANELS

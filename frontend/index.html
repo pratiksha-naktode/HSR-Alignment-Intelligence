@@ -6,7 +6,7 @@
 
     <title>HSR Alignment Intelligence</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <style id="criteria-enhanced-ui">
         /* =========================================================
@@ -741,6 +741,79 @@
         }
 
     </style>
+
+<style id="route-explorer-v2-ui">
+/* =========================================================
+   ROUTE EXPLORER V2 — VISUAL ENGINEERING PROFILE
+   Scoped to #routes so the existing application and GIS map
+   remain untouched.
+   ========================================================= */
+#routes.route-explorer-v2 { color:#172033; }
+#routes.route-explorer-v2 .rxv2-topbar{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:18px}
+#routes.route-explorer-v2 .rxv2-title h1{font-size:30px;line-height:1.15;margin:5px 0 7px;color:#172033}
+#routes.route-explorer-v2 .rxv2-title p{margin:0;color:#667085;font-size:13px;max-width:760px}
+#routes.route-explorer-v2 .rxv2-select{min-width:220px}
+#routes.route-explorer-v2 .rxv2-select label{display:block;font-size:10px;font-weight:800;letter-spacing:.12em;color:#667085;margin-bottom:7px}
+#routes.route-explorer-v2 .rxv2-select select{width:100%;padding:11px 13px;border:1px solid #cfd7e2;border-radius:8px;background:#fff;color:#172033;font-weight:700}
+#routes.route-explorer-v2 .rxv2-route-card{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:#fff;border:1px solid #d9dee7;border-left:4px solid #1769AA;border-radius:12px;padding:22px 24px;margin-bottom:18px}
+#routes.route-explorer-v2 .rxv2-route-card h2{margin:4px 0 5px;font-size:23px}
+#routes.route-explorer-v2 .rxv2-route-card p{margin:0;color:#667085;font-size:12px}
+#routes.route-explorer-v2 .rxv2-route-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+#routes.route-explorer-v2 .rxv2-meta-chip{border:1px solid #e0e5ec;background:#f8fafc;border-radius:7px;padding:8px 11px;min-width:112px}
+#routes.route-explorer-v2 .rxv2-meta-chip span{display:block;color:#667085;font-size:9px;text-transform:uppercase;letter-spacing:.08em}
+#routes.route-explorer-v2 .rxv2-meta-chip strong{display:block;margin-top:3px;font-family:"JetBrains Mono",monospace;font-size:15px;color:#172033}
+#routes.route-explorer-v2 .rxv2-length{text-align:right;padding-left:24px;border-left:1px solid #e5e9ef}
+#routes.route-explorer-v2 .rxv2-length span{display:block;font-size:9px;letter-spacing:.1em;font-weight:800;color:#667085}
+#routes.route-explorer-v2 .rxv2-length strong{display:inline-block;margin-top:5px;font:700 31px/1 "JetBrains Mono",monospace;color:#1769AA}
+#routes.route-explorer-v2 .rxv2-length small{font-weight:700;color:#667085}
+
+#routes.route-explorer-v2 .rxv2-how{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;margin-bottom:22px}
+#routes.route-explorer-v2 .rxv2-card{background:#fff;border:1px solid #d9dee7;border-radius:11px;padding:19px}
+#routes.route-explorer-v2 .rxv2-card h3{margin:3px 0 5px;font-size:18px}
+#routes.route-explorer-v2 .rxv2-card p{color:#667085;font-size:12px;line-height:1.55;margin:0}
+#routes.route-explorer-v2 .rxv2-kicker{font-size:9px;font-weight:800;letter-spacing:.12em;color:#1769AA}
+#routes.route-explorer-v2 .rxv2-process{display:grid;grid-template-columns:1fr 32px 1fr 32px 1fr;align-items:center;margin-top:16px}
+#routes.route-explorer-v2 .rxv2-process-step{min-height:78px;border:1px solid #e0e5ec;border-radius:9px;background:#f8fafc;padding:10px;text-align:center}
+#routes.route-explorer-v2 .rxv2-process-step strong{display:block;font-size:12px;margin-top:5px}
+#routes.route-explorer-v2 .rxv2-process-step span{display:block;color:#667085;font-size:9px;margin-top:3px}
+#routes.route-explorer-v2 .rxv2-arrow{text-align:center;color:#1769AA;font-size:18px}
+#routes.route-explorer-v2 .rxv2-cross-section{height:132px;display:flex;align-items:center;justify-content:center;margin-top:7px}
+#routes.route-explorer-v2 .rxv2-cross-section svg{width:100%;height:132px}
+
+#routes.route-explorer-v2 .rxv2-section-head{display:flex;justify-content:space-between;align-items:end;margin:24px 0 11px}
+#routes.route-explorer-v2 .rxv2-section-head h2{margin:3px 0 0;font-size:20px}
+#routes.route-explorer-v2 .rxv2-section-head p{margin:4px 0 0;color:#667085;font-size:11px}
+#routes.route-explorer-v2 .rxv2-env-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+#routes.route-explorer-v2 .rxv2-impact-card{background:#fff;border:1px solid #d9dee7;border-top:3px solid #1769AA;border-radius:10px;padding:14px;overflow:hidden}
+#routes.route-explorer-v2 .rxv2-impact-card.forest{border-top-color:#4E8B57}.rxv2-impact-card.agri{border-top-color:#C88719}.rxv2-impact-card.built{border-top-color:#7656A6}.rxv2-impact-card.wet{border-top-color:#2F80ED}
+#routes.route-explorer-v2 .rxv2-impact-icon{height:88px;border-radius:8px;background:#f7f9fb;display:flex;align-items:center;justify-content:center;margin-bottom:11px}
+#routes.route-explorer-v2 .rxv2-impact-card h3{font-size:13px;margin:0 0 5px}.rxv2-impact-card p{font-size:10px;color:#667085;margin:0 0 10px}
+#routes.route-explorer-v2 .rxv2-impact-value{font:700 20px "JetBrains Mono",monospace;color:#172033}.rxv2-impact-unit{font-size:10px;color:#667085;font-weight:700}
+#routes.route-explorer-v2 .rxv2-impact-note{font-size:9px!important;margin-top:5px!important}
+
+#routes.route-explorer-v2 .rxv2-analysis-grid{display:grid;grid-template-columns:1.65fr .8fr;gap:16px;margin-top:16px}
+#routes.route-explorer-v2 .rxv2-chart-wrap{height:255px;margin-top:8px}.rxv2-chart-wrap canvas{width:100%!important;height:100%!important}
+#routes.route-explorer-v2 .rxv2-explain{background:#f7fafc;border-left:3px solid #1769AA;padding:12px 13px;border-radius:6px;margin-top:12px;font-size:11px;line-height:1.5;color:#4f5d73}
+#routes.route-explorer-v2 .rxv2-explain strong{color:#172033}
+#routes.route-explorer-v2 .rxv2-insight{background:#f8fafc;border:1px solid #e1e6ed;border-radius:9px;padding:14px;margin-top:10px}
+#routes.route-explorer-v2 .rxv2-insight-label{font-size:9px;font-weight:800;letter-spacing:.1em;color:#667085}.rxv2-insight strong{display:block;font-size:15px;margin-top:5px}.rxv2-insight p{margin:5px 0 0;font-size:10px;color:#667085;line-height:1.45}
+
+#routes.route-explorer-v2 .rxv2-spatial-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+#routes.route-explorer-v2 .rxv2-social-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+#routes.route-explorer-v2 .rxv2-big-stat{display:flex;align-items:center;gap:15px;padding:14px 0;border-bottom:1px solid #e5e9ef}.rxv2-big-stat:last-child{border-bottom:0}
+#routes.route-explorer-v2 .rxv2-stat-icon{width:52px;height:52px;border-radius:10px;background:#eef5fb;display:grid;place-items:center;flex:0 0 auto}.rxv2-big-stat strong{font:700 25px "JetBrains Mono",monospace}.rxv2-big-stat span{display:block;color:#667085;font-size:10px;margin-top:2px}
+#routes.route-explorer-v2 .rxv2-diagram{margin-top:10px;background:#f8fafc;border:1px solid #e4e8ee;border-radius:8px;padding:8px}.rxv2-diagram svg{width:100%;height:112px;display:block}
+#routes.route-explorer-v2 .rxv2-highway-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.rxv2-highway-total{font:700 24px "JetBrains Mono",monospace;color:#1769AA}.rxv2-highway-total small{font:500 10px Arial;color:#667085}
+#routes.route-explorer-v2 .rxv2-infra-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}.rxv2-infra{border:1px solid #e0e5ec;border-radius:8px;padding:10px;background:#fff}.rxv2-infra span{display:block;font-size:9px;color:#667085}.rxv2-infra strong{display:block;margin-top:5px;font:700 18px "JetBrains Mono",monospace}
+#routes.route-explorer-v2 .rxv2-esz-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:12px;align-items:center}.rxv2-esz-distance strong{font:700 31px "JetBrains Mono",monospace;color:#7656A6}.rxv2-esz-distance small{color:#667085;font-weight:700}.rxv2-esz-distance p{margin:5px 0 0;color:#667085;font-size:10px}.rxv2-esz-name{margin-top:12px}.rxv2-esz-name span{display:block;font-size:9px;color:#667085}.rxv2-esz-name strong{display:block;margin-top:4px;font-size:12px}
+
+#routes.route-explorer-v2 .rxv2-intersection{margin-top:16px}.rxv2-intersection-table{width:100%;border-collapse:collapse;margin-top:10px}.rxv2-intersection-table th,.rxv2-intersection-table td{text-align:left;border-bottom:1px solid #e5e9ef;padding:10px;font-size:11px}.rxv2-intersection-table th{color:#667085;font-size:9px;text-transform:uppercase;letter-spacing:.08em}.rxv2-intersection-table td:last-child{text-align:right;font:700 12px "JetBrains Mono",monospace}.rxv2-bar{height:8px;background:#eef1f5;border-radius:20px;overflow:hidden}.rxv2-bar span{display:block;height:100%;border-radius:20px}
+#routes.route-explorer-v2 .rxv2-assumptions{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}.rxv2-assumption-visual{background:#f8fafc;border:1px solid #e1e6ed;border-radius:9px;padding:8px}.rxv2-assumption-visual svg{width:100%;height:170px}.rxv2-assumption-list{display:grid;grid-template-columns:1fr 1fr;gap:9px}.rxv2-assumption{border:1px solid #e0e5ec;border-radius:8px;padding:12px;background:#fff}.rxv2-assumption span{display:block;font-size:9px;color:#667085}.rxv2-assumption strong{display:block;font:700 17px "JetBrains Mono",monospace;margin-top:5px}.rxv2-assumption small{display:block;color:#667085;font-size:9px;margin-top:3px}
+#routes.route-explorer-v2 .rxv2-map-note{margin-top:16px;padding:13px 15px;background:#eef5fb;border:1px solid #cfe0ef;border-radius:9px;color:#3d536b;font-size:11px}.rxv2-map-note strong{color:#1769AA}
+@media(max-width:1050px){#routes.route-explorer-v2 .rxv2-env-grid{grid-template-columns:repeat(2,1fr)}#routes.route-explorer-v2 .rxv2-analysis-grid,#routes.route-explorer-v2 .rxv2-spatial-grid,#routes.route-explorer-v2 .rxv2-social-grid,#routes.route-explorer-v2 .rxv2-assumptions,#routes.route-explorer-v2 .rxv2-how{grid-template-columns:1fr}.rxv2-infra-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:700px){#routes.route-explorer-v2 .rxv2-topbar,#routes.route-explorer-v2 .rxv2-route-card{grid-template-columns:1fr;display:grid}#routes.route-explorer-v2 .rxv2-length{text-align:left;border-left:0;border-top:1px solid #e5e9ef;padding:14px 0 0}.rxv2-env-grid{grid-template-columns:1fr!important}.rxv2-infra-grid{grid-template-columns:1fr 1fr!important}.rxv2-process{grid-template-columns:1fr!important;gap:7px}.rxv2-arrow{transform:rotate(90deg)}}
+</style>
+
 </head>
 
 <body>
@@ -940,18 +1013,15 @@
                             </button>
                         </div>
 
-                        <div class="map-container">
-                            <div class="map-placeholder">
-                                <div class="map-placeholder-content">
-                                    <div class="map-icon">⌖</div>
-                                    <h3>Existing GIS Map</h3>
-                                    <p>
-                                        The verified interactive GIS map will be
-                                        connected here without changing its functionality.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                       <div class="map-container">
+    <iframe
+        id="overviewHsrMap"
+        src="../data/results/hsr_routes_clean.html"
+        title="HSR Alignment GIS Map"
+        loading="eager"
+        style="width:100%;height:100%;border:0;display:block;">
+    </iframe>
+</div>
 
                     </div>
 
@@ -1114,465 +1184,126 @@
 
             <!-- ================= OTHER SECTIONS ================= -->
 
-                    <section id="routes" class="page-section">
+                    <section id="routes" class="page-section route-explorer-v2">
 
-    <div class="route-explorer-header">
-
-        <div>
-            <span class="section-kicker">ROUTE EXPLORER</span>
-
+    <div class="rxv2-topbar">
+        <div class="rxv2-title">
+            <span class="rxv2-kicker">ROUTE EXPLORER</span>
             <h1>Alignment Route Profile</h1>
-
-            <p>
-                Interactive engineering, environmental and infrastructure
-                profile of the selected HSR alignment.
-            </p>
+            <p>Engineering, environmental, social and infrastructure evidence for the selected HSR alignment.</p>
         </div>
-
-        <div class="route-selector-box">
-
-    <label for="routeSelect">
-        SELECT ALIGNMENT
-    </label>
-
-    <select id="routeSelect" onchange="updateRouteExplorer(this.value)">
-
-        <option value="R1">
-            Route 1 — R1
-        </option>
-
-        <option value="R2">
-            Route 2 — R2
-        </option>
-
-        <option value="R3">
-            Route 3 — R3
-        </option>
-
-    </select>
-
-</div>
-
+        <div class="rxv2-select">
+            <label for="routeSelect">SELECT ALIGNMENT</label>
+            <select id="routeSelect" onchange="updateRouteExplorer(this.value)">
+                <option value="R1">Route 1 — R1</option>
+                <option value="R2">Route 2 — R2</option>
+                <option value="R3">Route 3 — R3</option>
+            </select>
+        </div>
     </div>
 
-
-    <!-- Selected Route -->
-    <div class="selected-route-banner">
-
+    <div class="rxv2-route-card">
         <div>
-            <span class="section-kicker">
-                SELECTED ALIGNMENT
-            </span>
-
-            <h2 id="selected-route-name">
-                Route 1 — R1
-            </h2>
-
-            <p>
-                Comprehensive route-level evaluation profile
-            </p>
+            <span class="rxv2-kicker">SELECTED ALIGNMENT</span>
+            <h2 id="selected-route-name">Route 1 — R1</h2>
+            <p>Profile generated from the mapped HSR centerline and the defined spatial analysis rules.</p>
+            <div class="rxv2-route-meta">
+                <div class="rxv2-meta-chip"><span>Ground footprint</span><strong>3.5 m</strong></div>
+                <div class="rxv2-meta-chip"><span>Centerline offset</span><strong>±1.75 m</strong></div>
+                <div class="rxv2-meta-chip"><span>Track gauge</span><strong>1.435 m</strong></div>
+                <div class="rxv2-meta-chip"><span>Planning / ROW</span><strong>17.5 m</strong></div>
+                <div class="rxv2-meta-chip"><span>Analysis CRS</span><strong>EPSG:32643</strong></div>
+            </div>
         </div>
-
-        <div class="route-length-highlight">
-
-            <span>ROUTE LENGTH</span>
-
-            <strong id="route-length">
-                788.785
-            </strong>
-
-            <small>km</small>
-
+        <div class="rxv2-length">
+            <span>ROUTE LENGTH</span><strong id="route-length">788.785</strong> <small>km</small>
         </div>
-
     </div>
 
-
-    <!-- KPI Cards -->
-    <div class="route-kpi-grid">
-
-        <div class="route-kpi forest">
-
-            <div class="kpi-title">
-                Forest Impact
+    <div class="rxv2-how">
+        <div class="rxv2-card">
+            <span class="rxv2-kicker">HOW TO READ THIS PROFILE</span>
+            <h3>From alignment geometry to measurable impact</h3>
+            <p>The analysis separates the permanent 3.5 m ground footprint from centerline-based distance and intersection measurements.</p>
+            <div class="rxv2-process">
+                <div class="rxv2-process-step"><svg width="34" height="28" viewBox="0 0 34 28"><path d="M2 22 C9 7 18 7 32 5" fill="none" stroke="#1769AA" stroke-width="3"/><circle cx="10" cy="15" r="3" fill="#1769AA"/></svg><strong>HSR centerline</strong><span>Original alignment geometry</span></div>
+                <div class="rxv2-arrow">›</div>
+                <div class="rxv2-process-step"><svg width="34" height="28" viewBox="0 0 34 28"><rect x="4" y="7" width="26" height="14" rx="2" fill="#e8f1f8" stroke="#1769AA"/><path d="M17 4v20" stroke="#1769AA" stroke-dasharray="2 2"/></svg><strong>3.5 m footprint</strong><span>±1.75 m from centerline</span></div>
+                <div class="rxv2-arrow">›</div>
+                <div class="rxv2-process-step"><svg width="34" height="28" viewBox="0 0 34 28"><path d="M3 21h28M5 21V8h8v13M17 21V5h7v16" fill="none" stroke="#4E8B57" stroke-width="2"/><circle cx="28" cy="9" r="4" fill="#C88719"/></svg><strong>GIS evidence</strong><span>Land, roads, education & ESZ</span></div>
             </div>
-
-            <strong id="route-forest">0.048307</strong>
-
-            <span>km²</span>
-
         </div>
-
-
-        <div class="route-kpi agriculture">
-
-            <div class="kpi-title">
-                Agriculture Impact
+        <div class="rxv2-card">
+            <span class="rxv2-kicker">ENGINEERING GEOMETRY</span>
+            <h3>Ground-impact cross-section</h3>
+            <div class="rxv2-cross-section">
+                <svg viewBox="0 0 520 132" role="img" aria-label="HSR centerline and 3.5 metre ground footprint cross-section">
+                    <line x1="20" y1="92" x2="500" y2="92" stroke="#b9c2ce" stroke-width="2"/>
+                    <rect x="185" y="76" width="150" height="32" rx="4" fill="#eaf3f9" stroke="#1769AA" stroke-width="2"/>
+                    <line x1="260" y1="62" x2="260" y2="115" stroke="#1769AA" stroke-width="2" stroke-dasharray="4 4"/>
+                    <line x1="185" y1="118" x2="335" y2="118" stroke="#1769AA" stroke-width="1.5"/>
+                    <path d="M185 118l8-4v8zM335 118l-8-4v8z" fill="#1769AA"/>
+                    <text x="260" y="129" text-anchor="middle" font-size="11" fill="#1769AA" font-weight="700">3.5 m ground footprint</text>
+                    <text x="260" y="70" text-anchor="middle" font-size="10" fill="#1769AA">HSR centerline</text>
+                    <line x1="90" y1="38" x2="430" y2="38" stroke="#7656A6" stroke-width="1.5" stroke-dasharray="6 5"/>
+                    <text x="260" y="31" text-anchor="middle" font-size="10" fill="#7656A6">17.5 m planning / ROW width</text>
+                    <line x1="260" y1="76" x2="260" y2="92" stroke="#172033" stroke-width="1"/>
+                </svg>
             </div>
-
-            <strong id="route-agriculture">0.878612</strong>
-
-            <span>km²</span>
-
         </div>
-
-
-        <div class="route-kpi builtup">
-
-            <div class="kpi-title">
-                Built-up Impact
-            </div>
-
-            <strong id="route-builtup">0.781871</strong>
-
-            <span>km²</span>
-
-        </div>
-
-
-        <div class="route-kpi education">
-
-            <div class="kpi-title">
-                Education Facilities
-            </div>
-
-            <strong id="route-education">39</strong>
-
-            <span>within 100 m</span>
-
-        </div>
-
-
-        <div class="route-kpi wetland">
-
-            <div class="kpi-title">
-                Wetland Impact
-            </div>
-
-            <strong id="route-wetland">0.024743</strong>
-
-            <span>km²</span>
-
-        </div>
-
-
-        <div class="route-kpi water">
-
-            <div class="kpi-title">
-                Waterbody Intersections
-            </div>
-
-            <strong id="route-waterbody">18</strong>
-
-            <span>polygon features</span>
-
-        </div>
-
     </div>
 
+    <div class="rxv2-section-head"><div><span class="rxv2-kicker">ENVIRONMENTAL IMPACT</span><h2>Land-use impact profile</h2><p>Area intersected by the defined 3.5 m permanent ground footprint.</p></div></div>
 
-    <!-- Charts -->
-    <div class="route-analysis-grid">
-
-        <!-- Environmental Chart -->
-        <div class="content-card route-chart-card">
-
-            <div class="card-header">
-
-                <div>
-                    <span class="section-kicker">
-                        ENVIRONMENT
-                    </span>
-
-                    <h2>Environmental Impact Profile</h2>
-
-                    <p>
-                        Ground footprint impact by land-use category.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="route-chart-container">
-                <canvas id="routeEnvironmentalChart"></canvas>
-            </div>
-
-        </div>
-
-
-        <!-- Impact Distribution -->
-        <div class="content-card route-chart-card">
-
-            <div class="card-header">
-
-                <div>
-                    <span class="section-kicker">
-                        IMPACT DISTRIBUTION
-                    </span>
-
-                    <h2>Impact Composition</h2>
-
-                    <p>
-                        Relative distribution of mapped land-use impact.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="route-doughnut-container">
-                <canvas id="routeImpactDoughnut"></canvas>
-            </div>
-
-        </div>
-
+    <div class="rxv2-env-grid">
+        <div class="rxv2-impact-card forest"><div class="rxv2-impact-icon"><svg viewBox="0 0 150 88" width="150" height="88"><path d="M0 68h150" stroke="#cbd5cf"/><path d="M73 68V48" stroke="#765d43" stroke-width="4"/><path d="M73 20l-17 29h10L51 65h44L80 49h11z" fill="#4E8B57"/><path d="M42 68V55" stroke="#765d43" stroke-width="3"/><path d="M42 38l-11 19h7L29 67h27L48 57h6z" fill="#6aa56f"/><path d="M102 68V55" stroke="#765d43" stroke-width="3"/><path d="M102 37L91 56h7L88 67h28l-11-11h7z" fill="#6aa56f"/><path d="M15 76h120" stroke="#1769AA" stroke-width="2"/><circle cx="73" cy="76" r="3" fill="#1769AA"/></svg></div><h3>Forest</h3><p>Permanent ground footprint intersecting mapped forest polygons.</p><div><span class="rxv2-impact-value" id="route-forest">0.048307</span> <span class="rxv2-impact-unit">km²</span></div><p class="rxv2-impact-note">Mapped patches used in the impact calculation.</p></div>
+        <div class="rxv2-impact-card agri"><div class="rxv2-impact-icon"><svg viewBox="0 0 150 88" width="150" height="88"><path d="M0 67Q35 48 72 67T150 67V88H0z" fill="#f5ead1"/><path d="M12 67h126M20 60h110M28 53h96" stroke="#C88719" stroke-width="2"/><path d="M20 74v-17M43 74V52M66 74V58M89 74V50M112 74V57M135 74V52" stroke="#C88719" stroke-width="2"/><path d="M8 76h134" stroke="#1769AA" stroke-width="2"/></svg></div><h3>Agriculture</h3><p>Permanent ground footprint intersecting mapped agricultural land.</p><div><span class="rxv2-impact-value" id="route-agriculture">0.878612</span> <span class="rxv2-impact-unit">km²</span></div><p class="rxv2-impact-note">Mapped agricultural patches intersected by the footprint.</p></div>
+        <div class="rxv2-impact-card built"><div class="rxv2-impact-icon"><svg viewBox="0 0 150 88" width="150" height="88"><path d="M0 72h150" stroke="#cbd0d9" stroke-width="2"/><rect x="18" y="38" width="31" height="34" fill="#e6e0ef" stroke="#7656A6"/><rect x="57" y="25" width="34" height="47" fill="#eeeaf4" stroke="#7656A6"/><rect x="100" y="45" width="28" height="27" fill="#e6e0ef" stroke="#7656A6"/><path d="M0 78h150" stroke="#1769AA" stroke-width="2"/><path d="M7 78h136" stroke="#1769AA" stroke-width="1" stroke-dasharray="5 5"/><path d="M25 51h7M25 59h7M66 39h7M66 47h7M66 55h7M108 57h6" stroke="#7656A6" stroke-width="2"/></svg></div><h3>Built-up</h3><p>Permanent ground footprint intersecting mapped built-up land.</p><div><span class="rxv2-impact-value" id="route-builtup">0.781871</span> <span class="rxv2-impact-unit">km²</span></div><p class="rxv2-impact-note">Mapped source features intersected by the footprint.</p></div>
+        <div class="rxv2-impact-card wet"><div class="rxv2-impact-icon"><svg viewBox="0 0 150 88" width="150" height="88"><path d="M0 60Q25 48 50 60T100 60T150 60V88H0z" fill="#dfeef9"/><path d="M0 60Q25 48 50 60T100 60T150 60" fill="none" stroke="#2F80ED" stroke-width="3"/><path d="M55 75h40" stroke="#1769AA" stroke-width="2"/><circle cx="33" cy="32" r="7" fill="#9ac6e8"/><path d="M33 18v8M24 23l6 5M42 23l-6 5" stroke="#4A90C2" stroke-width="2"/></svg></div><h3>Wetland</h3><p>Permanent ground footprint intersecting mapped wetland polygons.</p><div><span class="rxv2-impact-value" id="route-wetland">0.024743</span> <span class="rxv2-impact-unit">km²</span></div><p class="rxv2-impact-note">Mapped wetland features used in the area calculation.</p></div>
     </div>
 
-
-    <!-- Infrastructure + ESZ -->
-    <div class="route-analysis-grid">
-
-        <div class="content-card">
-
-            <div class="card-header">
-
-                <div>
-                    <span class="section-kicker">
-                        INFRASTRUCTURE
-                    </span>
-
-                    <h2>Highway Interaction</h2>
-
-                    <p>
-                        Road crossings/interactions identified along
-                        the selected alignment.
-                    </p>
-                </div>
-
-                <strong
-                    id="route-highway-total"
-                    class="total-badge">
-                    60
-                </strong>
-
-            </div>
-
-
-            <div class="infrastructure-grid">
-
-                <div class="infra-item nh">
-                    <span>National Highways</span>
-                    <strong id="route-nh">52</strong>
-                </div>
-
-                <div class="infra-item sh">
-                    <span>State Highways</span>
-                    <strong id="route-sh">0</strong>
-                </div>
-
-                <div class="infra-item expressway">
-                    <span>State Expressways</span>
-                    <strong id="route-expressway">5</strong>
-                </div>
-
-                <div class="infra-item major-road">
-                    <span>Other Major Roads</span>
-                    <strong id="route-major-road">3</strong>
-                </div>
-
-                <div class="infra-item mdr">
-                    <span>MDR</span>
-                    <strong id="route-mdr">0</strong>
-                </div>
-
-            </div>
-
-
-            <div class="route-chart-small">
-                <canvas id="routeHighwayChart"></canvas>
-            </div>
-
-        </div>
-
-
-        <div class="content-card esz-card">
-
-            <div class="card-header">
-
-                <div>
-                    <span class="section-kicker">
-                        ECO-SENSITIVE ZONE
-                    </span>
-
-                    <h2>Nearest ESZ</h2>
-                </div>
-
-            </div>
-
-
-            <div class="esz-distance">
-
-                <span>Perpendicular distance from centerline</span>
-
-                <strong id="route-esz-distance">
-                    1.459
-                </strong>
-
-                <small>km</small>
-
-            </div>
-
-
-            <div class="distance-meter">
-
-                <div
-                    id="esz-meter-fill"
-                    class="distance-meter-fill">
-                </div>
-
-            </div>
-
-
-            <div class="esz-area">
-
-                <span>Nearest identified area</span>
-
-                <strong id="route-esz-name">
-                    Sanjay Gandhi National Park
-                </strong>
-
-            </div>
-
-        </div>
-
+    <div class="rxv2-analysis-grid">
+        <div class="rxv2-card"><span class="rxv2-kicker">COMPARATIVE VIEW</span><h3>Impact by land-use category</h3><div class="rxv2-chart-wrap"><canvas id="routeEnvironmentalChart"></canvas></div><div class="rxv2-explain"><strong>Calculation basis:</strong> 3.5 m total ground footprint (±1.75 m from the centerline) intersected with the mapped land-use polygons. Waterbody features are intentionally reported separately below because the supplied Bhuvan waterbody metric is a feature count, not an area value.</div></div>
+        <div class="rxv2-card"><span class="rxv2-kicker">INTERPRETATION</span><h3>What the profile tells the engineer</h3><div class="rxv2-insight"><span class="rxv2-insight-label">LARGEST MAPPED AREA</span><strong id="route-largest-impact">Agriculture</strong><p id="route-largest-impact-note">The largest mapped land-use area intersected by the 3.5 m footprint for the selected route.</p></div><div class="rxv2-insight"><span class="rxv2-insight-label">WATERBODY METRIC</span><strong><span id="route-waterbody">18</span> features</strong><p>Bhuvan polygon features intersected by the HSR analysis. This is not treated as km².</p></div><div class="rxv2-insight"><span class="rxv2-insight-label">FOOTPRINT RULE</span><strong>3.5 m total width</strong><p>1.75 m is applied on each side of the original HSR centerline for ground-impact area calculations.</p></div></div>
     </div>
 
+    <div class="rxv2-section-head"><div><span class="rxv2-kicker">SOCIAL & INFRASTRUCTURE</span><h2>Spatial interaction profile</h2><p>Facilities and road interactions identified using the project's defined GIS rules.</p></div></div>
 
-    <!-- Centerline Intersection -->
-    <div class="content-card route-intersection-card">
+    <div class="rxv2-social-grid">
+        <div class="rxv2-card"><span class="rxv2-kicker">EDUCATIONAL SECTOR</span><h3>Facilities within 100 m of centerline</h3><div class="rxv2-big-stat"><div class="rxv2-stat-icon"><svg width="30" height="30" viewBox="0 0 30 30"><path d="M3 11l12-6 12 6-12 6z" fill="#1769AA"/><path d="M7 13v7h16v-7M10 21v4M20 21v4" fill="none" stroke="#1769AA" stroke-width="2"/><path d="M25 13v7" stroke="#C88719" stroke-width="2"/></svg></div><div><strong id="route-education">39</strong><span>identified educational facilities</span></div></div><div class="rxv2-diagram"><svg viewBox="0 0 430 112" role="img" aria-label="100 metre education analysis diagram"><circle cx="215" cy="57" r="43" fill="#eaf3f9" stroke="#1769AA" stroke-dasharray="4 4"/><line x1="25" y1="57" x2="405" y2="57" stroke="#1769AA" stroke-width="3"/><circle cx="215" cy="57" r="4" fill="#172033"/><rect x="278" y="34" width="28" height="23" rx="2" fill="#fff" stroke="#C88719"/><path d="M276 34l16-12 16 12" fill="#f5ead1" stroke="#C88719"/><text x="215" y="18" text-anchor="middle" font-size="10" fill="#1769AA" font-weight="700">100 m analysis distance</text><text x="215" y="76" text-anchor="middle" font-size="9" fill="#667085">HSR centerline</text><text x="292" y="72" text-anchor="middle" font-size="9" fill="#667085">Education facility</text></svg></div><div class="rxv2-explain"><strong>Method:</strong> count educational facilities whose mapped location falls within 100 m of the HSR centerline.</div></div>
 
-        <div class="card-header">
-
-            <div>
-                <span class="section-kicker">
-                    CENTERLINE INTERSECTION ANALYSIS
-                </span>
-
-                <h2>
-                    Environmental Intersection Length
-                </h2>
-
-                <p>
-                    Length of the original HSR centerline passing
-                    through each mapped feature category.
-                </p>
-            </div>
-
-            <span class="unit-label">
-                km
-            </span>
-
-        </div>
-
-
-        <div class="route-chart-large">
-
-            <canvas id="routeIntersectionChart"></canvas>
-
-        </div>
-
-
-        <div class="intersection-summary">
-
-            <div>
-                <span>Forest</span>
-                <strong id="intersection-forest">
-                    13.815
-                </strong>
-                <small>km</small>
-            </div>
-
-            <div>
-                <span>Agriculture</span>
-                <strong id="intersection-agriculture">
-                    250.905
-                </strong>
-                <small>km</small>
-            </div>
-
-            <div>
-                <span>Built-up</span>
-                <strong id="intersection-builtup">
-                    223.740
-                </strong>
-                <small>km</small>
-            </div>
-
-            <div>
-                <span>Wetland</span>
-                <strong id="intersection-wetland">
-                    7.070
-                </strong>
-                <small>km</small>
-            </div>
-
-            <div>
-                <span>Water Bodies</span>
-                <strong id="intersection-waterbody">
-                    1.477
-                </strong>
-                <small>km</small>
-            </div>
-
-        </div>
-
+        <div class="rxv2-card"><div class="rxv2-highway-top"><div><span class="rxv2-kicker">INFRASTRUCTURE</span><h3>Highway interaction profile</h3></div><div class="rxv2-highway-total" id="route-highway-total">60 <small>interactions</small></div></div><div class="rxv2-infra-grid"><div class="rxv2-infra"><span>National Highways</span><strong id="route-nh">52</strong></div><div class="rxv2-infra"><span>State Highways</span><strong id="route-sh">0</strong></div><div class="rxv2-infra"><span>State Expressways</span><strong id="route-expressway">5</strong></div><div class="rxv2-infra"><span>Other Major Roads</span><strong id="route-major-road">3</strong></div><div class="rxv2-infra"><span>MDR</span><strong id="route-mdr">0</strong></div></div><div class="rxv2-diagram"><svg viewBox="0 0 430 112" role="img" aria-label="Highway crossing diagram"><line x1="18" y1="67" x2="412" y2="67" stroke="#1769AA" stroke-width="5"/><text x="215" y="86" text-anchor="middle" font-size="9" fill="#667085">HSR CENTERLINE</text><line x1="215" y1="18" x2="215" y2="97" stroke="#667085" stroke-width="5"/><circle cx="215" cy="67" r="9" fill="#fff" stroke="#C88719" stroke-width="3"/><text x="215" y="12" text-anchor="middle" font-size="10" fill="#667085" font-weight="700">Road crossing / interaction</text></svg></div><div class="rxv2-explain"><strong>Classification:</strong> NH, State Highway, State Expressway and Other Major Road values follow the supplied road dataset. MDR remains separately reported where identifiable.</div></div>
     </div>
 
-
-    <!-- Engineering Parameters -->
-    <div class="content-card">
-
-        <div class="card-header">
-
-            <div>
-                <span class="section-kicker">
-                    ENGINEERING PARAMETERS
-                </span>
-
-                <h2>Alignment Assumptions</h2>
-            </div>
-
+    <div class="rxv2-analysis-grid rxv2-engineering-charts">
+        <div class="rxv2-card">
+            <span class="rxv2-kicker">INFRASTRUCTURE</span>
+            <h3>Highway Interaction</h3>
+            <p>Road crossings/interactions identified along the selected alignment.</p>
+            <div class="rxv2-chart-wrap rxv2-chart-tall"><canvas id="routeHighwayChart"></canvas></div>
         </div>
-
-
-        <div class="engineering-parameter-grid">
-
-            <div>
-                <span>Ground Footprint</span>
-                <strong>3.5 m</strong>
-                <small>1.75 m each side</small>
-            </div>
-
-            <div>
-                <span>Track Gauge</span>
-                <strong>1.435 m</strong>
-                <small>Standard gauge</small>
-            </div>
-
-            <div>
-                <span>Planning / ROW</span>
-                <strong>17.5 m</strong>
-                <small>Separate planning width</small>
-            </div>
-
-            <div>
-                <span>Analysis CRS</span>
-                <strong>EPSG:32643</strong>
-                <small>Metric projected CRS</small>
-            </div>
-
+        <div class="rxv2-card">
+            <span class="rxv2-kicker">CENTERLINE INTERSECTION ANALYSIS</span>
+            <h3>Environmental Intersection Length</h3>
+            <p>Length of the original HSR centerline passing through mapped feature categories.</p>
+            <div class="rxv2-chart-wrap rxv2-chart-tall"><canvas id="routeIntersectionChart"></canvas></div>
         </div>
-
     </div>
+
+    <div class="rxv2-spatial-grid">
+        <div class="rxv2-card"><span class="rxv2-kicker">WATER ENVIRONMENT</span><h3>Waterbody intersections</h3><div class="rxv2-big-stat"><div class="rxv2-stat-icon" style="background:#eaf5fb"><svg width="30" height="30" viewBox="0 0 30 30"><path d="M15 3C12 9 6 14 6 19a9 9 0 0018 0c0-5-6-10-9-16z" fill="#4A90C2"/></svg></div><div><strong id="route-waterbody-count">18</strong><span>Bhuvan polygon features intersected</span></div></div><div class="rxv2-diagram"><svg viewBox="0 0 430 112"><path d="M0 72Q70 45 140 72T280 72T430 72V112H0z" fill="#dceef9"/><path d="M0 72Q70 45 140 72T280 72T430 72" fill="none" stroke="#4A90C2" stroke-width="3"/><line x1="18" y1="78" x2="412" y2="78" stroke="#1769AA" stroke-width="4"/><text x="215" y="97" text-anchor="middle" font-size="9" fill="#667085">HSR centerline through mapped waterbody polygons</text></svg></div><div class="rxv2-explain"><strong>Important:</strong> this metric is a count of intersected Bhuvan polygon features. The separate centerline intersection length is <span id="intersection-waterbody-inline">1.477</span> km.</div></div>
+
+        <div class="rxv2-card"><span class="rxv2-kicker">ECO-SENSITIVE ZONE</span><h3>Nearest identified ESZ</h3><div class="rxv2-esz-layout"><div class="rxv2-esz-distance"><strong id="route-esz-distance">1.459</strong> <small>km</small><p>closest perpendicular distance from the HSR centerline</p><div class="rxv2-esz-name"><span>NEAREST IDENTIFIED AREA</span><strong id="route-esz-name">Sanjay Gandhi National Park</strong></div></div><div class="rxv2-diagram"><svg viewBox="0 0 280 130" role="img" aria-label="ESZ perpendicular distance diagram"><rect x="158" y="8" width="105" height="112" rx="7" fill="#eee8f5" stroke="#7656A6"/><text x="210" y="25" text-anchor="middle" font-size="9" fill="#7656A6" font-weight="700">ESZ / protected area</text><line x1="25" y1="92" x2="255" y2="92" stroke="#1769AA" stroke-width="4"/><circle cx="158" cy="92" r="4" fill="#1769AA"/><line x1="158" y1="92" x2="158" y2="55" stroke="#7656A6" stroke-width="2" stroke-dasharray="4 3"/><path d="M154 59l4-8 4 8M154 88l4 8 4-8" fill="#7656A6"/><text x="142" y="76" text-anchor="end" font-size="9" fill="#7656A6">nearest</text><text x="25" y="108" font-size="9" fill="#667085">HSR centerline</text></svg></div></div><div class="rxv2-explain"><strong>Spatial rule:</strong> nearest-distance analysis is reported separately from direct route intersection. The current analysis identifies no direct ESZ intersection for this route.</div></div>
+    </div>
+
+    <div class="rxv2-intersection rxv2-card"><div class="rxv2-section-head" style="margin-top:0"><div><span class="rxv2-kicker">CENTERLINE INTERSECTION ANALYSIS</span><h2>Environmental intersection length</h2><p>Length of the original HSR centerline passing through each mapped feature category. This is different from footprint impact area.</p></div><strong style="font:700 15px 'JetBrains Mono',monospace">km</strong></div><table class="rxv2-intersection-table"><thead><tr><th>Category</th><th>Relative length</th><th>Intersection length</th></tr></thead><tbody><tr><td>Forest</td><td><div class="rxv2-bar"><span id="intersection-bar-forest" style="width:5.5%;background:#4E8B57"></span></div></td><td id="intersection-forest">13.815</td></tr><tr><td>Agriculture</td><td><div class="rxv2-bar"><span id="intersection-bar-agriculture" style="width:100%;background:#C88719"></span></div></td><td id="intersection-agriculture">250.905</td></tr><tr><td>Built-up</td><td><div class="rxv2-bar"><span id="intersection-bar-builtup" style="width:89.2%;background:#7656A6"></span></div></td><td id="intersection-builtup">223.740</td></tr><tr><td>Wetland</td><td><div class="rxv2-bar"><span id="intersection-bar-wetland" style="width:2.8%;background:#2F80ED"></span></div></td><td id="intersection-wetland">7.070</td></tr><tr><td>Water Bodies</td><td><div class="rxv2-bar"><span id="intersection-bar-waterbody" style="width:0.6%;background:#4A90C2"></span></div></td><td id="intersection-waterbody">1.477</td></tr></tbody></table></div>
+
+    <div class="rxv2-assumptions">
+        <div class="rxv2-card"><span class="rxv2-kicker">ENGINEERING PARAMETERS</span><h3>Alignment assumptions</h3><div class="rxv2-assumption-list"><div class="rxv2-assumption"><span>GROUND FOOTPRINT</span><strong>3.5 m</strong><small>1.75 m each side of centerline</small></div><div class="rxv2-assumption"><span>TRACK GAUGE</span><strong>1.435 m</strong><small>Standard gauge</small></div><div class="rxv2-assumption"><span>PLANNING / ROW</span><strong>17.5 m</strong><small>Separate planning width</small></div><div class="rxv2-assumption"><span>ANALYSIS CRS</span><strong>EPSG:32643</strong><small>Metric projected CRS</small></div></div></div>
+        <div class="rxv2-card"><span class="rxv2-kicker">TECHNICAL REFERENCE</span><h3>Footprint and planning width</h3><div class="rxv2-assumption-visual"><svg viewBox="0 0 480 170"><line x1="40" y1="120" x2="440" y2="120" stroke="#c2cbd6" stroke-width="2"/><rect x="170" y="93" width="140" height="32" rx="4" fill="#eaf3f9" stroke="#1769AA" stroke-width="2"/><line x1="240" y1="75" x2="240" y2="142" stroke="#1769AA" stroke-dasharray="4 4"/><line x1="170" y1="150" x2="310" y2="150" stroke="#1769AA"/><text x="240" y="166" text-anchor="middle" font-size="10" fill="#1769AA" font-weight="700">3.5 m ground footprint</text><line x1="75" y1="50" x2="405" y2="50" stroke="#7656A6" stroke-dasharray="6 5"/><text x="240" y="43" text-anchor="middle" font-size="10" fill="#7656A6" font-weight="700">17.5 m planning / ROW</text><text x="240" y="88" text-anchor="middle" font-size="9" fill="#1769AA">HSR centerline</text></svg></div></div>
+    </div>
+
+    <div class="rxv2-map-note"><strong>GIS evidence:</strong> Use the existing GIS Layers module to inspect the original alignment, road interactions, station candidates and environmental layers spatially. The existing interactive map and its generator are intentionally left unchanged by this Route Explorer upgrade.</div>
 
 </section>
 
@@ -4511,7 +4242,7 @@
 
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="js/app.js"></script>
+<script src="app.js"></script>
 <script id="criteriaPresentationController">
 /*
  * Criteria presentation layer.

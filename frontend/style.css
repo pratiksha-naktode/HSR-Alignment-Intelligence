@@ -2881,13 +2881,10 @@ td:not(:first-child) {
 }
 
 /* =========================================================
-   ROUTE EXPLORER - NATIVE CANVAS RENDERING
+   FINAL ROUTE EXPLORER CHARTS
    ========================================================= */
-.route-chart-container canvas,
-.route-doughnut-container canvas,
-.route-chart-small canvas,
-.route-chart-large canvas {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-}
+.rxv2-engineering-charts { margin-top: 18px; }
+.rxv2-chart-tall { height: 310px; position: relative; margin-top: 12px; }
+.rxv2-chart-tall canvas { width:100% !important; height:100% !important; display:block; }
+@media(max-width:1050px){ .rxv2-engineering-charts{grid-template-columns:1fr!important;} }
+@media(max-width:700px){ .rxv2-chart-tall{height:260px;} }

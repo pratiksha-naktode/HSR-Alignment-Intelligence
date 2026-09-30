@@ -3204,3 +3204,587 @@ tbody tr:hover {
         padding: 18px 14px 30px;
     }
 }
+
+
+/* =========================================================
+   COMPACT TYPOGRAPHY — FIT MORE CONTENT ON SCREEN
+   ========================================================= */
+
+body {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+}
+
+.brand h1 {
+    font-size: 15px !important;
+}
+
+.brand p {
+    font-size: 10px !important;
+}
+
+.status-label {
+    font-size: 8px !important;
+}
+
+.status-item strong {
+    font-size: 10px !important;
+}
+
+.nav-item {
+    font-size: 11px !important;
+    padding: 8px 10px !important;
+}
+
+.nav-item span {
+    font-size: 13px !important;
+}
+
+.sidebar-title {
+    font-size: 9px !important;
+    padding: 17px 15px 8px !important;
+}
+
+.section-heading {
+    margin-bottom: 14px !important;
+}
+
+.section-heading h2 {
+    font-size: 21px !important;
+    line-height: 1.15 !important;
+}
+
+.section-heading p {
+    font-size: 11px !important;
+    margin-top: 4px !important;
+}
+
+.eyebrow {
+    font-size: 8px !important;
+    margin-bottom: 3px !important;
+}
+
+.analysis-badge {
+    font-size: 9px !important;
+    padding: 5px 8px !important;
+}
+
+/* KPI */
+.kpi-grid {
+    gap: 10px !important;
+    margin-bottom: 12px !important;
+}
+
+.kpi-card {
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
+}
+
+.kpi-label {
+    font-size: 9px !important;
+    margin-bottom: 5px !important;
+}
+
+.kpi-card strong {
+    font-size: 21px !important;
+}
+
+.kpi-card small {
+    font-size: 8px !important;
+    margin-top: 5px !important;
+}
+
+/* Panels */
+.panel {
+    margin-bottom: 11px !important;
+    border-radius: 7px !important;
+}
+
+.panel-header {
+    padding: 10px 13px !important;
+}
+
+.panel-kicker {
+    font-size: 8px !important;
+    margin-bottom: 1px !important;
+}
+
+.panel-header h3 {
+    font-size: 14px !important;
+}
+
+.panel-action {
+    padding: 5px 8px !important;
+    font-size: 9px !important;
+}
+
+.unit-note {
+    font-size: 8px !important;
+}
+
+/* Main layout */
+.main-content {
+    padding: 18px 22px 28px !important;
+}
+
+/* Overview/map */
+.map-container {
+    height: 420px !important;
+    padding: 9px !important;
+}
+
+.map-placeholder-content {
+    max-width: 280px !important;
+}
+
+.map-icon {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 20px !important;
+    margin-bottom: 8px !important;
+}
+
+.map-placeholder-content h3 {
+    font-size: 14px !important;
+}
+
+.map-placeholder-content p {
+    font-size: 10px !important;
+}
+
+/* Lists */
+.route-length-list,
+.decision-summary {
+    padding: 3px 13px 7px !important;
+}
+
+.metric-row {
+    padding: 8px 0 !important;
+}
+
+.metric-row span,
+.decision-row span {
+    font-size: 11px !important;
+}
+
+.metric-row strong,
+.decision-row strong {
+    font-size: 10px !important;
+}
+
+.decision-row {
+    padding: 7px 0 !important;
+}
+
+.decision-row small {
+    font-size: 8px !important;
+}
+
+/* Tables */
+th {
+    padding: 7px 11px !important;
+    font-size: 9px !important;
+}
+
+td {
+    padding: 8px 11px !important;
+    font-size: 10px !important;
+}
+
+td:not(:first-child) {
+    font-size: 9px !important;
+}
+
+/* Criterion analysis */
+.criterion-buttons {
+    padding: 10px 13px !important;
+    gap: 6px !important;
+}
+
+.criterion-btn {
+    padding: 6px 9px !important;
+    font-size: 9px !important;
+}
+
+.criterion-detail-grid {
+    gap: 11px !important;
+}
+
+.criterion-content {
+    padding: 12px 13px !important;
+}
+
+.calculation-box,
+.assumption-box {
+    padding: 9px !important;
+    margin-bottom: 7px !important;
+}
+
+.calculation-label {
+    font-size: 8px !important;
+    margin-bottom: 3px !important;
+}
+
+.calculation-box p,
+.assumption-box p {
+    font-size: 10px !important;
+}
+
+.criterion-values {
+    padding: 12px !important;
+    gap: 7px !important;
+}
+
+.criterion-route-value {
+    padding: 11px 6px !important;
+}
+
+.criterion-route-value span {
+    font-size: 9px !important;
+}
+
+.criterion-route-value strong {
+    font-size: 15px !important;
+}
+
+.criterion-route-value small {
+    font-size: 8px !important;
+}
+
+/* GIS */
+.gis-kpi-grid {
+    margin-bottom: 13px !important;
+}
+
+.gis-workspace {
+    margin-bottom: 13px !important;
+}
+
+.gis-toolbar {
+    min-height: 50px !important;
+    padding: 10px 13px !important;
+}
+
+.gis-toolbar strong {
+    font-size: 12px !important;
+}
+
+.gis-toolbar span {
+    font-size: 9px !important;
+}
+
+.gis-toolbar-meta span {
+    padding: 4px 7px !important;
+    font-size: 8px !important;
+}
+
+.gis-map-container {
+    height: 560px !important;
+}
+
+.gis-info-grid {
+    gap: 13px !important;
+}
+
+.info-card {
+    padding: 14px !important;
+}
+
+.info-card-header {
+    gap: 9px !important;
+    margin-bottom: 12px !important;
+}
+
+.info-icon {
+    width: 29px !important;
+    height: 29px !important;
+    font-size: 13px !important;
+}
+
+.info-card-header h3 {
+    font-size: 12px !important;
+}
+
+.info-card-header p {
+    font-size: 9px !important;
+}
+
+.layer-item {
+    padding: 8px 0 !important;
+}
+
+.layer-item strong {
+    font-size: 10px !important;
+}
+
+.layer-item small {
+    font-size: 9px !important;
+}
+
+.parameter-row {
+    padding: 7px 0 !important;
+}
+
+.parameter-row span,
+.parameter-row strong {
+    font-size: 9px !important;
+}
+
+/* Impact / decision cards */
+.impact-summary-grid,
+.decision-summary-grid {
+    gap: 10px !important;
+    margin-bottom: 13px !important;
+}
+
+.impact-summary-card,
+.decision-stat-card {
+    padding: 13px !important;
+    border-radius: 8px !important;
+}
+
+.impact-label,
+.decision-stat-card span {
+    font-size: 8px !important;
+}
+
+.impact-summary-card strong {
+    font-size: 18px !important;
+    margin-top: 5px !important;
+}
+
+.decision-stat-card strong {
+    font-size: 17px !important;
+    margin-top: 5px !important;
+}
+
+.impact-summary-card small,
+.decision-stat-card small {
+    font-size: 9px !important;
+}
+
+.analysis-card {
+    padding: 14px !important;
+    margin-bottom: 13px !important;
+}
+
+.analysis-card-header {
+    margin-bottom: 12px !important;
+}
+
+.analysis-card-header h3 {
+    font-size: 13px !important;
+}
+
+.analysis-card-header p {
+    font-size: 10px !important;
+}
+
+.analysis-unit {
+    font-size: 8px !important;
+    padding: 4px 7px !important;
+}
+
+.impact-chart-container {
+    height: 300px !important;
+}
+
+.impact-chart-small {
+    height: 230px !important;
+}
+
+/* AHP / TOPSIS */
+.ahp-layout,
+.topsis-layout {
+    gap: 15px !important;
+}
+
+.ahp-chart-container,
+.topsis-chart-container {
+    height: 330px !important;
+}
+
+.weight-table {
+    max-height: 330px !important;
+}
+
+/* Route comparison */
+.comparison-route-grid {
+    gap: 10px !important;
+    margin-bottom: 13px !important;
+}
+
+.comparison-route-card {
+    padding: 13px !important;
+}
+
+.comparison-route-header {
+    padding-bottom: 8px !important;
+}
+
+.comparison-route-header span {
+    font-size: 9px !important;
+}
+
+.comparison-route-header strong {
+    font-size: 10px !important;
+}
+
+.comparison-main-value {
+    padding: 11px 0 7px !important;
+}
+
+.comparison-main-value span {
+    font-size: 9px !important;
+}
+
+.comparison-main-value strong {
+    font-size: 17px !important;
+}
+
+.comparison-mini-row {
+    padding: 6px 0 !important;
+}
+
+.comparison-mini-row span,
+.comparison-mini-row strong {
+    font-size: 9px !important;
+}
+
+.comparison-chart {
+    height: 310px !important;
+}
+
+/* Methodology */
+.method-workflow {
+    gap: 7px !important;
+}
+
+.workflow-step {
+    padding: 12px !important;
+}
+
+.workflow-step > span {
+    width: 23px !important;
+    height: 23px !important;
+    font-size: 9px !important;
+}
+
+.workflow-step strong {
+    font-size: 11px !important;
+    margin-top: 7px !important;
+}
+
+.workflow-step small {
+    font-size: 9px !important;
+}
+
+.method-parameter-grid {
+    gap: 9px !important;
+}
+
+.method-parameter {
+    padding: 12px !important;
+}
+
+.method-parameter span {
+    font-size: 9px !important;
+}
+
+.method-parameter strong {
+    font-size: 15px !important;
+}
+
+.method-parameter small {
+    font-size: 8px !important;
+}
+
+.method-explanation {
+    padding: 13px !important;
+}
+
+.method-explanation h4 {
+    font-size: 12px !important;
+}
+
+.method-explanation p,
+.method-body-text {
+    font-size: 10px !important;
+}
+
+.method-explanation code {
+    padding: 7px !important;
+    font-size: 9px !important;
+}
+
+.method-mcdm-step {
+    padding: 12px !important;
+}
+
+.method-mcdm-step h4 {
+    font-size: 11px !important;
+}
+
+.method-mcdm-step p {
+    font-size: 9px !important;
+}
+
+.method-mcdm-step strong {
+    font-size: 10px !important;
+}
+
+/* Reports */
+.report-overview {
+    gap: 13px !important;
+    margin-bottom: 15px !important;
+}
+
+.report-info-card {
+    padding: 15px !important;
+    gap: 12px !important;
+}
+
+.report-icon {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    font-size: 16px !important;
+}
+
+.report-info-card h3 {
+    font-size: 14px !important;
+}
+
+.report-info-card p {
+    font-size: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.report-btn {
+    padding: 6px 10px !important;
+    font-size: 10px !important;
+}
+
+/* Footer */
+.bottom-status {
+    font-size: 8px !important;
+}
+
+/* Keep mobile compact too */
+@media (max-width: 800px) {
+    body {
+        font-size: 11px !important;
+    }
+
+    .section-heading h2 {
+        font-size: 19px !important;
+    }
+
+    .main-content {
+        padding: 14px 11px 24px !important;
+    }
+
+    .kpi-card strong {
+        font-size: 19px !important;
+    }
+}

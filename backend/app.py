@@ -1,8 +1,17 @@
 from pathlib import Path
 
 import pandas as pd
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS
+
+
+# ---------------------------------------------------------
+# Project paths
+# ---------------------------------------------------------
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+FRONTEND_DIR = PROJECT_ROOT / "frontend"
+RESULTS_DIR = PROJECT_ROOT / "data" / "results"
 
 
 # ---------------------------------------------------------
@@ -11,14 +20,6 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
-
-
-# ---------------------------------------------------------
-# Project paths
-# ---------------------------------------------------------
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-RESULTS_DIR = PROJECT_ROOT / "data" / "results"
 
 
 # ---------------------------------------------------------
@@ -32,6 +33,34 @@ def load_csv(filename):
         raise FileNotFoundError(f"File not found: {path}")
 
     return pd.read_csv(path)
+
+
+# ---------------------------------------------------------
+# Frontend
+# ---------------------------------------------------------
+
+@app.route("/")
+def index():
+    return send_from_directory(FRONTEND_DIR, "index.html")
+
+
+@app.route("/<path:path>")
+def frontend_files(path):
+    file_path = FRONTEND_DIR / path
+
+    if file_path.exists() and file_path.is_file():
+        return send_from_directory(FRONTEND_DIR, path)
+
+    return send_from_directory(FRONTEND_DIR, "index.html")
+
+
+# ---------------------------------------------------------
+# GIS map
+# ---------------------------------------------------------
+
+@app.route("/data/results/<path:filename>")
+def result_files(filename):
+    return send_from_directory(RESULTS_DIR, filename)
 
 
 # ---------------------------------------------------------
@@ -81,8 +110,12 @@ def decision():
 # ---------------------------------------------------------
 
 if __name__ == "__main__":
+    import os
+
+    port = int(os.environ.get("PORT", 5000))
+
     app.run(
-        host="127.0.0.1",
-        port=5000,
-        debug=True
+        host="0.0.0.0",
+        port=port,
+        debug=False
     )

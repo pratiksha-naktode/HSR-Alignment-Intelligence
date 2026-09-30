@@ -259,9 +259,7 @@ async function loadRouteData() {
 
     try {
 
-        const response = await fetch(
-            "http://127.0.0.1:5000/api/routes"
-        );
+     const response = await fetch("/api/routes");
 
 
         if (!response.ok) {

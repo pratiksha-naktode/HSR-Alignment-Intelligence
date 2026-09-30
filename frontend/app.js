@@ -2651,6 +2651,42 @@ function exportCompleteReport() {
         "application/json;charset=utf-8;"
     );
 }
+/* =====================================================
+   OVERVIEW MAP - HIDE STATION SEARCH ONLY
+   ===================================================== */
+
+const overviewHsrMap = document.getElementById("overviewHsrMap");
+
+if (overviewHsrMap) {
+
+    overviewHsrMap.addEventListener("load", function () {
+
+        const mapDocument =
+            overviewHsrMap.contentDocument ||
+            overviewHsrMap.contentWindow.document;
+
+        if (!mapDocument) return;
+
+        const elements =
+            mapDocument.querySelectorAll("div, section, aside");
+
+        elements.forEach(function (element) {
+
+            const text = element.textContent
+                .replace(/\s+/g, " ")
+                .trim();
+
+            if (text.includes("Station Candidate Search")) {
+
+                element.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+}
 
 window.exportRouteComparison = exportRouteComparison;
 window.exportDecisionResults = exportDecisionResults;
